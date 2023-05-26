@@ -94,20 +94,20 @@ public class EmployeeDAO {
 
 			// 結果の操作
 			while (res.next()) {
-				String surName = res.getString("surName");
-				String firstName = res.getString("firstName");
-				String surKanaName = res.getString("surKanaName");
-				String firstKanaName = res.getString("firstKanaName");
+				String surName = res.getString("sur_name");
+				String firstName = res.getString("first_name");
+				String surKanaName = res.getString("sur_kana_name");
+				String firstKanaName = res.getString("first_kana_name");
 				String gender = res.getString("gender");
-				Date birthDate = res.getDate("birthDate");
-				String sectionCode = res.getString("sectionCode");
+				Date birthDate = res.getDate("birth_date");
+				String sectionCode = res.getString("section_code");
 				String license_code = res.getString("license_code");
-				String hobbyCode = res.getString("hobbyCode");
-				Date joiningDate = res.getDate("joiningDate");
+				String hobbyCode = res.getString("hobby_code");
+				Date joiningDate = res.getDate("joining_date");
 				String mail = res.getString("mail");
 				String tel = res.getString("tel");
 				String address = res.getString("address");
-				String selfintroduction = res.getString("selfintroduction");
+				String selfintroduction = res.getString("self_introduction");
 
 				EmployeeBean employee = new EmployeeBean();
 				employee.setEmployeeCode(employeeCode);
