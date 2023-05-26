@@ -96,18 +96,37 @@ public class EmployeeDAO {
 		int cnt = 0; // 処理件数
 		try (Connection con = ConnectionManager.getConnection();
 				PreparedStatement pstmt = con.prepareStatement("INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?,?)")) {
-
+			
+			/**
+			 * データ受け取り
+			 */
 			String employeeCode = employee.getEmployeeCode();
 			String surName = employee.getSurName();
 			String firstName = employee.getFirstName();
 			String surKanaName = employee.getSurKanaName();
+			String firstKanaName = employee.getFirstKanaName();
+			String gender = employee.getGender();
+			Date birthDate = employee.getBirthDate();
+			String sectionCode = employee.getSectionCode();
+			Date joiningDate = employee.getJoiningDate();
+			String mail = employee.getMail();
+			String tel = employee.getTel();
+			String address = employee.getAddress();
 
 			// プレースホルダへの値の設定
-			/*
-			 * pstmt.setString(1, code); pstmt.setString(2, name); pstmt.setInt(3, age);
-			 * pstmt.setString(4, section);
-			 */
-
+			pstmt.setString(1,  employeeCode);
+			pstmt.setString(2, surName);
+			pstmt.setString(3, firstName);
+			pstmt.setString(4, surKanaName);
+			pstmt.setString(5, firstKanaName);
+			pstmt.setString(6, gender);
+			pstmt.setDate(7, birthDate);
+			pstmt.setString(8, sectionCode);
+			pstmt.setDate(9, joiningDate);
+			pstmt.setString(10, mail);
+			pstmt.setString(11, tel);
+			pstmt.setString(12, address);
+			
 			// SQLステートメントの実行
 			cnt = pstmt.executeUpdate();
 
