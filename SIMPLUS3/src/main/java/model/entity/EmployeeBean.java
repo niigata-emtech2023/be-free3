@@ -43,6 +43,11 @@ public class EmployeeBean implements Serializable {
 	 * 部署コード
 	 */
 	private String sectionCode;
+	
+	/**
+	 * 部署名
+	 */
+	private String sectionName;
 
 	/**
 	 * 資格コード
@@ -141,6 +146,14 @@ public class EmployeeBean implements Serializable {
 
 	public void setSectionCode(String sectionCode) {
 		this.sectionCode = sectionCode;
+	}
+
+	public String getSectionName() {
+		return sectionName;
+	}
+
+	public void setSectionName(String sectionName) {
+		this.sectionName = sectionName;
 	}
 
 	public String getLicense_code() {

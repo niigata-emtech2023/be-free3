@@ -32,14 +32,15 @@ public class EmployeeDAO {
 
 			// 結果の操作
 			while (res.next()) {
-				String employeeCode = res.getString("employeeCode");
-				String surName = res.getString("surName");
-				String firstName = res.getString("firstName");
-				String surKanaName = res.getString("surKanaName");
-				String firstKanaName = res.getString("firstKanaName");
+				String employeeCode = res.getString("employee_code");
+				String surName = res.getString("sur_name");
+				String firstName = res.getString("first_name");
+				String surKanaName = res.getString("sur_kana_name");
+				String firstKanaName = res.getString("first_kana_name");
 				//String gender = res.getString("gender");
 				//Date birthDate = res.getDate("birthDate");
-				String sectionCode = res.getString("sectionCode");
+//				String sectionCode = res.getString("sectionCode");
+				String sectionName = res.getString("section_name");
 				//String license_code = res.getString("license_code");
 				//String hobbyCode = res.getString("hobbyCode");
 				//Date joiningDate = res.getDate("joiningDate");
@@ -48,6 +49,8 @@ public class EmployeeDAO {
 				//String address = res.getString("address");
 				//String selfintroduction = res.getString("selfintroduction");
 
+//				System.out.println(employeeCode);
+				
 				EmployeeBean employee = new EmployeeBean();
 				employee.setEmployeeCode(employeeCode);
 				employee.setSurName(surName);
@@ -56,7 +59,8 @@ public class EmployeeDAO {
 				employee.setFirstKanaName(firstKanaName);
 				//employee.setGender(gender);
 				//employee.setBirthDate(birthDate);
-				employee.setSectionCode(sectionCode);
+//				employee.setSectionCode(sectionCode);
+				employee.setSectionName(sectionName);
 				//employee.setLicense_code(license_code);
 				//employee.setHobbyCode(hobbyCode);
 				//employee.setJoiningDate(joiningDate);
