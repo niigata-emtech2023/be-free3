@@ -96,7 +96,10 @@ public class EmployeeDAO {
 		int cnt = 0; // 処理件数
 		try (Connection con = ConnectionManager.getConnection();
 				PreparedStatement pstmt = con.prepareStatement("INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?,?)")) {
-
+			
+			/**
+			 * データ受け取り
+			 */
 			String employeeCode = employee.getEmployeeCode();
 			String surName = employee.getSurName();
 			String firstName = employee.getFirstName();
@@ -123,7 +126,7 @@ public class EmployeeDAO {
 			pstmt.setString(10, mail);
 			pstmt.setString(11, tel);
 			pstmt.setString(12, address);
-
+			
 			// SQLステートメントの実行
 			cnt = pstmt.executeUpdate();
 
