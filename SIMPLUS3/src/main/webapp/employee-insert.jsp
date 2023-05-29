@@ -26,7 +26,7 @@
                 <input type="submit"value="次へ">
                 </form>
                 
-                <form action="employee-insert-form-servlet"method="post">
+                <form action="menu.jsp"method="post">
                 
                 <input type="submit"value="メニューへ戻る">
                      

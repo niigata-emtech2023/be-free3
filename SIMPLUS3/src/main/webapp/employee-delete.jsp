@@ -20,11 +20,11 @@
 		性別：<%=employee.getGender()%><br>
 		所属部署：<%=employee.getSectionName()%><br>
 		入社日：<%=employee.getJoiningDate()%><br>
-		保有資格：<%=employee.getLicense_code()%><br>
-		趣味：<%=employee.getHobbyCode()%><br>
+		保有資格：<%=employee.getLicenseName()%><br>
+		趣味：<%=employee.getHobbyName()%><br>
 		自己紹介：<%=employee.getSelfintroduction()%><br>
 
-	<form action="employee-delete-form-servlet" method="POST">
+	<form action="employee-delete-comfirm-servlet" method="POST">
 	    <input type="submit" value="削除">
 	</form>
 	

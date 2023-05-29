@@ -19,7 +19,7 @@
 		<tr><th>TEL</th><td><%=employee.getTel() %></td></tr>
 		<tr><th>生年月日</th><td><%=employee.getBirthDate() %></td><th>性別</th><td><%=employee.getGender() %></td></tr>
 		<tr><th>所属部署</th><td><%=employee.getSectionName() %></td><th>入社日</th><td><%=employee.getJoiningDate() %></td></tr>
-		<tr><th>保有資格</th><td><%=employee.getLicense_code() %></td><th>趣味</th><td><%=employee.getHobbyCode() %></td></tr>
+		<tr><th>保有資格</th><td><%=employee.getLicenseName() %></td><th>趣味</th><td><%=employee.getHobbyName() %></td></tr>
 		<tr><th>自己紹介</th><td><%=employee.getSelfintroduction() %></td></tr>
 	</table>
 	本当に削除しますか？
