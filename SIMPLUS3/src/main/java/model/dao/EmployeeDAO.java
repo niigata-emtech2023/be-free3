@@ -253,22 +253,24 @@ public class EmployeeDAO {
 			String mail = employee.getMail();
 			String tel = employee.getTel();
 			String address = employee.getAddress();
+			String selfintroduction = employee.getSelfintroduction();
 
 			// プレースホルダへの値の設定
-			pstmt.setString(1, employeeCode);
-			pstmt.setString(2, surName);
-			pstmt.setString(3, firstName);
-			pstmt.setString(4, surKanaName);
-			pstmt.setString(5, firstKanaName);
-			pstmt.setString(6, gender);
-			pstmt.setString(7, birthDate);
-			pstmt.setString(8, sectionCode);
-			pstmt.setString(9, licenseCode);
-			pstmt.setString(10, hobbyCode);
-			pstmt.setString(11, joiningDate);
-			pstmt.setString(12, mail);
-			pstmt.setString(13, tel);
-			pstmt.setString(14, address);
+			pstmt.setString(1, surName);
+			pstmt.setString(2, firstName);
+			pstmt.setString(3, surKanaName);
+			pstmt.setString(4, firstKanaName);
+			pstmt.setString(5, gender);
+			pstmt.setString(6, birthDate);
+			pstmt.setString(7, sectionCode);
+			pstmt.setString(8, licenseCode);
+			pstmt.setString(9, hobbyCode);
+			pstmt.setString(10, joiningDate);
+			pstmt.setString(11, mail);
+			pstmt.setString(12, tel);
+			pstmt.setString(13, address);
+			pstmt.setString(14, selfintroduction);
+			pstmt.setString(15, employeeCode);
 
 			// SQLステートメントの実行
 			cnt = pstmt.executeUpdate();

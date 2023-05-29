@@ -20,8 +20,13 @@
 		性別：<%=employee.getGender()%><br>
 		所属部署：<%=employee.getSectionName()%><br>
 		入社日：<%=employee.getJoiningDate()%><br>
+<<<<<<< HEAD
 		保有資格：<%=employee.getLicenseCode()%><br>
 		趣味：<%=employee.getHobbyCode()%><br>
+=======
+		保有資格：<%=employee.getLicenseName()%><br>
+		趣味：<%=employee.getHobbyName()%><br>
+>>>>>>> refs/remotes/origin/master
 		自己紹介：<%=employee.getSelfintroduction()%><br>
 
 	<form action="employee-delete-comfirm-servlet" method="POST">
