@@ -3,15 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>ログイン画面</title>
+<link rel="stylesheet" href="css/wait.css">
 </head>
 <body>
-       <h1>ログイン</h1>
-     <form action="login-servlet"method="post"><br>
-        ユーザーID：<input type="text"size="10"name="id" ><br>
-        パスワード：<input type="password"size="10"name="pw"><br>
-        <input type="submit"value="ログイン">
-        <input type="reset" value="クリア">
-     
+       <div class="login_form_top">
+           <h1 class="login_h1">ログイン</h1>
+           <p class="login_p">ログインするユーザーの情報を入力してください。</p>
+       </div>
+       <form class="login_form" action="login-servlet"method="post">
+           <div class="login_form_top">
+               ユーザーID：<input class="login_input" type="text"size="10"name="id" placeholder="ユーザーIDを入力してください" required><br>
+               パスワード：<input class="login_input" type="password"size="10"name="pw"  placeholder="パスワードを入力してください" required><br>
+               <input class="login_input" type="submit"value="ログイン">
+               <input class="login_input" type="reset" value="クリア">
+         </div>
      </form>
        
 

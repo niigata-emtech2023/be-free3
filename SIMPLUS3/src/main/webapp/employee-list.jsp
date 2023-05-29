@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>社員情報一覧</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/table-style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+
 </head>
 <body>
 	<%

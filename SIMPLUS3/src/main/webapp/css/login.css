@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.login_body {
+  background-color: rgba(170, 150, 141, 0.521);
+}
+
+.login_form {
+  width: 400px;
+  padding: 40px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  text-align: center;
+}
+
+.login_form .login_h1, .login_form .login_p {
+  color: #96514d;
+  font-weight: 500;
+  /*back-ground:*/
+}
+
+.login_form .login_p {
+  font-size: 10px;
+}
+
+.login_form .login_input[type=id], .login_form .login_input[type=password] {
+  border: 0;
+  /*background: none;*/
+  /*追加back-ground:#fff; */
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #a8ddd4;
+  padding: 15px 10px;
+  width: 200px;
+  /* outline: none; ボタンの枠線を消す*/
+  /*追加*/
+  outline: 5px ridge #bb9a9a;
+  /*追加*/
+  border-radius: 2rem;
+  /*border-radius: 24px;*/
+  transition: 0.25s; /*ゆっくりアニメーション*/
+  text-align: center;
+}
+
+/*":focus"で、入力時（クリック時）に色が変わる*/
+.login_form .login_input[type=id]:focus, .login_form .login_input[type=password]:focus {
+  width: 280px;
+  background-color: #fff;
+  /*追加*/
+  color: #bb9a9a;
+}
+
+.login_form .login_input[type=submit] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #a8ddd4;
+  padding: 15px 10px;
+  width: 200px;
+  outline: none;
+  color: #000;
+  /*追加*/
+  outline: 5px ridge #a8ddd4;
+  /*追加*/
+  border-radius: 2rem;
+  /*border-radius: 25px;*/
+  transition: 0.25s;
+  text-align: center;
+  cursor: pointer; /*カーソルデザインの変更*/
+}
+
+.login_form .login_input[type=submit]:hover {
+  background-color: #a8ddd4;
+  border: 2px solid #a8ddd4;
+  /*追加*/
+  color: #fff;
+}
