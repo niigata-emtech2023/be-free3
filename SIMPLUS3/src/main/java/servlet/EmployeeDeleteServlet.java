@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.dao.EmployeeDAO;
 import model.entity.EmployeeBean;
@@ -42,12 +43,14 @@ public class EmployeeDeleteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		EmployeeBean employee = new EmployeeBean();
-
-		EmployeeDAO dao = new EmployeeDAO();
-
+EmployeeDAO dao = new EmployeeDAO();
+		
+		HttpSession session = request.getSession();
+		
+		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
+		
 		String employeeCode = employee.getEmployeeCode();
-
+		
 		int cnt = 0;
 
 		try {
@@ -58,12 +61,12 @@ public class EmployeeDeleteServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		if(cnt != 0) {
-			RequestDispatcher rd = request.getRequestDispatcher("employee-delete-result.jsp");
+		if(cnt == 0) {
+			RequestDispatcher rd = request.getRequestDispatcher("delete-er.jsp");
 			rd.forward(request, response);
 		}else {
-
+			RequestDispatcher rd = request.getRequestDispatcher("employee-delete-result.jsp");
+			rd.forward(request, response);
 		}
 	}
 }
-
