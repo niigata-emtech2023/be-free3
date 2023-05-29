@@ -93,27 +93,27 @@ public class EmployeeDAO {
 		try (Connection con = ConnectionManager.getConnection();
 				PreparedStatement pstmt = con.prepareStatement(sql);) {
 
-//			pstmt.setString(1, employeeCode);
+			pstmt.setString(1, employeeCode);
 //			
 			ResultSet res = pstmt.executeQuery();
 //			
 //			// 結果の操作
 			while (res.next()) {
-				employee.setEmployeeCode(res.getString("employeeCode"));
-				employee.setSurName(res.getString("surName"));
-				employee.setFirstName(res.getString("firstName"));
-				employee.setSurKanaName(res.getString("surKanaName"));
-				employee.setFirstKanaName(res.getString("firstKanaName"));
+				employee.setEmployeeCode(res.getString("employee_code"));
+				employee.setSurName(res.getString("sur_name"));
+				employee.setFirstName(res.getString("first_name"));
+				employee.setSurKanaName(res.getString("sur_kana_name"));
+				employee.setFirstKanaName(res.getString("first_kana_name"));
 				employee.setGender(res.getString("gender"));
-				employee.setBirthDate(res.getString("birthDate"));
-				employee.setSectionCode(res.getString("sectionCode"));
+				employee.setBirthDate(res.getString("birth_date"));
+				employee.setSectionCode(res.getString("section_code"));
 				employee.setLicense_code(res.getString("license_code"));
-				employee.setHobbyCode(res.getString("hobbyCode"));
-				employee.setJoiningDate(res.getString("joiningDate"));
+				employee.setHobbyCode(res.getString("hobby_code"));
+				employee.setJoiningDate(res.getString("joining_date"));
 				employee.setMail(res.getString("mail"));
 				employee.setTel(res.getString("tel"));
 				employee.setAddress(res.getString("address"));
-				employee.setSelfintroduction(res.getString("selfintroduction"));
+				employee.setSelfintroduction(res.getString("self_introduction"));
 			}
 //				String surName = res.getString("sur_name");
 //				String firstName = res.getString("first_name");
