@@ -248,7 +248,7 @@ public class EmployeeDAO {
 	public int Delete(EmployeeBean employee) throws SQLException, ClassNotFoundException {
 		int cnt = 0; // 処理件数
 
-		String sql = "DELETE FROM employee WHERE employeeCode = ?";
+		String sql = "DELETE FROM employee WHERE employee_code = ?";
 
 		// データベースへの接続の取得、PreparedStatementの取得
 		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql)) {
