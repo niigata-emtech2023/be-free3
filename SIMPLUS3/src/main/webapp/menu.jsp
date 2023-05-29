@@ -11,7 +11,7 @@ pageEncoding="UTF-8"%>
 <body>
   <div class = "container">
   <h1>メニュー</h1>
-      <div class="menu_select">
+      <!-- <div class="menu_select"> -->
   <h3>【行いたい操作を選んでください。】</h3>
   
       <p>▶所属する従業員の一覧表示・新規登録ができます</p>
@@ -71,7 +71,7 @@ pageEncoding="UTF-8"%>
   	    </form>
   	    </div><br> -->
       </div>
-    </div>
+    <!-- </div> -->
 
 </body>
 </html>
