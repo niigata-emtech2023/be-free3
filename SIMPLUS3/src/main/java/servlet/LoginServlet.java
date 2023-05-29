@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
 			// DAOの利用
 			if (loginDao.loginCheck(userid, password)) {
 				// 認証成功
-				url = "menu-servlet";
+				url = "menu.jsp";
 
 				// セッションオブジェクトの取得
 				HttpSession session = request.getSession();
