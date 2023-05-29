@@ -7,8 +7,8 @@
 <title>従業員削除画面</title>
 </head>
 <body>
-	<h1>従業員削除画面a</h1>
-	<form action="employee-delete-servlet" method="post">
+	<h1>従業員削除画面</h1>
+	<form action="employee-delete-comfirm-servlet" method="post">
 	<%
 		//List<EmployeeBean> employeelist = (List<EmployeeBean>) session.getAttribute("employeelist");
 		//EmployeeBean employee = (EmployeeBean) employeelist;
