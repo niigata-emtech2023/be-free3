@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class EmployeeUpdateFormServlet
+ * Servlet implementation class EmployeeUpdateConfirmServlet
  */
-@WebServlet("/employee-update-form-servlet")
-public class EmployeeUpdateFormServlet extends HttpServlet {
+@WebServlet("/employee-update-confirm-servlet")
+public class EmployeeUpdateConfirmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EmployeeUpdateFormServlet() {
+	public EmployeeUpdateConfirmServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -39,10 +39,9 @@ public class EmployeeUpdateFormServlet extends HttpServlet {
 	 *      response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {	
-		
+			throws ServletException, IOException {
 		// リクエストの転送
-		RequestDispatcher rd = request.getRequestDispatcher("employee-update.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("employee-update-confirm.jsp");
 		rd.forward(request, response);
 	}
 
