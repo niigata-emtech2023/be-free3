@@ -7,29 +7,29 @@
 <title>従業員削除画面</title>
 </head>
 <body>
-	<h1>従業員削除画面a</h1>
-	<form action="employee-delete-servlet" method="post">
-	<%
-		//List<EmployeeBean> employeelist = (List<EmployeeBean>) session.getAttribute("employeelist");
-		//EmployeeBean employee = (EmployeeBean) employeelist;
-		EmployeeBean employee = (EmployeeBean) request.getAttribute("employee");
-	%>
-	<table border=1>
-		<tr><th>従業員コード</th><td><%=employee.getEmployeeCode() %></td></tr>
-		<tr><th>氏名（かな）</th><td><%=employee.getSurName() %><%=employee.getFirstName() %>(<%=employee.getSurKanaName() %><%=employee.getFirstKanaName() %>)</td></tr>
-		<tr><th>メールアドレス</th><td><%=employee.getMail() %></td></tr>
-		<tr><th>TEL</th><td><%=employee.getTel() %></td></tr>
-		<tr><th>生年月日</th><td><%=employee.getBirthDate() %></td><th>性別</th><td><%=employee.getGender() %></td></tr>
-		<tr><th>所属部署</th><td><%=employee.getSectionName() %></td><th>入社日</th><td><%=employee.getJoiningDate() %></td></tr>
-		<tr><th>保有資格</th><td><%=employee.getLicense_code() %></td><th>趣味</th><td><%=employee.getHobbyCode() %></td></tr>
-		<tr><th>自己紹介</th><td><%=employee.getSelfintroduction() %></td></tr>
-	</table>
-	削除しますか？
+	<h1>従業員削除画面</h1>
+	<p>以下の社員情報を削除します。よろしいですか？</p>
+		<%
+		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
+		%>
+		従業員コード：<%=employee.getEmployeeCode()%><br>
+		氏名（かな）：<%=employee.getSurName()%><%=employee.getFirstName()%>(<%=employee.getSurKanaName()%><%=employee.getFirstKanaName()%>)<br>
+		メールアドレス：<%=employee.getMail()%><br>
+		TEL：<%=employee.getTel()%><br>
+		生年月日：<%=employee.getBirthDate()%><br>
+		性別：<%=employee.getGender()%><br>
+		所属部署：<%=employee.getSectionName()%><br>
+		入社日：<%=employee.getJoiningDate()%><br>
+		保有資格：<%=employee.getLicense_code()%><br>
+		趣味：<%=employee.getHobbyCode()%><br>
+		自己紹介：<%=employee.getSelfintroduction()%><br>
 	
-	<input type="submit" value="削除">
+	<form action="employee-delete-form-servlet" method="POST">
+	    <input type="submit" value="削除">
 	</form>
+	
 	<form action="employee-detail.jsp" method="post">
-	<input type="submit" value="戻る">
+	    <input type="submit" value="戻る">
 	</form>
 
 </body>

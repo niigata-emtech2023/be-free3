@@ -7,7 +7,7 @@
 <title>従業員別詳細画面</title>
 </head>
 <body>
-	<h1>従業員別詳細画面</h1>
+	<h1>従業員別の詳細画面です。</h1>
 		<%
 		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
 		%>
