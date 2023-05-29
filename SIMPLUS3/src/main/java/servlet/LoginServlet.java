@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		// リクエストパラメータの取得
-		String userid = request.getParameter("userid");
+		String userId = request.getParameter("userId");
 		String password = request.getParameter("password");
 
 		try {
@@ -54,15 +54,15 @@ public class LoginServlet extends HttpServlet {
 			 LoginDAO loginDao = new  LoginDAO();
 
 			// DAOの利用
-			if (loginDao.loginCheck(userid, password)) {
+			if (loginDao.loginCheck(userId, password)) {
 				// 認証成功
-				url = "menu-servlet";
+				url = "menu.jsp";
 
 				// セッションオブジェクトの取得
 				HttpSession session = request.getSession();
 
 				// セッションスコープへの属性の設定
-				session.setAttribute("userid", userid);
+				session.setAttribute("userId", userId);
 
 			} else {
 				// 認証失敗
