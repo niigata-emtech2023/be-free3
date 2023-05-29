@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>従業員情報登録完了画面</title>
 </head>
 <body>
        <%
@@ -22,7 +22,7 @@
 }
 %>
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean"scope="request" />
-	<form action="employee-insert-servlet"method="post">
+	
 	コード:<jsp:getProperty name="employee" property="code" /><br> 
 	    氏:<jsp:getProperty name="employee" property="sur_name" /><br> 
 		名:<jsp:getProperty name="employee" property="first_name" /><br>
@@ -36,7 +36,7 @@
 		所属部署:<jsp:getProperty name="employee" property="section" /><br>
 		入社日:<jsp:getProperty name="employee" property="joining_date" /><br>
 		部署:<jsp:getProperty name="employee" property="section" /><br>
-     </form>
+     
      <form action="menu.jsp"method="post">
            <input type="submit"value="メニューに戻る">
      </form>

@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 	<form action="employee-list-servlet" method="POST">
 		<input type="submit" value="従業員情報一覧">
 	</form>
-	<form action="employee-insert-servlet" method="POST">
+	<form action="employee-insert-form-servlet" method="POST">
 		<input type="submit" value="従業員登録">
 	</form>
 	<form action="license-insert-servlet" method="POST">
