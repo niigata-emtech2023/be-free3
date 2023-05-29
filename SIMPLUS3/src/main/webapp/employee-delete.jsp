@@ -24,7 +24,7 @@
 		趣味：<%=employee.getHobbyCode()%><br>
 		自己紹介：<%=employee.getSelfintroduction()%><br>
 
-	<form action="employee-delete-form-servlet" method="POST">
+	<form action="employee-delete-comfirm-servlet" method="POST">
 	    <input type="submit" value="削除">
 	</form>
 	
