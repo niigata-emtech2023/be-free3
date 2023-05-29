@@ -1,7 +1,6 @@
 package model.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 public class EmployeeBean implements Serializable {
 	/**
@@ -37,7 +36,7 @@ public class EmployeeBean implements Serializable {
 	/**
 	 * 生年月日
 	 */
-	private Date birthDate;
+	private String birthDate;
 
 	/**
 	 * 部署コード
@@ -62,7 +61,7 @@ public class EmployeeBean implements Serializable {
 	/**
 	 * 入社日
 	 */
-	private Date joiningDate;
+	private String joiningDate;
 
 	/**
 	 * メールアドレス
@@ -132,11 +131,11 @@ public class EmployeeBean implements Serializable {
 		this.gender = gender;
 	}
 
-	public Date getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 
@@ -172,11 +171,11 @@ public class EmployeeBean implements Serializable {
 		this.hobbyCode = hobbyCode;
 	}
 
-	public Date getJoiningDate() {
+	public String getJoiningDate() {
 		return joiningDate;
 	}
 
-	public void setJoiningDate(Date joiningDate) {
+	public void setJoiningDate(String joiningDate) {
 		this.joiningDate = joiningDate;
 	}
 
