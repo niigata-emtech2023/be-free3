@@ -6,27 +6,27 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-        <form action="employee-insert-servlet"method="post">
+        <form action="employee-insert-confirm-servlet"method="post">
           <h1>従業員情報登録</h1>
-            　　従業員コード　※必須<input type="text"size="10"name="code" placeholder="従業員コードを入力してください" required><br>
-            　　氏　　　　　　※必須<input type="text"size="10"name="sur_name" placeholder="氏を入力してください" required>
-                名　　　　　　※必須<input type="text"size="10"name="first_name" placeholder="名を入力してください" required><br>
-                氏(かな)　　　※必須<input type="text"size="10"name="sur_kana_name" placeholder="氏(かな)を入力してください" required>
-                名(かな)　　　※必須<input type="text"size="10"name="first_kana_name" placeholder="名(かな)を入力してください" required><br>
-                メールアドレス※必須<input type="text"size="10"name="mail" placeholder="メールアドレスを入力してください" required><br>
-                電話番号　　　※必須<input type="text"size="10"name="tel" placeholder="TELを入力してください" required><br>
-                住所　　　　　※必須<input type="text"size="10"name="address" placeholder="住所を入力してください" required><br>
-                性別　　　　　      <input type="radio"name="gender"value="male">男
+                従業員コード<span>※必須</span><input type="text"size="10"name="code" required><br>
+                氏<span>※必須</span>><input type="text"size="10"name="sur_name"  required>
+                名<span>※必須</span>><input type="text"size="10"name="first_name"  required><br>
+                氏(かな)<span>※必須</span>><input type="text"size="10"name="sur_kana_name"  required>
+                名(かな)※必須<input type="text"size="10"name="first_kana_name" required><br>
+                メールアドレス<span>※必須</span>><input type="text"size="10"name="mail"  required><br>
+                電話番号<span>※必須</span><input type="text"size="10"name="tel"  required><br>
+                住所<span>※必須</span><input type="text"size="10"name="address" required><br>
+                性別      <input type="radio"name="gender"value="male">男
                                     <input type="radio"name="gender"value="female">女
-                生年月日　　　※必須<input type="date"name="birth_date" placeholder="生年月日を入力してください" required><br>
-                所属部署　　　※必須<input type="text"size="10"name="section" placeholder="所属部署を入力してください" required><br>
-                入社日　　　　※必須<input type="date"name="joining_date" placeholder="入社日を入力してください" required><br>
+                生年月日<span>※必須</span>><input type="date"name="birth_date"  required><br>
+                所属部署<span>※必須</span><input type="text"size="10"name="section"  required><br>
+                入社日<span>※必須</span>><input type="date"name="joining_date" required><br>
                 
                 
                 <input type="submit"value="次へ">
                 </form>
                 
-                <form action="menu-servlet"method="post">
+                <form action="employee-insert-form-servlet"method="post">
                 
                 <input type="submit"value="メニューへ戻る">
                      

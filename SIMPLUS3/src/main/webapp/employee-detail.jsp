@@ -7,10 +7,10 @@
 <title>従業員別詳細画面</title>
 </head>
 <body>
-	<h1>従業員別の詳細画面です。</h1>
 		<%
 		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
 		%>
+	    <h1><%=employee.getSurName()%><%=employee.getFirstName()%>さんの詳細画面です。</h1>
 		従業員コード：<%=employee.getEmployeeCode()%><br>
 		氏名（かな）：<%=employee.getSurName()%><%=employee.getFirstName()%>(<%=employee.getSurKanaName()%><%=employee.getFirstKanaName()%>)<br>
 		メールアドレス：<%=employee.getMail()%><br>
