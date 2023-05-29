@@ -245,15 +245,14 @@ public class EmployeeDAO {
 		return cnt;
 	}
 
-	public int Delete(EmployeeBean employee) throws SQLException, ClassNotFoundException {
+	public int Delete(String employeeCode) throws SQLException, ClassNotFoundException {
 		int cnt = 0; // 処理件数
 
 		String sql = "DELETE FROM employee WHERE employee_code = ?";
 
 		// データベースへの接続の取得、PreparedStatementの取得
 		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql)) {
-
-			String employeeCode = employee.getEmployeeCode();
+			
 			pstmt.setString(1, employeeCode);
 
 			cnt = pstmt.executeUpdate();
