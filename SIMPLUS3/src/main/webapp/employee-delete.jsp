@@ -12,7 +12,7 @@
 	<%
 		//List<EmployeeBean> employeelist = (List<EmployeeBean>) session.getAttribute("employeelist");
 		//EmployeeBean employee = (EmployeeBean) employeelist;
-		EmployeeBean employee = (EmployeeBean) request.getAttribute("employee");
+		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
 	%>
 	<table border=1>
 		<tr><th>従業員コード</th><td><%=employee.getEmployeeCode() %></td></tr>
