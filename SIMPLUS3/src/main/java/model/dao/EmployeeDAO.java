@@ -1,7 +1,6 @@
 package model.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -102,11 +101,11 @@ public class EmployeeDAO {
 				String surKanaName = res.getString("sur_kana_name");
 				String firstKanaName = res.getString("first_kana_name");
 				String gender = res.getString("gender");
-				Date birthDate = res.getDate("birth_date");
+				String birthDate = res.getString("birth_date");
 				String sectionCode = res.getString("section_code");
 				String license_code = res.getString("license_code");
 				String hobbyCode = res.getString("hobby_code");
-				Date joiningDate = res.getDate("joining_date");
+				String joiningDate = res.getString("joining_date");
 				String mail = res.getString("mail");
 				String tel = res.getString("tel");
 				String address = res.getString("address");
@@ -157,9 +156,9 @@ public class EmployeeDAO {
 			String surKanaName = employee.getSurKanaName();
 			String firstKanaName = employee.getFirstKanaName();
 			String gender = employee.getGender();
-			Date birthDate = employee.getBirthDate();
+			String birthDate = employee.getBirthDate();
 			String sectionCode = employee.getSectionCode();
-			Date joiningDate = employee.getJoiningDate();
+			String joiningDate = employee.getJoiningDate();
 			String mail = employee.getMail();
 			String tel = employee.getTel();
 			String address = employee.getAddress();
@@ -171,9 +170,9 @@ public class EmployeeDAO {
 			pstmt.setString(4, surKanaName);
 			pstmt.setString(5, firstKanaName);
 			pstmt.setString(6, gender);
-			pstmt.setDate(7, birthDate);
+			pstmt.setString(7, birthDate);
 			pstmt.setString(8, sectionCode);
-			pstmt.setDate(9, joiningDate);
+			pstmt.setString(9, joiningDate);
 			pstmt.setString(10, mail);
 			pstmt.setString(11, tel);
 			pstmt.setString(12, address);
@@ -214,11 +213,11 @@ public class EmployeeDAO {
 			String surKanaName = employee.getSurKanaName();
 			String firstKanaName = employee.getFirstKanaName();
 			String gender = employee.getGender();
-			Date birthDate = employee.getBirthDate();
+			String birthDate = employee.getBirthDate();
 			String sectionCode = employee.getSectionCode();
 			String license_code = employee.getLicense_code();
 			String hobbyCode = employee.getHobbyCode();
-			Date joiningDate = employee.getJoiningDate();
+			String joiningDate = employee.getJoiningDate();
 			String mail = employee.getMail();
 			String tel = employee.getTel();
 			String address = employee.getAddress();
@@ -230,11 +229,11 @@ public class EmployeeDAO {
 			pstmt.setString(4, surKanaName);
 			pstmt.setString(5, firstKanaName);
 			pstmt.setString(6, gender);
-			pstmt.setDate(7, birthDate);
+			pstmt.setString(7, birthDate);
 			pstmt.setString(8, sectionCode);
 			pstmt.setString(9, license_code);
 			pstmt.setString(10, hobbyCode);
-			pstmt.setDate(11, joiningDate);
+			pstmt.setString(11, joiningDate);
 			pstmt.setString(12, mail);
 			pstmt.setString(13, tel);
 			pstmt.setString(14, address);
