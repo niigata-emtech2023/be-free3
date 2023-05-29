@@ -10,8 +10,9 @@
 	<h1>従業員削除画面a</h1>
 	<form action="employee-delete-servlet" method="post">
 	<%
-		List<EmployeeBean> employeelist = (List<EmployeeBean>) session.getAttribute("employeelist");
-		EmployeeBean employee = (EmployeeBean) employeelist;
+		//List<EmployeeBean> employeelist = (List<EmployeeBean>) session.getAttribute("employeelist");
+		//EmployeeBean employee = (EmployeeBean) employeelist;
+		EmployeeBean employee = (EmployeeBean) request.getAttribute("employee");
 	%>
 	<table border=1>
 		<tr><th>従業員コード</th><td><%=employee.getEmployeeCode() %></td></tr>

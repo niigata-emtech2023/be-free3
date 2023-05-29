@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-    background-color: rgba(170, 150, 141, 0.521);
+    /*background-color: rgba(170, 150, 141, 0.521);*/
      margin: 20px auto;
     padding: 30px 30px 30px;
 }
@@ -10,7 +10,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-}z
+}
 
 h1 {
     font-weight: normal;

@@ -82,56 +82,75 @@ public class EmployeeDAO {
 	 * @throws SQLException
 	 * @throws ClassNotFoundException
 	 */
-	public List<EmployeeBean> selectEmployee(String employeeCode) throws SQLException, ClassNotFoundException {
+	public EmployeeBean selectEmployee(String employeeCode) throws SQLException, ClassNotFoundException {
 
-		List<EmployeeBean> employeeList = new ArrayList<EmployeeBean>();
+		//List<EmployeeBean> employeeList = new ArrayList<EmployeeBean>();
+		EmployeeBean employee = new EmployeeBean();
+		
+		String sql = "SELECT * FROM employee WHERE employee_code = ?";
 
 		// データベースへの接続の取得、Statementの取得、SQLステートメントの実行
 		try (Connection con = ConnectionManager.getConnection();
-				PreparedStatement pstmt = con.prepareStatement("SELECT * FROM employee WHERE employee_code = ?")) {
+				PreparedStatement pstmt = con.prepareStatement(sql);) {
 
-			pstmt.setString(1, employeeCode);
-			
+//			pstmt.setString(1, employeeCode);
+//			
 			ResultSet res = pstmt.executeQuery();
-			
-			// 結果の操作
+//			
+//			// 結果の操作
 			while (res.next()) {
-				String surName = res.getString("sur_name");
-				String firstName = res.getString("first_name");
-				String surKanaName = res.getString("sur_kana_name");
-				String firstKanaName = res.getString("first_kana_name");
-				String gender = res.getString("gender");
-				String birthDate = res.getString("birth_date");
-				String sectionCode = res.getString("section_code");
-				String license_code = res.getString("license_code");
-				String hobbyCode = res.getString("hobby_code");
-				String joiningDate = res.getString("joining_date");
-				String mail = res.getString("mail");
-				String tel = res.getString("tel");
-				String address = res.getString("address");
-				String selfintroduction = res.getString("self_introduction");
-
-				EmployeeBean employee = new EmployeeBean();
-				employee.setEmployeeCode(employeeCode);
-				employee.setSurName(surName);
-				employee.setFirstName(firstName);
-				employee.setSurKanaName(surKanaName);
-				employee.setFirstKanaName(firstKanaName);
-				employee.setGender(gender);
-				employee.setBirthDate(birthDate);
-				employee.setSectionCode(sectionCode);
-				employee.setLicense_code(license_code);
-				employee.setHobbyCode(hobbyCode);
-				employee.setJoiningDate(joiningDate);
-				employee.setMail(mail);
-				employee.setTel(tel);
-				employee.setAddress(address);
-				employee.setSelfintroduction(selfintroduction);
-
-				employeeList.add(employee);
+				employee.setEmployeeCode(res.getString("employeeCode"));
+				employee.setSurName(res.getString("surName"));
+				employee.setFirstName(res.getString("firstName"));
+				employee.setSurKanaName(res.getString("surKanaName"));
+				employee.setFirstKanaName(res.getString("firstKanaName"));
+				employee.setGender(res.getString("gender"));
+				employee.setBirthDate(res.getString("birthDate"));
+				employee.setSectionCode(res.getString("sectionCode"));
+				employee.setLicense_code(res.getString("license_code"));
+				employee.setHobbyCode(res.getString("hobbyCode"));
+				employee.setJoiningDate(res.getString("joiningDate"));
+				employee.setMail(res.getString("mail"));
+				employee.setTel(res.getString("tel"));
+				employee.setAddress(res.getString("address"));
+				employee.setSelfintroduction(res.getString("selfintroduction"));
 			}
+//				String surName = res.getString("sur_name");
+//				String firstName = res.getString("first_name");
+//				String surKanaName = res.getString("sur_kana_name");
+//				String firstKanaName = res.getString("first_kana_name");
+//				String gender = res.getString("gender");
+//				String birthDate = res.getString("birth_date");
+//				String sectionCode = res.getString("section_code");
+//				String license_code = res.getString("license_code");
+//				String hobbyCode = res.getString("hobby_code");
+//				String joiningDate = res.getString("joining_date");
+//				String mail = res.getString("mail");
+//				String tel = res.getString("tel");
+//				String address = res.getString("address");
+//				String selfintroduction = res.getString("self_introduction");
+//
+//				EmployeeBean employee = new EmployeeBean();
+//				employee.setEmployeeCode(employeeCode);
+//				employee.setSurName(surName);
+//				employee.setFirstName(firstName);
+//				employee.setSurKanaName(surKanaName);
+//				employee.setFirstKanaName(firstKanaName);
+//				employee.setGender(gender);
+//				employee.setBirthDate(birthDate);
+//				employee.setSectionCode(sectionCode);
+//				employee.setLicense_code(license_code);
+//				employee.setHobbyCode(hobbyCode);
+//				employee.setJoiningDate(joiningDate);
+//				employee.setMail(mail);
+//				employee.setTel(tel);
+//				employee.setAddress(address);
+//				employee.setSelfintroduction(selfintroduction);
+//
+//				employeeList.add(employee);
+//		}
 		}
-		return employeeList;
+		return employee;
 	}
 
 	/**

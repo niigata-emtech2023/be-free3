@@ -32,8 +32,8 @@
 			<td><%=employee.getSectionName()%></td>
 			<td>
 				<form action="employee-detail-servlet" method="POST">
-					<input type="hidden" name="code" value="<%=employee.getEmployeeCode()%>">
-					<input type="submit" value="詳細">
+					<input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
+					<input type="submit" value="詳細表示">
 				</form>
 			</td>
 		</tr>
