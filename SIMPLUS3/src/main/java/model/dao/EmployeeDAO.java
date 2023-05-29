@@ -89,9 +89,12 @@ public class EmployeeDAO {
 
 		// データベースへの接続の取得、Statementの取得、SQLステートメントの実行
 		try (Connection con = ConnectionManager.getConnection();
-				Statement stmt = con.createStatement();
-				ResultSet res = stmt.executeQuery("SELECT * FROM employee WHERE employee_code = ?")) {
+				PreparedStatement pstmt = con.prepareStatement("SELECT * FROM employee WHERE employee_code = ?")) {
 
+			pstmt.setString(1, employeeCode);
+			
+			ResultSet res = pstmt.executeQuery();
+			
 			// 結果の操作
 			while (res.next()) {
 				String surName = res.getString("sur_name");
