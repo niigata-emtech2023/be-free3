@@ -82,6 +82,21 @@ public class EmployeeBean implements Serializable {
 	 * 自己紹介
 	 */
 	private String selfintroduction;
+	
+	/**
+	 * 性別名
+	 */
+	private String genderName;
+	
+	/**
+	 * 趣味名
+	 */
+	private String hobbyName;
+	
+	/**
+	 * 資格名
+	 */
+	private String licenseName;
 
 	public String getEmployeeCode() {
 		return employeeCode;
@@ -155,12 +170,12 @@ public class EmployeeBean implements Serializable {
 		this.sectionName = sectionName;
 	}
 
-	public String getLicense_code() {
+	public String getLicenseCode() {
 		return license_code;
 	}
 
-	public void setLicense_code(String license_code) {
-		this.license_code = license_code;
+	public void setLicenseCode(String licenseCode) {
+		this.license_code = licenseCode;
 	}
 
 	public String getHobbyCode() {
@@ -210,4 +225,30 @@ public class EmployeeBean implements Serializable {
 	public void setSelfintroduction(String selfintroduction) {
 		this.selfintroduction = selfintroduction;
 	}
+
+	public String getGenderName() {
+		return genderName;
+	}
+
+	public void setGenderName(String genderName) {
+		this.genderName = genderName;
+	}
+
+	public String getHobbyName() {
+		return hobbyName;
+	}
+
+	public void setHobbyName(String hobbyName) {
+		this.hobbyName = hobbyName;
+	}
+
+	public String getLicenseName() {
+		return licenseName;
+	}
+
+	public void setLicenseName(String licenseName) {
+		this.licenseName = licenseName;
+	}
+	
+	
 }

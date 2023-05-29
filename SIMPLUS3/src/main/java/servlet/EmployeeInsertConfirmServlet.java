@@ -79,7 +79,7 @@ public class EmployeeInsertConfirmServlet extends HttpServlet {
 		// リクエストスコープへの属性の設定
 		//request.setAttribute("count", count);
 		request.setAttribute("employee", employee);
-		RequestDispatcher rd=request.getRequestDispatcher("employee-insert-confilm.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("employee-insert-confirm.jsp");
 		rd.forward(request, response);
 	}
 

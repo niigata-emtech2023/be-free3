@@ -87,7 +87,7 @@ public class EmployeeDAO {
 		//List<EmployeeBean> employeeList = new ArrayList<EmployeeBean>();
 		EmployeeBean employee = new EmployeeBean();
 		
-		String sql = "SELECT * FROM employee WHERE employee_code = ?";
+		String sql = "SELECT t1.employee_code, t1.sur_name, t1.first_name, t1.sur_kana_name, t1.first_kana_name, t1.mail, t1.tel, t1.birth_date, t2.gender_name, t3.section_name, t1.joining_date, t4.license_name, t5.hobby_name, t1.self_introduction FROM employee t1 LEFT OUTER JOIN gender t2 ON t1.gender = t2.gender LEFT OUTER JOIN section t3 ON t1.section_code = t3.section_code LEFT OUTER JOIN license t4 ON t1.license_code = t4.license_code LEFT OUTER JOIN hobby t5 ON t1.hobby_code = t5.hobby_code WHERE employee_code = ?";
 
 		// データベースへの接続の取得、Statementの取得、SQLステートメントの実行
 		try (Connection con = ConnectionManager.getConnection();
@@ -104,15 +104,19 @@ public class EmployeeDAO {
 				employee.setFirstName(res.getString("first_name"));
 				employee.setSurKanaName(res.getString("sur_kana_name"));
 				employee.setFirstKanaName(res.getString("first_kana_name"));
-				employee.setGender(res.getString("gender"));
-				employee.setBirthDate(res.getString("birth_date"));
-				employee.setSectionCode(res.getString("section_code"));
-				employee.setLicense_code(res.getString("license_code"));
-				employee.setHobbyCode(res.getString("hobby_code"));
-				employee.setJoiningDate(res.getString("joining_date"));
 				employee.setMail(res.getString("mail"));
 				employee.setTel(res.getString("tel"));
+				employee.setBirthDate(res.getString("birth_date"));
+				employee.setGenderName(res.getString("gender_name"));
+				//employee.setGender(res.getString("gender"));
+				//employee.setSectionCode(res.getString("section_code"));
+				employee.setSectionName(res.getString("section_name"));
+				//employee.setLicense_code(res.getString("license_code"));
+//				employee.setHobbyCode(res.getString("hobby_code"));
+				employee.setJoiningDate(res.getString("joining_date"));
+				employee.setLicenseName(res.getString("license_name"));
 				employee.setAddress(res.getString("address"));
+				employee.setHobbyName(res.getString("hobby_name"));
 				employee.setSelfintroduction(res.getString("self_introduction"));
 			}
 //				String surName = res.getString("sur_name");
@@ -234,7 +238,7 @@ public class EmployeeDAO {
 			String gender = employee.getGender();
 			String birthDate = employee.getBirthDate();
 			String sectionCode = employee.getSectionCode();
-			String license_code = employee.getLicense_code();
+			String licenseCode = employee.getLicenseCode();
 			String hobbyCode = employee.getHobbyCode();
 			String joiningDate = employee.getJoiningDate();
 			String mail = employee.getMail();
@@ -250,7 +254,7 @@ public class EmployeeDAO {
 			pstmt.setString(6, gender);
 			pstmt.setString(7, birthDate);
 			pstmt.setString(8, sectionCode);
-			pstmt.setString(9, license_code);
+			pstmt.setString(9, licenseCode);
 			pstmt.setString(10, hobbyCode);
 			pstmt.setString(11, joiningDate);
 			pstmt.setString(12, mail);

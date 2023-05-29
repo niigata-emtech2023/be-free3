@@ -16,11 +16,11 @@
 		メールアドレス：<%=employee.getMail()%><br>
 		TEL：<%=employee.getTel()%><br>
 		生年月日：<%=employee.getBirthDate()%><br>
-		性別：<%=employee.getGender()%><br>
+		性別：<%=employee.getGenderName()%><br>
 		所属部署：<%=employee.getSectionName()%><br>
 		入社日：<%=employee.getJoiningDate()%><br>
-		保有資格：<%=employee.getLicense_code()%><br>
-		趣味：<%=employee.getHobbyCode()%><br>
+		保有資格：<%=employee.getLicenseName()%><br>
+		趣味：<%=employee.getHobbyName()%><br>
 		自己紹介：<%=employee.getSelfintroduction()%><br>
 	
 	<form action="employee-update-form-servlet" method="POST">
