@@ -56,11 +56,11 @@ public class EmployeeInsertServlet extends HttpServlet {
 			// DAOの利用
 			count = dao.insert(employee);
 		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 
 		// リクエストスコープへの属性の設定
-		//request.setAttribute("processingNumber", processingNumber);
+		request.setAttribute("count", count);
 
 		// リクエストの転送
 		RequestDispatcher rd = request.getRequestDispatcher("employee-insert-result.jsp");

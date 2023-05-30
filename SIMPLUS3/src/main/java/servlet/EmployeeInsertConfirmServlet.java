@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.dao.EmployeeDAO;
 import model.entity.EmployeeBean;
 
 /**
@@ -52,7 +54,7 @@ public class EmployeeInsertConfirmServlet extends HttpServlet {
 		String gender=request.getParameter("gender");
 		String birthDate =request.getParameter("birth_date");
 		String joiningDate=request.getParameter("joining_date");
-		String section = request.getParameter("section");
+		String section = request.getParameter("sectionName");
 
 		EmployeeBean employee = new EmployeeBean();
 		employee.setEmployeeCode(code);
@@ -68,16 +70,16 @@ public class EmployeeInsertConfirmServlet extends HttpServlet {
 		employee.setJoiningDate(joiningDate);
 		employee.setSectionName(section);
 		// DAOの生成
-		//EmployeeDAO dao = new EmployeeDAO();
-		//int count = 0; // 処理件数
-		//try {
+	    EmployeeDAO dao = new EmployeeDAO();
+		int count = 0; // 処理件数
+		try {
 			// DAOの利用
-			//count = dao.insert(employee);
-		//} catch (ClassNotFoundException | SQLException e) {
+			count = dao.insert(employee);
+		} catch (ClassNotFoundException | SQLException e) {
 			//e.printStackTrace();
-		//}
+		}
 		// リクエストスコープへの属性の設定
-		//request.setAttribute("count", count);
+		request.setAttribute("count", count);
 		request.setAttribute("employee", employee);
 		RequestDispatcher rd=request.getRequestDispatcher("employee-insert-confirm.jsp");
 		rd.forward(request, response);
