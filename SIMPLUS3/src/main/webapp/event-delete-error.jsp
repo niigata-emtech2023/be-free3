@@ -15,7 +15,7 @@
 	
 	<%=event.getEventName() %>を削除できませんでした。
 	
-	<form action="event-list.jsp" method="post">
+	<form action="event-list-servlet" method="post">
 	<input type="submit" value="一覧画面に戻る">
 	</form>
 </body>
