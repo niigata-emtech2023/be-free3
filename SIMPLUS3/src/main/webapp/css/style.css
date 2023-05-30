@@ -64,6 +64,22 @@ input[type="submit"]:hover {
     transition: background-color 1s;
 }*/
 
+.logout_submit {
+	width: 150px;
+    font-size: 15px;
+    color: #fff;
+	display: inline-block;
+    padding: 15px 0px;
+    text-align: center;
+	background-color: #a8ddd4;
+    border: 1px solid #a8ddd4;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 1s;
+    margin-top: 20px;
+}
+
 .main_submit {
 	width: 200px;
     font-size: 15px;

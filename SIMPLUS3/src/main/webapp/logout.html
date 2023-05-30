@@ -2,16 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ログアウト完了</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-       <form action="logout-servlet"method="post">
-       <h2>ログアウトしました</h2>
+       <div class="login_form_btm">
+         <form action="logout-servlet"method="post">
+         <h2>ログアウトしました</h2>
+         </form>
+         <form action="login.html"method="post">
+       <input class="main_submit" type="submit"value="ログイン画面へ戻る">
        </form>
-       <form action="login.html"method="post">
-       <input type="submit"value="ログイン画面へ戻る">
-       </form>
-       
+       </div>
 
 </body>
 </html>
