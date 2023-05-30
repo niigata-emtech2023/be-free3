@@ -10,11 +10,7 @@
       
       <h1>保有資格登録画面</h1>
          
-         <%
-		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
-		%>
-	    <%=employee.getSurName()%><%=employee.getFirstName()%>さんの保有資格登録画面です。
-         
+       
          <form action="license-insert-confirm-servlet"method="post">
          保有資格選択<span>※必須</span>：
           <select name="licenceName">

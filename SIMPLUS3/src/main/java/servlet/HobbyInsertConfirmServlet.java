@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,20 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.EmployeeDAO;
 import model.entity.EmployeeBean;
 
 /**
- * Servlet implementation class LicenseInsertServlet
+ * Servlet implementation class HobbyInsertConfirmServlet
  */
-@WebServlet("/license-insert-servlet")
-public class LicenseInsertServlet extends HttpServlet {
+@WebServlet("/hobby-insert-confirm-servlet")
+public class HobbyInsertConfirmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LicenseInsertServlet() {
+    public HobbyInsertConfirmServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,31 +42,21 @@ public class LicenseInsertServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		// リクエストオブジェクトのエンコーディング方式の指定
 				request.setCharacterEncoding("UTF-8");
+				// リクエストパラメータの取得
+				String hobbyName = request.getParameter("hobbyName");
+				String selfIntroduction = request.getParameter("selfIntroduction");
 				
-				// セッションオブジェクトの取得
+				EmployeeBean employee = new EmployeeBean();
+				employee.setHobbyName(hobbyName);
+				employee.setSelfintroduction(selfIntroduction);
+				
+				
 				HttpSession session = request.getSession();
-
-				// セッションスコープからの属性値の取得
-				EmployeeBean license = (EmployeeBean) session.getAttribute("license");
-
-				// DAOの生成
-				EmployeeDAO dao = new EmployeeDAO();
-
-				int count = 0; //処理件数
-
-				try {
-					// DAOの利用
-					count = dao.insert(license);
-				} catch (ClassNotFoundException | SQLException e) {
-					e.printStackTrace();
-				}
-
-				// リクエストスコープへの属性の設定
-				request.setAttribute("count", count);
-
-				// リクエストの転送
-				RequestDispatcher rd = request.getRequestDispatcher("license-insert-result.jsp");
-				rd.forward(request, response);
+				 
+				 session.setAttribute("employee", employee);
+				 
+				 RequestDispatcher rd = request.getRequestDispatcher("hobby-record-confirm.jsp");
+				 rd.forward(request, response);
 	}
 
 }
