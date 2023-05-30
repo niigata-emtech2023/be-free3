@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+.confirm-field{
+    width: 1000px;
+    margin: 60px auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.c-form-submit-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #5c87a6;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 20px;
+    text-align : center;
+}
+
+.c-form-submit-button:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+.c-form-back-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ADADAD;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 20px;
+    text-align : center;
+}
+
+.c-form-submit-button:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+.double_submit{
+    padding-right: 30px;
+}
+
+ul {
+display: flex;
+padding:0;
+list-style: none;
+margin: 3px auto;
+margin-top:3px;
+    padding: 3px;
+    width: 100%;
+
+}
+li {
+padding:10px;
+margin: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 500px;
+    margin: 10px auto;
+}
+table tr {
+    border-bottom: 1px solid #ACACAC;
+}
+table tr th,
+table tr td {
+    text-align: left;
+    vertical-align: top;
+}
+table tr th {
+    width: 150px;
+    font-weight: bold;
+    border-bottom: 1px solid #0070BD;
+    padding: 5px 0;
+    color: #0070BD;
+}
+table tr td {
+    width: 75%;
+    padding: 5px 5px;
+}
+
+.c-form-submit-button:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+.double_submit{
+    margin: 20px auto;
+}
+
+li {
+    width: 50%;
+}

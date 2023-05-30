@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.c-form-submit-button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5c87a6;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 20px;
+    text-align : center;
+}
+
+.c-form-submit-button:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+.double_submit{
+    padding-right: 30px;
+}
+
+li {
+    width: 50%;
+}

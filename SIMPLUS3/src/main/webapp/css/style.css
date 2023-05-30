@@ -127,8 +127,61 @@ input[type="submit"]:hover {
   border-bottom: 2px solid #1d7dcc;
 }*/
 
-/*
-.header_logo {
+
+/*.header_logo {
 	text-align: center
+}*/
+
+.c-form-submit-button2 {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ADADAD;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-align : center;
 }
-*/
+
+.c-form-submit-button2:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button2:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+/*キャンセル・戻る用赤ボタン*/
+.c-form-cancel-button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FA3932;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 20px;
+    text-align : center;
+}
+
+.c-form-cancel-button:hover {
+    background-color: #000;
+}
+
+.c-form-cancel-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
