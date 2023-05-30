@@ -29,12 +29,12 @@ public class EventDAO {
 
 			// 結果の操作
 			while (res.next()) {
-				//String event_code = res.getString("event_code");
+				String event_code = res.getString("event_code");
 				String event_date = res.getString("event_date");
 				String event_name = res.getString("event_name");
 
 				EventBean event = new EventBean();
-				//event.setEventDate(event_code);
+				event.setEventCode(event_code);
 				event.setEventDate(event_date);
 				event.setEventName(event_name);
 				eventList.add(event);
