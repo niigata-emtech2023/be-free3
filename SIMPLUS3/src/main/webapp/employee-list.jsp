@@ -10,6 +10,7 @@
 
 </head>
 <body>
+<%@ include file="header.jsp" %>
   <div class = "container">
     <h1>社員情報一覧</h1>
 	<%

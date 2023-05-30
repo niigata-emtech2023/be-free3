@@ -2,7 +2,7 @@
 body {
     /*background-color: rgba(170, 150, 141, 0.521);*/
      margin: 20px auto;
-    padding: 30px 30px 30px;
+    padding: 10px 30px 30px;
     background: #efefef;
 }
 
@@ -126,3 +126,9 @@ input[type="submit"]:hover {
   background-color: #1d7dcc;
   border-bottom: 2px solid #1d7dcc;
 }*/
+
+/*
+.header_logo {
+	text-align: center
+}
+*/
