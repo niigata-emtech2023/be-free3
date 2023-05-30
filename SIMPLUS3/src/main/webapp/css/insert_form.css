@@ -83,4 +83,99 @@ table {
     background: linear-gradient(transparent 90%, #70c7b8 90%);
 }
 
+.c-form-select {
+    position: relative;
+}
 
+.c-form-select:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(135deg);
+    pointer-events: none;
+}
+
+.c-form-select select {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.c-form-select select::-ms-expand {
+    display: none;
+}
+
+.c-form-select select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+.c-form-submit-button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a8ddd4;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align : center;
+}
+
+.c-form-submit-button:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+.c-form-submit-button2 {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a8ddd4;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align : center;
+}
+
+.c-form-submit-button2:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button2:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}

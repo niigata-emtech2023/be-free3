@@ -59,11 +59,11 @@
   <tr><th>入社日<span class="req_span">必須</span></th><td><input type="date" name="joining_date" required></td></tr>
 </table>
 
-                <input type="submit" value="確認">
+                <input type="submit" value="確認" class="c-form-submit-button">
                 </form>
                 
                 <form action="menu.jsp" method="post">
-                	<input type="submit" value="メニューへ戻る"> 
+                	<input type="submit" value="登録を中止してメニューへ戻る" class="c-form-submit-button2"> 
                 </form>
   </div>
 <%@ include file="footer.jsp" %>
