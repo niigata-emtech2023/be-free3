@@ -1,6 +1,5 @@
 package model.entity;
 import java.io.Serializable;
-import java.sql.Date;
 
 public class EventBean implements Serializable {
     /**
@@ -16,7 +15,7 @@ public class EventBean implements Serializable {
 	/**
 	 * 開催日時
 	 */
-	private Date eventDate;
+	private String eventDate;
 	
 	/**
 	 * 開催場所
@@ -53,11 +52,11 @@ public class EventBean implements Serializable {
 		this.eventName = eventName;
 	}
 
-	public Date getEventDate() {
+	public String getEventDate() {
 		return eventDate;
 	}
 
-	public void setEventDate(Date eventDate) {
+	public void setEventDate(String eventDate) {
 		this.eventDate = eventDate;
 	}
 
