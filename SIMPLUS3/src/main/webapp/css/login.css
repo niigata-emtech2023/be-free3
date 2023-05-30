@@ -22,7 +22,7 @@ body {
 }
 
 .login_form .login_p {
-  font-size: 10px;
+  font-size: 20px;
 }
 
 .login_form .login_input[type=text], .login_form .login_input[type=password] {

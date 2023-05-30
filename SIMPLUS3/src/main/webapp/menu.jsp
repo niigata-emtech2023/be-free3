@@ -36,20 +36,27 @@ pageEncoding="UTF-8"%>
 		    <input type="submit" value="従業員登録">
    	    </form><br>  -->
    	  
-   	  <p>▶所属する従業員の保有資格を登録できます</p>
+   	  <!--  <p>▶所属する従業員の保有資格を登録できます</p>
    	  <div class ="none-list">
 	    <form action="license-insert-form-servlet" method="POST">
 		    <input type="submit" value="保有資格情報登録" class="main_submit">
 	    </form><br>
-	  </div>
+	  </div> -->
 	
-	  <p>▶従業員の趣味・自己紹介を登録できます</p>
-	  <div class ="none-list">
-	    <form action="hobby-insert-form-servlet" method="POST">
-		    <input type="submit" value="趣味・自己紹介登録" class="main_submit">
-	    </form><br>
-	  </div>
-	  
+	<p>▶従業員の保有資格、趣味・自己紹介を登録できます</p>
+	  <ul>
+	      <li>
+	        <form action="license-insert-form-servlet" method="POST">
+		      <input type="submit" value="保有資格情報登録" class="main_submit">
+	        </form>
+	      </li>
+	      <li>
+	        <form action="hobby-insert-form-servlet" method="POST">
+		      <input type="submit" value="趣味・自己紹介登録" class="main_submit">
+	        </form>
+	      </li>
+	  </ul>
+	    
 	  <p>▶今後開催予定の社内イベントを一覧表示・登録します</p>
 	  <!-- <div class = "yokonarabi"> -->
 	  <ul>
