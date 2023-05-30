@@ -41,7 +41,7 @@ public class EmployeeInsertServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// セッションオブジェクトの取得
 		HttpSession session = request.getSession();
 
 		// セッションスコープからの属性値の取得
@@ -56,7 +56,7 @@ public class EmployeeInsertServlet extends HttpServlet {
 			// DAOの利用
 			count = dao.insert(employee);
 		} catch (ClassNotFoundException | SQLException e) {
-			//e.printStackTrace();
+			e.printStackTrace();
 		}
 
 		// リクエストスコープへの属性の設定

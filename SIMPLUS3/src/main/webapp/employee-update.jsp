@@ -27,7 +27,7 @@
 		保有資格：    <input type="text" name="license_code" value="<jsp:getProperty name="employee" property="license_code" />"><br>
 		趣味：        <input type="text" name="hobbyCode" value="<jsp:getProperty name="employee" property="hobbyCode" />"><br>
 		自己紹介：    <input type="text" name="selfintroduction" value="<jsp:getProperty name="employee" property="selfintroduction" />"><br>
-		<input type="submit" value="変更する">
+		<input type="submit" value="確認">
 		
 	</form>
 	

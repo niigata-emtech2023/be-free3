@@ -175,9 +175,9 @@ public class EmployeeDAO {
 	 * @throws ClassNotFoundException
 	 */
 	public int insert(EmployeeBean employee) throws SQLException, ClassNotFoundException {
-		int cnt = 0; // 処理件数
+		int count = 0; // 処理件数
 		try (Connection con = ConnectionManager.getConnection();
-				PreparedStatement pstmt = con.prepareStatement("INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?,?)")) {
+				PreparedStatement pstmt = con.prepareStatement("INSERT INTO employee(employee_code,sur_name,first_name,sur_kana_name,first_kana_name,gender,birth_date,section_code,joining_date,mail,tel,address) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")) {
 
 			/**
 			 * データ受け取り
@@ -210,11 +210,11 @@ public class EmployeeDAO {
 			pstmt.setString(12, address);
 
 			// SQLステートメントの実行
-			cnt = pstmt.executeUpdate();
+			count = pstmt.executeUpdate();
 
 		}
 
-		return cnt;
+		return count;
 	}
 
 	/**

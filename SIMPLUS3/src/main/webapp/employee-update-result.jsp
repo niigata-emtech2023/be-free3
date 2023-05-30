@@ -8,8 +8,8 @@
 </head>
 <body>
 	<%
-		int processingNumber = (Integer) request.getAttribute("processingNumber");
-		if (processingNumber > 0) {
+		int cnt = (Integer) request.getAttribute("cnt");
+		if (cnt > 0) {
 	%>
 	次のデータを変更登録しました。<br>
 	<%

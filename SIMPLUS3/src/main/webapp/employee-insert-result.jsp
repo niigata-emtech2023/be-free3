@@ -9,7 +9,7 @@
 <body>
        <%
 	int count = (Integer) request.getAttribute("count");
-	if (count != 0) {
+	if (count > 0) {
 	%>
 	以下の従業員情報を登録しました。
 	<br>
@@ -21,7 +21,7 @@
 	<%
 }
 %>
-	<jsp:useBean id="employee" class="model.entity.EmployeeBean"scope="request" />
+	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session" />
 	
 	    コード:<jsp:getProperty  name="employee"  property="employeeCode" /><br> 
 	    氏:<jsp:getProperty  name="employee"  property="surName" /><br> 
@@ -33,7 +33,7 @@
 		住所:<jsp:getProperty name="employee"  property="address" /><br>
 		性別:<jsp:getProperty name="employee"  property="gender" /><br>
 		生年月日:<jsp:getProperty name="employee"  property="birthDate" /><br>
-		所属部署:<jsp:getProperty name="employee"  property="sectionName" /><br>
+		所属部署:<jsp:getProperty name="employee"  property="sectionCode" /><br>
 		入社日:<jsp:getProperty name="employee"  property="joiningDate" /><br>
 		
      
