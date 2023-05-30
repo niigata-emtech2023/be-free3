@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.entity.HobbyBean;
+import model.entity.EmployeeBean;
 
 public class HobbyDAO {
 	
@@ -32,6 +33,14 @@ public class HobbyDAO {
 			}
 		}
 		return hobbyList;
+	}
+	
+	public int insert(EmployeeBean employeeCode) throws SQLException, ClassNotFoundException{
+		
+		int cnt = 0;
+		
+		String sql = "INSERT INTO employee(hobby_code) VALUE ?"
+				
 	}
 	
 	public int insert(HobbyBean hobby) throws SQLException, ClassNotFoundException {
