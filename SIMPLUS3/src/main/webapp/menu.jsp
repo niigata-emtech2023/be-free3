@@ -9,6 +9,7 @@ pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
   <div class = "container">
   <h1>メニュー</h1>
    
@@ -74,6 +75,6 @@ pageEncoding="UTF-8"%>
   	    </div><br> -->
       </div>
     </div>
-
+<%@ include file="footer.jsp" %>
 </body>
 </html>
