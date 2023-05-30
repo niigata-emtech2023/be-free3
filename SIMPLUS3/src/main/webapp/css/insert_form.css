@@ -138,7 +138,7 @@ table {
     cursor: pointer;
     border: 2px solid transparent;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align : center;
 }
 
@@ -157,7 +157,7 @@ table {
     padding: 8px;
     border: none;
     border-radius: 4px;
-    background-color: #a8ddd4;
+    background-color: #ADADAD;
     color: #fff;
     font-weight: bold;
     appearance: none;
@@ -165,8 +165,6 @@ table {
     -moz-appearance: none;
     cursor: pointer;
     border: 2px solid transparent;
-    margin-top: 50px;
-    margin-bottom: 50px;
     text-align : center;
 }
 
@@ -178,4 +176,42 @@ table {
     outline: 0;
     background-color: #000;
     border: 2px solid rgb(33, 150, 243);
+}
+
+table {
+    border-collapse: collapse;  /* セルの線を重ねる */
+}
+ 
+th,td {
+    padding: 5px 10px;          /* 余白指定 */
+    height: 80px;
+}
+ 
+th {
+    background-color: #FADBDA;  /* 背景色指定 */
+    color:  #000;               /* 文字色指定 */
+    font-weight:  bold;       /* 文字の太さ指定 */
+    position:  relative;        /* 位置指定 */
+    z-index: 10;                /* 重なり調整 */
+}
+ 
+td {
+    background-color:  #eee; /* 背景色指定 */
+    padding-left: 25px;         /* 余白指定 */
+}
+ 
+th::after {
+    content:'';                 /* 空の要素を作る */
+    position:  absolute;        /* 位置指定 */
+    height: 24px;               /* 高さ指定 */
+    width: 24px;                /* 幅指定 */
+    background-color: #FADBDA;  /* 背景色指定 */
+    transform:  rotate(45deg);  /* 要素を回転 */
+    top: 5px;                   /* 位置指定 */
+    right: -12px;               /* 位置指定 */
+    z-index:  -1;               /* 重なり調整 */
+}
+ 
+tr {
+    border-bottom:  solid #fff; /* 線指定 */
 }

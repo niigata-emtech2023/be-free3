@@ -15,13 +15,13 @@
    		<h1>従業員情報登録</h1>
 		   <table>
   <tr><th>従業員コード<span class="req_span">必須</span></th><td><input type="text" size="5" name="employeeCode" required class="form_text"></td></tr>
-  <tr><th>氏<span class="req_span">必須</span><p class="note">全角漢</p></th><td><input type="text" size="10"  name="sur_name"  required class="form_text"></td></tr>
-  <tr><th>名<span class="req_span">必須</span><p class="note">全角漢</p></th><td><input type="text" size="10" name="first_name"  required class="form_text"></td></tr>
-  <tr><th>氏（かな）<span class="req_span">必須</span><p class="note">全角かな</p></th><td><input type="text" size="20" name="sur_kana_name"  required class="form_text"></td></tr>
-  <tr><th>名（かな）<span class="req_span">必須</span><p class="note">全角かな</p></th><td><input type="text" size="20" name="first_kana_name" required class="form_text"></td></tr>
-  <tr><th>メールアドレス<span class="req_span">必須</span></th><td><input type="email" size="10" name="mail"  required class="form_text"></td></tr>
-  <tr><th>電話番号<span class="req_span">必須</span><p class="note">ハイフンありで入力（例）111-2222-3333</p></th><td><input type="tel" size="13" maxlength="13" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required class="form_text"></td></tr>
-  <tr><th>住所<span class="req_span">必須</span></th><td><input type="text" size="40" name="address" required class="form_text">
+  <tr><th>氏<span class="req_span">必須</span><p class="note">全角漢</p></th><td><input type="text" size="10"  name="sur_name"  required placeholder="苗字を入力してください" class="form_text"></td></tr>
+  <tr><th>名<span class="req_span">必須</span><p class="note">全角漢</p></th><td><input type="text" size="10" name="first_name"  required   placeholder="名前を入力してください" class="form_text"></td></tr>
+  <tr><th>氏（かな）<span class="req_span">必須</span><p class="note">全角かな</p></th><td><input type="text" size="20" name="sur_kana_name" placeholder="ひらがなで入力してください"  required class="form_text"></td></tr>
+  <tr><th>名（かな）<span class="req_span">必須</span><p class="note">全角かな</p></th><td><input type="text" size="20" name="first_kana_name"  placeholder="ひらがなで入力してください" required class="form_text"></td></tr>
+  <tr><th>メールアドレス<span class="req_span">必須</span></th><td><input type="email" size="10" name="mail"  required  placeholder="「@」のあとも含めて入力してください" class="form_text"></td></tr>
+  <tr><th>電話番号<span class="req_span">必須</span><p class="note">ハイフンありで入力</p></th><td><input type="tel" size="13" maxlength="13" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="（例）111-2222-3333" required class="form_text"></td></tr>
+  <tr><th>住所<span class="req_span">必須</span></th><td><input type="text" size="40" name="address" required placeholder="住所を入力してください" class="form_text">
   <tr><th>性別<span class="req_span">必須</span></th><td>
                  <div class="c-form-radio">
                    <label>
