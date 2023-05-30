@@ -19,11 +19,11 @@
 	<table>
 	  <thead>
 		<tr>
-			<th>社員コード</th>
-			<th>氏名</th>
-			<th>かな</th>
-			<th>所属部署</th>
-			<th></th>
+			<th class="th1">社員コード</th>
+			<th class="th2">氏名</th>
+			<th class="th3">かな</th>
+			<th class="th4">所属部署</th>
+			<th class="th5"></th>
 		</tr>
 	  </thead>
 	  <tbody>
@@ -31,11 +31,11 @@
 			for (EmployeeBean employee : employeeList) {
 		%>
 		<tr>
-			<td><span class="str_td"><%=employee.getEmployeeCode()%></strong></td>
-			<td><%=employee.getSurName() + employee.getFirstName()%></td>
-			<td><%=employee.getSurKanaName() + employee.getFirstKanaName()%></td>
-			<td><%=employee.getSectionName()%></td>
-			<td>
+			<td class="td1"><span class="str_td"><%=employee.getEmployeeCode()%></span></td>
+			<td class="td2"><%=employee.getSurName() + employee.getFirstName()%></td>
+			<td class="td3"><%=employee.getSurKanaName() + employee.getFirstKanaName()%></td>
+			<td class="td4"><%=employee.getSectionName()%></td>
+			<td class="td5">
 				<form action="employee-detail-servlet" method="POST">
 					<input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
 					<input type="submit" value="詳細表示" class="detail-submit">
