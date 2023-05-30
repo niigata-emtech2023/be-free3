@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-.login_body {
-  background-color: rgba(170, 150, 141, 0.521);
+body {
+  background-color: #efefef;
 }
 
 .login_form {
-  width: 400px;
+  width: 500px;
   padding: 40px 10px;
   position: absolute;
   top: 50%;
@@ -16,7 +16,7 @@
 }
 
 .login_form .login_h1, .login_form .login_p {
-  color: #96514d;
+  color: #5c87a6;
   font-weight: 500;
   /*back-ground:*/
 }
@@ -25,31 +25,31 @@
   font-size: 10px;
 }
 
-.login_form .login_input[type=id], .login_form .login_input[type=password] {
+.login_form .login_input[type=text], .login_form .login_input[type=password] {
   border: 0;
   /*background: none;*/
   /*追加back-ground:#fff; */
   display: block;
-  margin: 20px auto;
-  border: 2px solid #a8ddd4;
+  margin: 5px auto;
+  border: 2px solid #000;
   padding: 15px 10px;
   width: 200px;
-  /* outline: none; ボタンの枠線を消す*/
+  outline: none; /* ボタンの枠線を消す*/
+  /*追加
+  outline: 3px ridge #bb9a9a;*/
   /*追加*/
-  outline: 5px ridge #bb9a9a;
-  /*追加*/
-  border-radius: 2rem;
+  border-radius: 2px;
   /*border-radius: 24px;*/
   transition: 0.25s; /*ゆっくりアニメーション*/
   text-align: center;
 }
 
 /*":focus"で、入力時（クリック時）に色が変わる*/
-.login_form .login_input[type=id]:focus, .login_form .login_input[type=password]:focus {
+.login_form .login_input[type=text]:focus, .login_form .login_input[type=password]:focus {
   width: 280px;
   background-color: #fff;
   /*追加*/
-  color: #bb9a9a;
+  color: #5c87a6;
 }
 
 .login_form .login_input[type=submit] {
@@ -77,4 +77,46 @@
   border: 2px solid #a8ddd4;
   /*追加*/
   color: #fff;
+}
+
+.login_form .login_input[type=reset] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #a8ddd4;
+  padding: 15px 10px;
+  width: 200px;
+  outline: none;
+  color: #000;
+  /*追加*/
+  outline: 5px ridge #a8ddd4;
+  /*追加*/
+  border-radius: 2rem;
+  /*border-radius: 25px;*/
+  transition: 0.25s;
+  text-align: center;
+  cursor: pointer; /*カーソルデザインの変更*/
+}
+
+.login_form .login_input[type=reset]:hover {
+  background-color: #a8ddd4;
+  border: 2px solid #a8ddd4;
+  /*追加*/
+  color: #fff;
+}
+
+ul {
+display: flex;
+padding:0;
+list-style: none;
+margin: 3px auto;
+margin-top:3px;
+    padding-left:23px;
+    width: 100%;
+
+}
+li {
+padding:10px;
+margin: 5px;
 }
