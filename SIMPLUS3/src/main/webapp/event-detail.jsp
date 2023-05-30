@@ -20,7 +20,7 @@
 		<tr><th>開催場所</th><td><%=event.getEventPlace() %></td></tr>
 		<tr><th>イベント詳細</th><td><%=event.getSelfIntroduction() %></td></tr>
 		</table>
-		<input type="radio" name="join" value="参加">参加
+		<input type="radio" name="join" value="参加" checked>参加
 		<input type="radio" name="join" value="不参加">不参加
 		<input type="submit" formaction="" value="送信"><br>
 		

@@ -52,7 +52,7 @@ public class EventDeleteServlet extends HttpServlet {
 		int cnt = 0;
 
 		try {
-			cnt = dao.delete(eventCode);
+			cnt = dao.Delete(eventCode);
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
