@@ -5,7 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>従業員情報登録画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
+<body>
+<%@ include file="header.jsp" %>
    <form action="employee-insert-confirm-servlet"method="post">
    		<h1>従業員情報登録</h1>
 		   従業員コード:<span>※必須</span><input type="text" size="10" name="employeeCode" required><br>
@@ -35,7 +38,6 @@
                 <form action="menu.jsp" method="post">
                 	<input type="submit" value="メニューへ戻る"> 
                 </form>
-<body>
-
+<%@ include file="footer.jsp" %>
 </body>
 </html>

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>従業員登録確認画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 <%@ include file="header.jsp" %>

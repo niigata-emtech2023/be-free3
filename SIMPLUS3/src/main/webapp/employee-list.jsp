@@ -53,5 +53,6 @@
         <input type="submit" value="メニューに戻る" class="main_submit">
 	</form>
   </div>
+  <%@ include file="footer.jsp" %>
 </body>
 </html>
