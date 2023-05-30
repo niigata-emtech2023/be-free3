@@ -63,10 +63,10 @@ public class EventDAO {
 
 			while (res.next()) {
 				event.setEventName(res.getString("event_name"));
-				event.setEventName(res.getString("organizer"));
-				event.setEventName(res.getString("event_date"));
-				event.setEventName(res.getString("event_place"));
-				event.setEventName(res.getString("self_introduction"));
+				event.setOrganizer(res.getString("organizer"));
+				event.setEventDate(res.getString("event_date"));
+				event.setEventPlace(res.getString("event_place"));
+				event.setSelfIntroduction(res.getString("self_introduction"));
 			}
 		}
 		return event;
