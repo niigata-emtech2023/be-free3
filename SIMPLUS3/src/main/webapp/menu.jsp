@@ -38,14 +38,14 @@ pageEncoding="UTF-8"%>
    	  
    	  <p>▶所属する従業員の保有資格を登録できます</p>
    	  <div class ="none-list">
-	    <form action="license-insert-servlet" method="POST">
+	    <form action="license-insert-form-servlet" method="POST">
 		    <input type="submit" value="保有資格情報登録" class="main_submit">
 	    </form><br>
 	  </div>
 	
 	  <p>▶従業員の趣味・自己紹介を登録できます</p>
 	  <div class ="none-list">
-	    <form action="hobby-insert-servlet" method="POST">
+	    <form action="hobby-insert-form-servlet" method="POST">
 		    <input type="submit" value="趣味・自己紹介登録" class="main_submit">
 	    </form><br>
 	  </div>
