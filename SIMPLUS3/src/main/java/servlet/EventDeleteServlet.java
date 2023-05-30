@@ -59,11 +59,11 @@ public class EventDeleteServlet extends HttpServlet {
 		}
 
 		if(cnt != 0) {
-			RequestDispatcher rd = request.getRequestDispatcher("employee-delete-result.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("event-delete-result.jsp");
 			rd.forward(request, response);
 
 		}else {
-			RequestDispatcher rd = request.getRequestDispatcher("employee-delete-error.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("event-delete-error.jsp");
 			rd.forward(request, response);	
 
 		}
