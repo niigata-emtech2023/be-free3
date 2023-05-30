@@ -14,7 +14,7 @@ public class EventDAO {
 	/**
 	 * すべての従業員のリストを返します。
 	 * 
-	 * @return 社内イベントのリスト
+	 * @return 社内イベントの一覧
 	 * @throws SQLException
 	 * @throws ClassNotFoundException
 	 */
@@ -31,7 +31,7 @@ public class EventDAO {
 			while (res.next()) {
 				String event_date = res.getString("event_date");
 				String event_name = res.getString("event_name");
-				
+
 				EventBean event = new EventBean();
 				event.setEventDate(event_date);
 				event.setEventName(event_name);
@@ -40,21 +40,28 @@ public class EventDAO {
 		}
 		return eventList;
 	}
-	
+
+	/**
+	 * 社内イベント詳細
+	 * 
+	 * @param eventDate
+	 * @return
+	 * @throws SQLException
+	 * @throws ClassNotFoundException
+	 */
 	public EventBean selectEvent(String eventDate) throws SQLException, ClassNotFoundException {
-		
+
 		EventBean event = new EventBean();
-		
-		String sql = "SELECT event_name,organizer,event_date,event_place,self_introduction FROM event WHERE event_code = ?"; 
-				
-		try(Connection con = ConnectionManager.getConnection();
-				PreparedStatement pstmt = con.prepareStatement(sql);){
-			
+
+		String sql = "SELECT event_name,organizer,event_date,event_place,self_introduction FROM event WHERE event_code = ?";
+
+		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql);) {
+
 			pstmt.setString(1, eventDate);
 //			
 			ResultSet res = pstmt.executeQuery();
-			
-			while(res.next()) {
+
+			while (res.next()) {
 				event.setEventName(res.getString("event_name"));
 				event.setEventName(res.getString("organizer"));
 				event.setEventName(res.getString("event_date"));
@@ -65,4 +72,86 @@ public class EventDAO {
 		return event;
 	}
 
+	/**
+	 * 社内イベントの登録
+	 * 
+	 * @param event
+	 * @return
+	 * @throws SQLException
+	 * @throws ClassNotFoundException
+	 */
+	public int insert(EventBean event) throws SQLException, ClassNotFoundException {
+		int count = 0; // 処理件数
+		try (Connection con = ConnectionManager.getConnection();
+				PreparedStatement pstmt = con.prepareStatement(
+						"INSERT INTO event(event_code,event_name,event_date,event_place,organizer,self_introduction) VALUES(?,?,?,?,?,?)")) {
+
+			String eventCode = event.getEventCode();
+			String eventName = event.getEventName();
+			String Organizer = event.getOrganizer();
+			String EventDate = event.getEventDate();
+			String EventPlace = event.getEventPlace();
+			String SelfIntroduction = event.getSelfIntroduction();
+
+			// プレースホルダへの値の設定
+			pstmt.setString(1, eventCode);
+			pstmt.setString(2, eventName);
+			pstmt.setString(3, EventDate);
+			pstmt.setString(4, EventPlace);
+			pstmt.setString(5, Organizer);
+			pstmt.setString(6, SelfIntroduction);
+
+			// SQLステートメントの実行
+			count = pstmt.executeUpdate();
+		}
+		return count;
+	}
+
+	public int update(EventBean event) throws SQLException, ClassNotFoundException {
+		int cnt = 0; // 処理件数
+
+		String sql = "UPDATE event SET event_name = ?,event_date = ?,event_place = ?,organizer = ?,self_introduction = ? WHERE event_code = ?";
+
+		// データベースへの接続の取得、PreparedStatementの取得
+		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql)) {
+
+			/**
+			 * データ受け取り
+			 */
+			String EventCode = event.getEventCode();
+			String EventName = event.getEventName();
+			String Organizer = event.getOrganizer();
+			String EventDate = event.getEventDate();
+			String EventPlace = event.getEventPlace();
+			String SelfIntroduction = event.getSelfIntroduction();
+
+			// プレースホルダへの値の設定
+			pstmt.setString(1, EventName);
+			pstmt.setString(2, EventDate);
+			pstmt.setString(3, EventPlace);
+			pstmt.setString(4, Organizer);
+			pstmt.setString(5, SelfIntroduction);
+			pstmt.setString(6, EventCode);
+
+			// SQLステートメントの実行
+			cnt = pstmt.executeUpdate();
+
+		}
+		return cnt;
+	}
+
+	public int Delete(String eventCode) throws SQLException, ClassNotFoundException {
+		int cnt = 0; // 処理件数
+
+		String sql = "DELETE FROM event WHERE event_code = ?";
+
+		// データベースへの接続の取得、PreparedStatementの取得
+		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql)) {
+
+			pstmt.setString(1, eventCode);
+
+			cnt = pstmt.executeUpdate();
+		}
+		return cnt;
+	}
 }
