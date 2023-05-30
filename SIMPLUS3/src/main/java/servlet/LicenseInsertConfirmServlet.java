@@ -8,18 +8,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.entity.EmployeeBean;
 
 /**
- * Servlet implementation class EventUpdateConfirmServlet
+ * Servlet implementation class LicenseInsertConfirmServlet
  */
-@WebServlet("/event-update-confirm-servlet")
-public class EventUpdateConfirmServlet extends HttpServlet {
+@WebServlet("/license-insert-confirm-servlet")
+public class LicenseInsertConfirmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EventUpdateConfirmServlet() {
+    public LicenseInsertConfirmServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,8 +40,20 @@ public class EventUpdateConfirmServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher rd = request.getRequestDispatcher("event-update-confirm.jsp");
-		rd.forward(request, response);
+		// リクエストオブジェクトのエンコーディング方式の指定
+		request.setCharacterEncoding("UTF-8");
+		// リクエストパラメータの取得
+		String licenseName = request.getParameter("licenseName");
+		
+		EmployeeBean employee = new EmployeeBean();
+		employee.setLicenseName(licenseName);
+		
+		HttpSession session = request.getSession();
+		 
+		 session.setAttribute("employee", employee);
+		 
+		 RequestDispatcher rd = request.getRequestDispatcher("license-insert-confirm.jsp");
+		 rd.forward(request, response);
 	}
 
 }

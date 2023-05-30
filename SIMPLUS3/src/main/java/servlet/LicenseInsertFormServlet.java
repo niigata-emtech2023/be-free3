@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class EventUpdateConfirmServlet
+ * Servlet implementation class LicenseInsertFormServlet
  */
-@WebServlet("/event-update-confirm-servlet")
-public class EventUpdateConfirmServlet extends HttpServlet {
+@WebServlet("/license-insert-form-servlet")
+public class LicenseInsertFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EventUpdateConfirmServlet() {
+    public LicenseInsertFormServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,7 +37,7 @@ public class EventUpdateConfirmServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher rd = request.getRequestDispatcher("event-update-confirm.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("license-insert-form.jsp");
 		rd.forward(request, response);
 	}
 
