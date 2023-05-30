@@ -22,7 +22,7 @@
 		</table>
 		<input type="radio" name="join" value="参加" checked>参加
 		<input type="radio" name="join" value="不参加">不参加
-		<input type="submit" formaction="" value="送信"><br>
+		<input type="submit" formaction="event-join-servlet" value="送信"><br>
 		
 		<input type="submit" formaction="event-list.jsp" value="一覧に戻る">
 		<input type="submit" formaction="event-delete-form-servlet" value="削除">
