@@ -41,6 +41,9 @@ public class EmployeeInsertServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// リクエストオブジェクトのエンコーディング方式の指定
+		request.setCharacterEncoding("UTF-8");
+		
 		// セッションオブジェクトの取得
 		HttpSession session = request.getSession();
 

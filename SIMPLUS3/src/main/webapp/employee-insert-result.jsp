@@ -8,8 +8,8 @@
 </head>
 <body>
        <%
-	int count = (Integer) request.getAttribute("count");
-	if (count > 0) {
+       int count = (Integer) request.getAttribute("count");
+   	if (count > 0) {
 	%>
 	以下の従業員情報を登録しました。
 	<br>
@@ -27,7 +27,7 @@
 	    氏:<jsp:getProperty  name="employee"  property="surName" /><br> 
 		名:<jsp:getProperty  name="employee"  property="firstName" /><br>
 		氏(かな):<jsp:getProperty name="employee"  property="surKanaName" /><br>
-		名(かな):<jsp:getProperty name="employee"  property="surKanaName" /><br>
+		名(かな):<jsp:getProperty name="employee"  property="firstKanaName" /><br>
 		メールアドレス:<jsp:getProperty  name="employee"  property="mail" /><br>
 		電話番号:<jsp:getProperty name="employee"  property="tel" /><br>
 		住所:<jsp:getProperty name="employee"  property="address" /><br>
