@@ -25,14 +25,16 @@ public class EventDAO {
 		// データベースへの接続の取得、Statementの取得、SQLステートメントの実行
 		try (Connection con = ConnectionManager.getConnection();
 				Statement stmt = con.createStatement();
-				ResultSet res = stmt.executeQuery("SELECT event_date,event_name FROM event")) {
+				ResultSet res = stmt.executeQuery("SELECT event_name,event_date, FROM event")) {
 
 			// 結果の操作
 			while (res.next()) {
+				//String event_code = res.getString("event_code");
 				String event_date = res.getString("event_date");
 				String event_name = res.getString("event_name");
 
 				EventBean event = new EventBean();
+				//event.setEventDate(event_code);
 				event.setEventDate(event_date);
 				event.setEventName(event_name);
 				eventList.add(event);

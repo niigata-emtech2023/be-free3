@@ -17,12 +17,12 @@
 	<jsp:setProperty name= "event" property= "organizer" param= "organizer" />
 	<jsp:setProperty name= "event" property= "selfIntroduction" param= "selfIntroduction" />
 	
-	    イベントコード： <jsp:getProperty name= "event" property= "eventCode" /><br>
-		イベント名：		   <jsp:getProperty name= "event" property= "eventName" /><br>
-		開催日時：		   <jsp:getProperty name= "event" property= "eventDate" /><br>
-		開催場所：	   <jsp:getProperty name= "event" property= "eventPlace" /><br>
-		開催者名：	   <jsp:getProperty name= "event" property= "organizer" /><br>
-	　　自由記述:<jsp:getProperty name= "event" property= "selfIntroduction" /><br>
+	    イベントコード：<jsp:getProperty name= "event" property= "eventCode" /><br>
+		イベント:<jsp:getProperty name= "event" property= "eventName" /><br>
+		開催日時:<jsp:getProperty name= "event" property= "eventDate" /><br>
+		開催場所：<jsp:getProperty name= "event" property= "eventPlace" /><br>
+		開催者名:<jsp:getProperty name= "event" property= "organizer" /><br>
+	    自由記述:<jsp:getProperty name= "event" property= "selfIntroduction" /><br>
 	
 	<form action="event-update-servlet" method="post">
 		<input type= "submit" value= "変更する">

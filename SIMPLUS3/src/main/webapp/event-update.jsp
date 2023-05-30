@@ -8,6 +8,7 @@
 </head>
 <body>
        <jsp:useBean id="event" class="model.entity.EventBean" scope="session"/>
+	
 	<form action="event-update-confirm-servlet" method="post">
 	
 		イベントコード：<jsp:getProperty name="event" property="eventCode" /><br>
@@ -16,9 +17,11 @@
 		開催場所：    <input type="text" name="eventplace" value="<jsp:getProperty name="event" property="eventPlace" />"><br>
 		開催者名：    <input type="text" name="organizer" value="<jsp:getProperty name="event" property="organizer" />"><br>
 		自由記述:<input type="text" name="selfIntroduction" value="<jsp:getProperty name="event" property="selfIntroduction" />"><br>
-		
-		 <input type="submit" value="変更する">
+	
+	
+		 <input type="submit" value="確認">
      </form>
+     
      <form action="event-detail-servlet" method="POST">
 		<input type="hidden" name="eventCode" value="<%=event.getEventCode()%>">
 		<input type="submit" value="戻る">
