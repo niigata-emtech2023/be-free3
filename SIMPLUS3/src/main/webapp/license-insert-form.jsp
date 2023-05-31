@@ -13,7 +13,7 @@
        
          <form action="license-insert-confirm-servlet"method="post">
          保有資格選択<span>※必須</span>：
-          <select name="licenceName">
+          <select name="licenceCode">
                  <option></option>
                  <option value="L001">基本情報技術者試験</option>
                  <option value="L002">応用情報技術者試験</option>

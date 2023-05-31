@@ -43,10 +43,10 @@ public class LicenseInsertConfirmServlet extends HttpServlet {
 		// リクエストオブジェクトのエンコーディング方式の指定
 		request.setCharacterEncoding("UTF-8");
 		// リクエストパラメータの取得
-		String licenseName = request.getParameter("licenseName");
+		String licenseCode = request.getParameter("licenseCode");
 		
 		EmployeeBean license = new EmployeeBean();
-		license.setLicenseName(licenseName);
+		license.setLicenseName(licenseCode);
 		
 		HttpSession session = request.getSession();
 		 

@@ -9,11 +9,11 @@
 <body> 
         <h1>保有資格登録確認画面</h1>
         
-	    <jsp:useBean id="employee"  class="model.entity.EmployeeBean" scope="session" />
+	    <jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session" />
 	
-	    <jsp:setProperty name="employee" property="licenseName" param="licenseName" />
+	    <jsp:setProperty name="employee" property="licenseCode" param="licenseCode" />
 	  　 
-	     保有資格名:<jsp:getProperty  name="employee"  property="licenseName" /><br> 
+	     保有資格名:<jsp:getProperty  name="employee"  property="licenseCode" /><br> 
 	    
 	    <form action="license-insert-servlet"method="post">
               <input type="submit" value="確定">

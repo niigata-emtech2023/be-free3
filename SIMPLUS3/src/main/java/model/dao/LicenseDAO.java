@@ -35,7 +35,8 @@ public class LicenseDAO {
 		String sql = "UPDATE employee SET license_code=?";
 
 		// データベースへの接続の取得、PreparedStatementの取得
-		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql)) {			
+		try (Connection con = ConnectionManager.getConnection(); 
+				PreparedStatement pstmt = con.prepareStatement(sql)) {			
 
 			String licenseCode = license.getLicenseCode();
 

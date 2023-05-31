@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.EmployeeDAO;
+import model.dao.LicenseDAO;
 import model.entity.EmployeeBean;
 
 /**
@@ -52,7 +52,7 @@ public class LicenseInsertServlet extends HttpServlet {
 				EmployeeBean license = (EmployeeBean) session.getAttribute("license");
 
 				// DAOの生成
-				EmployeeDAO dao = new EmployeeDAO();
+				LicenseDAO dao = new LicenseDAO();
 
 				int count = 0; //処理件数
 

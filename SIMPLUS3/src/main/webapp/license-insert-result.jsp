@@ -23,7 +23,7 @@
 %>
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session" />
 	
-	    保有資格名:<jsp:getProperty  name="employee"  property="licenseName" /><br> 
+	    保有資格名:<jsp:getProperty  name="employee"  property="licenseCode" /><br> 
 	  
      <form action="menu.jsp"method="post">
            <input type="submit"value="メニューに戻る">
