@@ -30,6 +30,10 @@
     padding-right: 30px;
 }
 
+ul {
+    height: 70px;
+}
+
 li {
     width: 50%;
 }
@@ -86,3 +90,55 @@ tr {
 .detail_table_inner {
 	margin: 20px auto;
 }*/
+
+.box30 {
+text-align: center;
+    margin: 2em 0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+.box30 .box-title {
+    font-size: 1.2em;
+    background: #5fc2f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box30 .radio-002 {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.part_submit {
+    width: 100%;
+}
+
+.c-form-submit-button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a8ddd4;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align : center;
+}
+
+.c-form-submit-button:hover {
+    background-color: #000;
+}
+
+.c-form-submit-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}

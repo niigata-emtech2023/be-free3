@@ -208,3 +208,7 @@ input[type="submit"]:hover {
 .c-form-select {
     position: relative;
 }
+
+.fail_red{
+    color: red;
+}

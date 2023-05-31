@@ -5,20 +5,97 @@
 <head>
 <meta charset="UTF-8">
 <title>従業員情報編集画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/insert_form.css">
 </head>
 <body>
 <%@ include file="header.jsp" %>
+<div class = "container">
      <h1>従業員編集画面</h1>
     
-
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session"/>
 	
 	<form action="employee-update-confirm-servlet" method="post">
 	
-		従業員コード：<input type="text" name="employeeCode" value="<jsp:getProperty name="employee" property="employeeCode" />"><br>
-		氏：		  <input type="text" name="surName" value="<jsp:getProperty name="employee" property="surName" />"><br>
+	<table class ="one_table">
+	    <tr>
+	      <th>従業員コード</th>
+	      <td class="normal_td"><input type="text" name="employeeCode" value="<jsp:getProperty name="employee" property="employeeCode" />"></td>
+	    </tr>
+	</table>
+	
+	<table class="two_table" align="left">
+	    <tr>
+	      <th>氏名</th>
+	      <td class="normal_td"><input type="text" name="surName" value="<jsp:getProperty name="employee" property="surName" />"> <input type="text" name="firstName" value="<jsp:getProperty name="employee" property="firstName" />">
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>性別</th>
+	      <td class="normal_td">
+	             <fieldset class="radio-002">
+                   <label>
+                     <input type="radio" name="gender" value="0" checked="checked">
+                     未設定
+                   </label>
+                   <label>
+                     <input type="radio" name="gender" value="1">
+                     男
+                   </label>
+                   <label>
+                     <input type="radio" name="gender" value="2">
+                     女
+                   </label>
+                 </fieldset>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>メールアドレス</th>
+	      <td class="normal_td"><input type="text" name="mail" value="<jsp:getProperty name="employee" property="mail" />"></td>
+	    </tr>
+	    <tr>
+	      <th>生年月日</th>
+	      <td class="normal_td"><input type="date" name="birthDate" value="<jsp:getProperty name="employee" property="birthDate" />"></td>
+	    </tr>
+	</table>
+	<table class="two_table">
+	    <tr>
+	      <th>氏名かな</th>
+	      <td class="normal_td"><input type="text" name="surKanaName" value="<jsp:getProperty name="employee" property="surKanaName" />"> <input type="text" name="firstKanaName" value="<jsp:getProperty name="employee" property="firstKanaName" />">
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>所属部署</th>
+	      <td class="normal_td">
+	        <div class="c-form-select">
+                  <select name="sectionCode" >
+                     <option value="S000">未確定</option>
+				     <option value="S001">経理部</option>
+				     <option value="S002">営業部</option>
+				     <option value="S003">開発部</option>
+				     <option value="S004">研修部</option>
+				  </select>
+			 </div>
+	      </td>
+	    <tr>
+	      <th>電話番号</th>
+	      <td class="normal_td"><input type="text" name="tel" value="<jsp:getProperty name="employee" property="tel" />"></td>
+	    </tr>
+	    <tr>
+	      <th>入社日</th>
+	      <td class="normal_td"><input type="date" name="joiningDate" value="<jsp:getProperty name="employee" property="joiningDate" />"></td>
+	    </tr>
+	</table>
+	
+	<table class ="one_table">
+	    <tr>
+	      <th>住所</th>
+	      <td class="normal_td"><input type="text" name="address" value="<jsp:getProperty name="employee" property="address" />"></td>
+	    </tr>
+	</table>
+		<!-- 氏：		  <input type="text" name="surName" value="<jsp:getProperty name="employee" property="surName" />"><br>
 		名：		  <input type="text" name="firstName" value="<jsp:getProperty name="employee" property="firstName" />"><br>
-		氏(かな)：    <input type="text" name="surKanaName" value="<jsp:getProperty name="employee" property="surKanaName" />"><br>
+		 氏(かな)：    <input type="text" name="surKanaName" value="<jsp:getProperty name="employee" property="surKanaName" />"><br>
 		名(かな)：    <input type="text" name="firstKanaName" value="<jsp:getProperty name="employee" property="firstKanaName" />"><br>
 		住所:<input type="text" name="address" value="<jsp:getProperty name="employee" property="address" />">
 		メールアドレス:<input type="text" name="mail" value="<jsp:getProperty name="employee" property="mail" />"><br>
@@ -38,9 +115,9 @@
 						   <option value="S004">研修部</option>
 				  	  </select>
 		入社日:		  <input type="date" name="joiningDate" value="<jsp:getProperty name="employee" property="joiningDate" />"><br>
-
+-->
 		
-		<input type="submit" value="確認">
+		<input type="submit" value="確認" class="c-form-submit-button">
 		
 	</form>
 	
@@ -48,5 +125,7 @@
 		<input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
 		<input type="submit" value="戻る">
 	</form>
+	</div>
+	<%@ include file="footer.jsp" %>
 </body>
 </html>
