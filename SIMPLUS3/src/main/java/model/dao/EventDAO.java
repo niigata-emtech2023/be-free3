@@ -64,6 +64,7 @@ public class EventDAO {
 			ResultSet res = pstmt.executeQuery();
 
 			while (res.next()) {
+				event.setEventCode(eventCode);
 				event.setEventName(res.getString("event_name"));
 				event.setOrganizer(res.getString("organizer"));
 				event.setEventDate(res.getString("event_date"));
