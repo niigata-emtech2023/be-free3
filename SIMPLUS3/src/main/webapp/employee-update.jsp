@@ -8,6 +8,8 @@
 </head>
 <body>
 <%@ include file="header.jsp" %>
+     <h1>従業員編集画面</h1>
+    
 
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session"/>
 	

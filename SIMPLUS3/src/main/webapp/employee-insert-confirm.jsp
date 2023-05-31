@@ -12,7 +12,7 @@
 <%@ include file="header.jsp" %>
 	<h1>従業員情報登録確認画面</h1>
 	<div class="confirm-field">
-	<p>以下の社員情報を削除します。よろしいですか？</p>
+	<p>以下の社員情報を登録します。よろしいですか？</p>
 	<jsp:useBean id="employee"  class="model.entity.EmployeeBean" scope="session" />
 	
 	<jsp:setProperty name="employee" property="employeeCode" param="employeeCode" />
