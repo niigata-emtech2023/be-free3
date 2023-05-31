@@ -12,6 +12,19 @@ public class UserBean implements Serializable {
 	 */
 	private String name;
 	
+	/**
+	 * 管理者
+	 */
+	private String authorityNo;
+	
+	public String getAuthority() {
+		return authorityNo;
+	}
+
+	public void setAuthority(String authorityNo) {
+		this.authorityNo = authorityNo;
+	}
+
 	public UserBean() {
 		
 	}
