@@ -31,6 +31,6 @@
 		<input type="submit" value="メニュー画面に戻る">
 	</form>
 
-	<% session.invalidate(); %>
+	<!-- <% session.invalidate(); %> -->
 </body>
 </html>

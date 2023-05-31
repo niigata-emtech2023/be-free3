@@ -7,6 +7,7 @@
 <title>従業員情報編集画面</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>
 
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session"/>
 	<form action="employee-update-confirm-servlet" method="post">

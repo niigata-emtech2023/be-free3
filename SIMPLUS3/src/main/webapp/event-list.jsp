@@ -17,10 +17,10 @@
 	<table>
 	  <thead>
 		<tr>
-			<th>イベントコード</th>
-			<th>イベント名</th>
-			<th>開催日時</th>
-			<th></th>
+			<th class="th6">イベントコード</th>
+			<th class="th7">イベント名</th>
+			<th class="th8">開催日時</th>
+			<th class="th9"></th>
 		</tr>
 	  </thead>
 	  <tbody>
@@ -28,11 +28,11 @@
 			for(EventBean event : eventList) {
 		%>
 		<tr>
-			<td><span class="str_td"> <%=event.getEventCode()%> </span></td>
-			<td><%=event.getEventName()%></td>
-			<td><%=event.getEventDate()%></td>
+			<td class="td6"><span class="str_td"> <%=event.getEventCode()%> </span></td>
+			<td class="td7"><%=event.getEventName()%></td>
+			<td class="td8"><%=event.getEventDate()%></td>
 			
-			<td>
+			<td class="td9">
 				<form action="event-detail-servlet" method="POST">
 					<input type="hidden" name="eventCode" value="<%=event.getEventCode()%>">
 					<input type="submit" value="詳細表示" class="detail-submit">

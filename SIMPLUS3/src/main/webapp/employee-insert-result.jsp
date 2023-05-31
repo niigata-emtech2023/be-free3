@@ -7,6 +7,7 @@
 <title>従業員情報登録完了画面</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>
        <%
        int count = (Integer) request.getAttribute("count");
    	if (count > 0) {
@@ -41,7 +42,7 @@
      <form action="menu.jsp"method="post">
            <input type="submit"value="メニューに戻る">
      </form>
-     <%session.invalidate(); %>
+     <% session.removeAttribute("employee"); %>
 
 </body>
 </html>
