@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.List,model.entity.EmployeeBean"%>
+    pageEncoding="UTF-8" import="java.util.List,model.entity.EmployeeBean" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>社員情報一覧</title>
+<title>趣味検索結果一覧</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/table-style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
@@ -16,7 +16,7 @@
     
     <div class="group">
       <div class="search_bar">
-        趣味で社員検索
+        他の趣味で社員検索
         <i class="fas fa-search search_icon"></i>
          <form action="employee-search-servlet" method="POST">
           <div class="c-form-select">
@@ -73,10 +73,21 @@
 		</tbody>
 	</table>
 	
-	<form action="menu.jsp" method="POST">
-        <input type="submit" value="メニューに戻る" class="main_submit">
-	</form>
-  </div>
+	<div class="double_submit">
+	<ul>
+	  <li>
+	      <form action="employee-list-servlet" method="POST">
+		    <input type="submit" value="社員一覧画面に戻る" class="c-form-submit-button">
+	      </form>
+	  </li>
+	  <li>
+	      <form action="menu.jsp" method="POST">
+		    <input type="submit" value="メニュー画面に戻る" class="c-form-submit-button">
+	      </form>
+	  </li>
+	</ul>
+	</div>
+	
   <%@ include file="footer.jsp" %>
 </body>
 </html>
