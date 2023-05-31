@@ -13,7 +13,7 @@
 	
 	<form action="employee-update-confirm-servlet" method="post">
 	
-		従業員コード：<jsp:getProperty name="employee" property="employeeCode" /><br>
+		従業員コード：<input type="text" name="employeeCode" value="<jsp:getProperty name="employee" property="employeeCode" />"><br>
 		氏：		  <input type="text" name="surName" value="<jsp:getProperty name="employee" property="surName" />"><br>
 		名：		  <input type="text" name="firstName" value="<jsp:getProperty name="employee" property="firstName" />"><br>
 		氏(かな)：    <input type="text" name="surKanaName" value="<jsp:getProperty name="employee" property="surKanaName" />"><br>

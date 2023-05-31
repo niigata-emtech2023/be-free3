@@ -49,14 +49,17 @@ public class EmployeeUpdateConfirmServlet extends HttpServlet {
 		//リクエストパラメータの取得 
 		String gender = request.getParameter("gender");
 		String sectionCode = request.getParameter("sectionCode");
+		String employeeCode = request.getParameter("employeeCode");
 		
 		EmployeeBean employee = new EmployeeBean();
 		employee.setGender(gender);
 		employee.setSectionCode(sectionCode);
+		employee.setEmployeeCode(employeeCode);
 		
 		HttpSession session = request.getSession();
 		
 		session.setAttribute("employee", employee);
+		
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
