@@ -24,26 +24,6 @@
   		   </table> -->
   			   <tr><th>住所<span class="req_span">必須</span></th><td class="normal_td"><input type="text" size="40" name="address" required placeholder="住所を入力してください" class="form_text">
    			   <tr><th>性別<span class="req_span">必須</span></th><td class="white_td">
-                 <!-- <div class="c-form-radio">
-                   <label>
-                   <input type="radio" name="gender" value="0" checked="checked">
-                     <span class="c-form-radio-name">
-                       <span class="c-form-radio-text">未設定</span>
-                     </span>
-                   </label>
-                   <label>
-                   <input type="radio" name="gender" value="1">
-                     <span class="c-form-radio-name">
-                       <span class="c-form-radio-text">男</span>
-                     </span>
-                   </label>
-                   <label>
-                   <input type="radio" name="gender" value="2">
-                     <span class="c-form-radio-name">
-                       <span class="c-form-radio-text">女</span>
-                     </span>
-                   </label>
-		         </div> -->
 		         <fieldset class="radio-002">
                    <label>
                      <input type="radio" name="gender" value="0" checked="checked">

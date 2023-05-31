@@ -5,8 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>社内イベント情報登録完了画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
+    <h1></h1>
 <%
     int count = (Integer) request.getAttribute("count");
    	if (count > 0) {
