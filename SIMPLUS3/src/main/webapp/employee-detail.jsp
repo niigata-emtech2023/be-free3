@@ -5,14 +5,35 @@
 <head>
 <meta charset="UTF-8">
 <title>従業員別詳細画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/detail.css">
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/css/insert-form.css"> -->
 </head>
 <body>
+<%@ include file="header.jsp" %>
+     <div class = "container">
 		<%
 		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
 		%>
-	    <h1><%=employee.getSurName()%><%=employee.getFirstName()%>さんの詳細画面です。</h1>
-		従業員コード：<%=employee.getEmployeeCode()%><br>
-		氏名（かな）：<%=employee.getSurName()%><%=employee.getFirstName()%>(<%=employee.getSurKanaName()%><%=employee.getFirstKanaName()%>)<br>
+	    <h1><%=employee.getSurName()%><%=employee.getFirstName()%>さんの詳細情報</h1>
+		<table class="one_table">
+		   <tr><th>従業員コード</th><td><%=employee.getEmployeeCode()%><td></tr>
+		   <tr><th>氏名（かな）</th><td><%=employee.getSurName()%><%=employee.getFirstName()%>(<%=employee.getSurKanaName()%><%=employee.getFirstKanaName()%>)<td></tr>
+		</table>
+		<table class="two_table" align="left">
+		   <tr><th>性別</th><td><%=employee.getGenderName()%><td></tr>
+		   <tr><th>メールアドレス</th><td><%=employee.getMail()%><td></tr>
+		   <tr><th>生年月日</th><td><%=employee.getBirthDate()%><td></tr>
+		   <tr><th>保有資格</th><td><%=employee.getLicenseName()%><td></tr>
+		</table>
+		<table class="two_table">
+		   <tr><th>所属部署</th><td><%=employee.getSectionName()%><td></tr>
+		   <tr><th>電話番号</th><td><%=employee.getTel()%><td></tr>
+		   <tr><th>入社日</th><td><%=employee.getJoiningDate()%><td></tr>
+		   <tr><th>趣味</th><td><%=employee.getHobbyName()%><td></tr>
+		</table>
+		<!-- 従業員コード：<%=employee.getEmployeeCode()%><br>
+		 氏名（かな）：<%=employee.getSurName()%><%=employee.getFirstName()%>(<%=employee.getSurKanaName()%><%=employee.getFirstKanaName()%>)<br>
 		メールアドレス：<%=employee.getMail()%><br>
 		TEL：<%=employee.getTel()%><br>
 		生年月日：<%=employee.getBirthDate()%><br>
@@ -21,18 +42,27 @@
 		入社日：<%=employee.getJoiningDate()%><br>
 		保有資格：<%=employee.getLicenseName()%><br>
 		趣味：<%=employee.getHobbyName()%><br>
-		自己紹介：<%=employee.getSelfintroduction()%><br>
+		-->自己紹介：<%=employee.getSelfintroduction()%><br>
+		
 	
-	<form action="employee-update-form-servlet" method="POST">
-		<input type="submit" value="変更">
-	</form>
-	
-	<form action="employee-delete-form-servlet" method="POST">
-		<input type="submit" value="削除">
-	</form>
+	<div class="double_submit">
+	<ul>
+	  <li>
+	      <form action="employee-update-form-servlet" method="POST">
+		    <input type="submit" value="変更" class="c-form-submit-button">
+	      </form>
+	  </li>
+	  <li>
+	      <form action="employee-delete-form-servlet" method="POST">
+		    <input type="submit" value="削除" class="c-form-cancel-button">
+	      </form>
+	  </li>
+	</ul>
+	</div>
 	
 	<form action="employee-list-servlet" method="POST">
-		<input type="submit" value="戻る">
+		<input type="submit" value="戻る" class="c-form-submit-button2">
 	</form>
+	</div>
 </body>
 </html>
