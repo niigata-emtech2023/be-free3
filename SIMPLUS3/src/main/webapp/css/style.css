@@ -185,3 +185,26 @@ input[type="submit"]:hover {
     background-color: #000;
     border: 2px solid rgb(33, 150, 243);
 }
+
+.search_bar{
+    display: flex; /*アイコン、テキストボックスを調整する*/
+    align-items: center; /*アイコン、テキストボックスを縦方向の中心に*/
+    justify-content: center; /*アイコン、テキストボックスを横方向の中心に*/
+    height: 50px;
+    width: 100%;
+}
+
+.search_icon{ /*アイコンに一定のスペースを設ける*/
+    height: 15px;
+    width: 15px;
+    padding: 5px 5px;
+}
+
+.group {
+	margin: 20px auto;
+}
+
+
+.c-form-select {
+    position: relative;
+}
