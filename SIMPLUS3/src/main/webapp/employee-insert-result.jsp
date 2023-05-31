@@ -12,7 +12,6 @@
 <%@ include file="header.jsp" %>
   <h1>従業員情報の登録完了</h1>
   <div class="confirm-field">
-	<p>以下の社員情報を登録します。よろしいですか？</p>
   
        <%
        int count = (Integer) request.getAttribute("count");
@@ -71,7 +70,7 @@
 	</table>
      
      <form action="menu.jsp"method="post">
-           <input type="submit"value="メニューに戻る" class="c-form-submit-button">
+           <input type="submit"value="メニューに戻る" class="c-form-submit-button3">
      </form>
      <% session.removeAttribute("employee"); %>
 
