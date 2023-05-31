@@ -51,7 +51,7 @@ public class EventDAO {
 	 * @throws SQLException
 	 * @throws ClassNotFoundException
 	 */
-	public EventBean selectEvent(String eventDate) throws SQLException, ClassNotFoundException {
+	public EventBean selectEvent(String eventCode) throws SQLException, ClassNotFoundException {
 
 		EventBean event = new EventBean();
 
@@ -59,7 +59,7 @@ public class EventDAO {
 
 		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql);) {
 
-			pstmt.setString(1, eventDate);
+			pstmt.setString(1, eventCode);
 //			
 			ResultSet res = pstmt.executeQuery();
 

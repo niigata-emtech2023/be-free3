@@ -41,19 +41,21 @@ public class EventDeteilServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		request.setCharacterEncoding("UTF-8");
+		
 		String eventCode = request.getParameter("eventCode");
 
 		EventDAO dao = new EventDAO();
 
 		EventBean event = new EventBean();
-
+		
 		try {
 
 			event = dao.selectEvent(eventCode);
 
 			HttpSession session = request.getSession();
+			
 			session.setAttribute("event", event);
 
 		} catch (ClassNotFoundException | SQLException e) {
