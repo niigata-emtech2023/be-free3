@@ -23,6 +23,7 @@
 %>
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session" />
 	
+	    変更した従業員のコード：<jsp:getProperty  name="employee"  property="employeeCode" /><br> 
 	    趣味名:<jsp:getProperty  name="employee"  property="hobbyName" /><br> 
 	    自己紹介:<jsp:getProperty  name="employee"  property="selfintroduction" /><br>  
 	    
