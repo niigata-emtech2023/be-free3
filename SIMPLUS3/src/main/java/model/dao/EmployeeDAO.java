@@ -264,7 +264,7 @@ public class EmployeeDAO {
 	public int update(EmployeeBean employee) throws SQLException, ClassNotFoundException {
 		int cnt = 0; // 処理件数
 		
-		String sql = "UPDATE employee SET sur_name = ?, first_name = ?, sur_kana_name = ?,first_kana_name = ?, gender = ?, birth_date =?,hobby_code = ?, joining_date = ?, mail = ?, tel = ?, address = ?, self_introduction = ? WHERE employee_code = ?";
+		String sql = "UPDATE employee SET sur_name = ?,first_name = ?,sur_kana_name = ?,first_kana_name = ?,gender = ?,birth_date = ?,section_code = ?,joining_date = ?,mail = ?,tel = ?,address = ? WHERE employee_code = ?";
 		
 		// データベースへの接続の取得、PreparedStatementの取得
 		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -279,16 +279,11 @@ public class EmployeeDAO {
 			String firstKanaName = employee.getFirstKanaName();
 			String gender = employee.getGender();
 			String birthDate = employee.getBirthDate();
-			String sectionCode = employee.getSectionCode();
-			
-			String licenseCode = employee.getLicenseCode();
-			String hobbyCode = employee.getHobbyCode();
-			 
+			String sectionCode = employee.getSectionCode();		 
 			String joiningDate = employee.getJoiningDate();
 			String mail = employee.getMail();
 			String tel = employee.getTel();
 			String address = employee.getAddress();
-			String selfintroduction = employee.getSelfintroduction();
 
 			// プレースホルダへの値の設定
 			pstmt.setString(1, surName);
@@ -298,16 +293,11 @@ public class EmployeeDAO {
 			pstmt.setString(5, gender);
 			pstmt.setString(6, birthDate);
 			pstmt.setString(7, sectionCode);
-			
-			 pstmt.setString(8, licenseCode);
-			 pstmt.setString(9, hobbyCode);
-			 
 			pstmt.setString(8, joiningDate);
 			pstmt.setString(9, mail);
 			pstmt.setString(10, tel);
 			pstmt.setString(11, address);
-			pstmt.setString(12, selfintroduction);
-			pstmt.setString(13, employeeCode);
+			pstmt.setString(12, employeeCode);
 
 			// SQLステートメントの実行
 			cnt = pstmt.executeUpdate();
