@@ -285,7 +285,7 @@ public class EmployeeDAO {
 	public int update(EmployeeBean employee) throws SQLException, ClassNotFoundException {
 		int cnt = 0; // 処理件数
 		
-		String sql = "UPDATE employee SET sur_name = ?, first_name = ?, sur_kana_name = ?,first_kana_name = ?, gender = ?, birth_date = ?,section_code = ?,joining_date = ?, mail = ?, tel = ?, address = ?, WHERE employee_code = ?";
+		String sql = "UPDATE employee SET sur_name = ?,first_name = ?,sur_kana_name = ?,first_kana_name = ?,gender = ?,birth_date = ?,section_code = ?,joining_date = ?,mail = ?,tel = ?,address = ? WHERE employee_code = ?";
 		
 		// データベースへの接続の取得、PreparedStatementの取得
 		try (Connection con = ConnectionManager.getConnection(); PreparedStatement pstmt = con.prepareStatement(sql)) {

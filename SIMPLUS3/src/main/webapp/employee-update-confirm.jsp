@@ -13,7 +13,6 @@
 	従業員情報を以下の内容に変更します。よろしいですか？<br>
 	<jsp:useBean id="employee" scope="session" class="model.entity.EmployeeBean" />
 	
-	
 	<jsp:setProperty name="employee" property="surName" param="surName" />
 	<jsp:setProperty name="employee" property="firstName" param="firstName" />
 	<jsp:setProperty name="employee" property="surKanaName" param="surKanaName" />
