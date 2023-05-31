@@ -40,6 +40,6 @@
 		<input type="submit" value="一覧に戻る">
 	</form>
 
-	<% session.invalidate(); %>
+	<% session.removeAttribute("employee"); %>
 </body>
 </html>
