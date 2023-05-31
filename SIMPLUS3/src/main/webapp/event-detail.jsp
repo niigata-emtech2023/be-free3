@@ -24,7 +24,7 @@
 		<input type="radio" name="join" value="不参加">不参加
 		<input type="submit" formaction="event-join-servlet" value="送信"><br>
 		
-		<input type="submit" formaction="event-list.jsp" value="一覧に戻る">
+		<input type="submit" formaction="event-list-servlet" value="一覧に戻る">
 		<input type="submit" formaction="event-delete-form-servlet" value="削除">
 		<input type="submit" formaction="event-update-form-servlet" value="編集">
 	</form>
