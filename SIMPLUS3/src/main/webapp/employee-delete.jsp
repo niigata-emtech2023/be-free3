@@ -68,13 +68,14 @@
   <div class="double_submit">
   <ul>
     <li>
-      <form action="employee-delete-comfirm-servlet" method="POST">
-	    <input type="submit" value="削除" class="c-form-submit-button">
+    <form action="employee-detail.jsp" method="post">
+	    <input type="submit" value="戻る" class="c-form-back-button">
 	  </form>
+      
     </li>
     <li>
-      <form action="employee-detail.jsp" method="post">
-	    <input type="submit" value="戻る" class="c-form-back-button">
+      <form action="employee-delete-comfirm-servlet" method="POST">
+	    <input type="submit" value="削除" class="c-form-submit-button">
 	  </form>
     </li>
   </ul>
