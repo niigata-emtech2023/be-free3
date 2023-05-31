@@ -27,7 +27,7 @@
 		開催者：	  <jsp:getProperty name="event" property="organizer" /><br>
 		自由記述：	  <jsp:getProperty name="event" property="selfIntroduction" /><br>
 		
-		<form action="event-list.jsp" method="POST">
+		<form action="event-list-servlet" method="POST">
 		<input type="submit" value="メニュー画面に戻る">
 	</form>
 

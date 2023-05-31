@@ -36,8 +36,8 @@
 		趣味：        <jsp:getProperty name="employee" property="hobbyCode" /><br>
 		自己紹介：    <jsp:getProperty name="employee" property="selfintroduction" /><br>
 		
-	<form action="menu.jsp" method="POST">
-		<input type="submit" value="メニュー画面に戻る">
+	<form action="employee-list-servlet" method="POST">
+		<input type="submit" value="一覧に戻る">
 	</form>
 
 	<% session.invalidate(); %>
