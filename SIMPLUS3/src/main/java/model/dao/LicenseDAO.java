@@ -31,7 +31,8 @@ public class LicenseDAO {
 	}
 	public int update(EmployeeBean license) throws SQLException,ClassNotFoundException {
 		int count = 0;//処理件数
-
+		
+		//変数sqlにsql文を格納
 		String sql = "UPDATE employee SET license_code=?";
 
 		// データベースへの接続の取得、PreparedStatementの取得
