@@ -73,6 +73,63 @@ public class EmployeeDAO {
 		}
 		return employeeList;
 	}
+	
+	public List<EmployeeBean> search(String hobbyCode) throws SQLException, ClassNotFoundException {
+
+		List<EmployeeBean> employeeList = new ArrayList<EmployeeBean>();
+
+		// データベースへの接続の取得、Statementの取得、SQLステートメントの実行
+		try (Connection con = ConnectionManager.getConnection();
+				Statement stmt = con.createStatement();
+				ResultSet res = stmt.executeQuery("SELECT t1.employee_code,t1.sur_name,"
+						+ "t1.first_name,t1.sur_kana_name,t1.first_kana_name,t2.section_name "
+						+ "FROM employee t1 LEFT OUTER JOIN section t2 ON t1.section_code = t2.section_code"
+						+ "WHERE t1.hobby_code = ")) {
+
+			// 結果の操作
+			while (res.next()) {
+				String employeeCode = res.getString("employee_code");
+				String surName = res.getString("sur_name");
+				String firstName = res.getString("first_name");
+				String surKanaName = res.getString("sur_kana_name");
+				String firstKanaName = res.getString("first_kana_name");
+				//String gender = res.getString("gender");
+				//Date birthDate = res.getDate("birthDate");
+//				String sectionCode = res.getString("sectionCode");
+				String sectionName = res.getString("section_name");
+				//String license_code = res.getString("license_code");
+				//String hobbyCode = res.getString("hobbyCode");
+				//Date joiningDate = res.getDate("joiningDate");
+				//String mail = res.getString("mail");
+				//String tel = res.getString("tel");
+				//String address = res.getString("address");
+				//String selfintroduction = res.getString("selfintroduction");
+
+//				System.out.println(employeeCode);
+				
+				EmployeeBean employee = new EmployeeBean();
+				employee.setEmployeeCode(employeeCode);
+				employee.setSurName(surName);
+				employee.setFirstName(firstName);
+				employee.setSurKanaName(surKanaName);
+				employee.setFirstKanaName(firstKanaName);
+				//employee.setGender(gender);
+				//employee.setBirthDate(birthDate);
+//				employee.setSectionCode(sectionCode);
+				employee.setSectionName(sectionName);
+				//employee.setLicense_code(license_code);
+				//employee.setHobbyCode(hobbyCode);
+				//employee.setJoiningDate(joiningDate);
+				//employee.setMail(mail);
+				//employee.setTel(tel);
+				//employee.setAddress(address);
+				//employee.setSelfintroduction(selfintroduction);
+
+				employeeList.add(employee);
+			}
+		}
+		return employeeList;
+	}
 
 	/**
 	 * 趣味
