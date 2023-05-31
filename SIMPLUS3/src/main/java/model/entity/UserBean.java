@@ -17,11 +17,11 @@ public class UserBean implements Serializable {
 	 */
 	private String authorityNo;
 	
-	public String getAuthority() {
+	public String getAuthorityNo() {
 		return authorityNo;
 	}
 
-	public void setAuthority(String authorityNo) {
+	public void setAuthorityNo(String authorityNo) {
 		this.authorityNo = authorityNo;
 	}
 

@@ -48,22 +48,30 @@ public class LoginServlet extends HttpServlet {
 		// リクエストパラメータの取得
 		String userId = request.getParameter("userId");
 		String password = request.getParameter("password");
-
+		String i = "";
+		
 		try {
 			// DAOの生成
 			 LoginDAO loginDao = new  LoginDAO();
-
+			 
 			// DAOの利用
 			if (loginDao.loginCheck(userId, password)) {
-				
-				// 認証成功
-				url = "menu.jsp";
+				if(1 == loginDao.authorityNoCheck(userId, password)) {
+					// 認証成功
+					url = "menu.jsp";
+				}
+				else {
+					i = "2";
+					// 認証成功
+					url = "menu2.jsp";
+				}
 
 				// セッションオブジェクトの取得
 				HttpSession session = request.getSession();
 
 				// セッションスコープへの属性の設定
 				session.setAttribute("userId", userId);
+				session.setAttribute("authority",i);
 				
 				
 			} else {
