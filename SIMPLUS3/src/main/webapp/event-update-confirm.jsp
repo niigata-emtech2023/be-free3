@@ -11,6 +11,8 @@
 		request.setCharacterEncoding("UTF-8");
 	%>
     イベント情報を以下の内容で変更します。よろしいですか？
+    <jsp:useBean id="event" scope="session" class="model.entity.EventBean" />
+    
     <jsp:setProperty name= "event" property= "eventName" param= "eventName" />
 	<jsp:setProperty name= "event" property= "eventDate" param= "eventDate" />
 	<jsp:setProperty name= "event" property= "eventPlace" param= "eventPlace" />
