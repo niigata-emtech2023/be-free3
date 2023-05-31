@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.entity.EmployeeBean;
 
 /**
  * Servlet implementation class EmployeeUpdateConfirmServlet
@@ -40,6 +43,19 @@ public class EmployeeUpdateConfirmServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		//リクエストパラメータの取得 
+		String gender = request.getParameter("gender");
+		String sectionCode = request.getParameter("sectionCode");
+		
+		EmployeeBean employee = new EmployeeBean();
+		employee.setGender(gender);
+		employee.setSectionCode(sectionCode);
+		
+		HttpSession session = request.getSession();
+		 
+		session.setAttribute("employee", employee);
+		
 		// リクエストの転送
 		RequestDispatcher rd = request.getRequestDispatcher("employee-update-confirm.jsp");
 		rd.forward(request, response);
