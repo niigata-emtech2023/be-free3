@@ -11,10 +11,11 @@
         
 	    <jsp:useBean id="employee"  class="model.entity.EmployeeBean" scope="session" />
 	
+	    <jsp:setProperty name="employee" property="employeeCode" param="employeeCode" />
 	    <jsp:setProperty name="employee" property="hobbyName" param="hobbyName" />
-	  　<jsp:setProperty name="employee" property="selfintroduction" param="selfintroduction" />
+	    <jsp:setProperty name="employee" property="selfintroduction" param="selfintroduction" />
 	     
-	     
+	     変更したい従業員のコード：<jsp:getProperty  name="employee"  property="employeeCode" /><br>
 	     趣味名:<jsp:getProperty  name="employee"  property="hobbyName" /><br>
 	     自己紹介:<jsp:getProperty  name="employee"  property="selfintroduction" /><br>
 	      

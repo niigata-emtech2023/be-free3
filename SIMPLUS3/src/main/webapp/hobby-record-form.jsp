@@ -11,6 +11,7 @@
       
       
        <form action="hobby-insert-confirm-servlet"method="post">
+       設定したい従業員のコードを入力してください<span>必須</span>：<input type="text" size="10" name="employeeCode" required><br>
        趣味名<span>※必須</span>：
           <select name="hobbyName">
                  <option></option>

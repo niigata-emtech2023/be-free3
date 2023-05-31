@@ -42,27 +42,29 @@ public class HobbyDAO {
 		return cnt;
 	}
 	
-//	public int insert(HobbyBean hobby) throws SQLException, ClassNotFoundException {
-//		
-//		int cnt = 0;
-//		
-//		String sql = "INSERT INTO Hobby(hobby_code, hobby_name) VALUE (?.?)";
-//		
-//		try(Connection con = ConnectionManager.getConnection();
-//				PreparedStatement pstmt = con.prepareStatement(sql)){
-//			
-//			String hobbyCode = hobby.getHobbyCode();
-//			String hobbyName = hobby.getHobbyName();
-//			
-//			pstmt.setString(1,hobbyCode);
-//			pstmt.setString(2, hobbyName);
-//			
-//			cnt = pstmt.executeUpdate();
-//		}
-//		
-//		return cnt;
-//	}
-//	
+	public int update(EmployeeBean employee) throws SQLException, ClassNotFoundException {
+		
+		int count = 0;
+		
+		String sql = "UPDATE employee SET hobby_code =?, self_introduction = ? WHERE employee_code = ?";
+		
+		try(Connection con = ConnectionManager.getConnection();
+				PreparedStatement pstmt = con.prepareStatement(sql)){
+			
+			String hobbyCode = employee.getHobbyCode();
+			String selfIntroduction = employee.getSelfintroduction();
+			String employeeCode = employee.getEmployeeCode();
+			
+			pstmt.setString(1,hobbyCode);
+			pstmt.setString(2, selfIntroduction);
+			pstmt.setString(3, employeeCode);
+			
+			count = pstmt.executeUpdate();
+		}
+		
+		return count;
+	}
+	
 //	public int update(HobbyBean hobby) throws SQLException, ClassNotFoundException {
 //		
 //		int cnt = 0;

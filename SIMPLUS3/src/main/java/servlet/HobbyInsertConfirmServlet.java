@@ -43,10 +43,12 @@ public class HobbyInsertConfirmServlet extends HttpServlet {
 		// リクエストオブジェクトのエンコーディング方式の指定
 				request.setCharacterEncoding("UTF-8");
 				// リクエストパラメータの取得
+				String employeeCode = request.getParameter("employeeCode");
 				String hobbyName = request.getParameter("hobbyName");
 				String selfIntroduction = request.getParameter("selfIntroduction");
 				
 				EmployeeBean employee = new EmployeeBean();
+				employee.setEmployeeCode(employeeCode);
 				employee.setHobbyName(hobbyName);
 				employee.setSelfintroduction(selfIntroduction);
 				

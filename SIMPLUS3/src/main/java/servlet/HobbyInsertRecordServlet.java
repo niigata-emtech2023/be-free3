@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.EmployeeDAO;
+import model.dao.HobbyDAO;
 import model.entity.EmployeeBean;
 
 /**
@@ -52,13 +52,13 @@ public class HobbyInsertRecordServlet extends HttpServlet {
 		EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
 
 		// DAOの生成
-		EmployeeDAO dao = new EmployeeDAO();
+		HobbyDAO dao = new HobbyDAO();
 
 		int count = 0; //処理件数
 
 		try {
 			// DAOの利用
-			count = dao.insert(employee);
+			count = dao.update(employee);
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
