@@ -55,6 +55,7 @@ public class LoginServlet extends HttpServlet {
 
 			// DAOの利用
 			if (loginDao.loginCheck(userId, password)) {
+				
 				// 認証成功
 				url = "menu.jsp";
 
@@ -63,7 +64,8 @@ public class LoginServlet extends HttpServlet {
 
 				// セッションスコープへの属性の設定
 				session.setAttribute("userId", userId);
-
+				
+				
 			} else {
 				// 認証失敗
 				url = "login.html";
