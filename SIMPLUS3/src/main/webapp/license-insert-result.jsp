@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>保有資格情報登録画面</title>
 </head>
 <body>
         <%
@@ -22,7 +22,8 @@
 }
 %>
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session" />
-	
+		
+		変更した従業員のコード：<jsp:getProperty  name="employee"  property="employeeCode" /><br> 
 	    保有資格名:<jsp:getProperty  name="employee"  property="licenseCode" /><br> 
 	  
      <form action="menu.jsp"method="post">

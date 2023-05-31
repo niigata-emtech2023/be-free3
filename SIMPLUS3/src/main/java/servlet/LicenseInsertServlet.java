@@ -49,7 +49,7 @@ public class LicenseInsertServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 
 				// セッションスコープからの属性値の取得
-				EmployeeBean license = (EmployeeBean) session.getAttribute("license");
+				EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
 
 				// DAOの生成
 				LicenseDAO dao = new LicenseDAO();
@@ -58,7 +58,7 @@ public class LicenseInsertServlet extends HttpServlet {
 
 				try {
 					// DAOの利用
-					count = dao.insert(license);
+					count = dao.update(employee);
 				} catch (ClassNotFoundException | SQLException e) {
 					e.printStackTrace();
 				}

@@ -4,15 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>保有資格登録確認画面</title>
+<title>保有資格情報登録確認画面</title>
 </head>
 <body> 
-        <h1>保有資格登録確認画面</h1>
+        <h1>保有資格情報登録確認画面</h1>
+        
         
 	    <jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session" />
-	
+	    
+		<jsp:setProperty name="employee" property="employeeCode" param="employeeCode" />
 	    <jsp:setProperty name="employee" property="licenseCode" param="licenseCode" />
-	  　 
+	   	
+	   	 変更したい従業員のコード：<jsp:getProperty  name="employee"  property="employeeCode" /><br>
 	     保有資格名:<jsp:getProperty  name="employee"  property="licenseCode" /><br> 
 	    
 	    <form action="license-insert-servlet"method="post">
