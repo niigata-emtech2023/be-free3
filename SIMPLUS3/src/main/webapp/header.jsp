@@ -11,8 +11,8 @@
 	        <input class="logout_submit"  type="submit" value="ログアウト">
           </form>
           <div class="user_name_area"><p>ログインユーザ：<%=userId %></p></div>
-          <form action="design-servlet" method="POST">
-	        <input class="design_submit"  type="submit" value="サイトデザインの変更">
+          <form action="design_form.jsp" method="POST">
+	        <input class="design_submit" type="submit" value="サイトデザインの変更">
           </form>
       </div>
 

@@ -6,10 +6,13 @@
 <meta charset="UTF-8">
 <title>従業員登録確認画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css"><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 <%@ include file="header.jsp" %>
 	<h1>従業員情報登録確認画面</h1>
+	<div class="confirm-field">
+	<p>以下の社員情報を削除します。よろしいですか？</p>
 	<jsp:useBean id="employee"  class="model.entity.EmployeeBean" scope="session" />
 	
 	<jsp:setProperty name="employee" property="employeeCode" param="employeeCode" />
@@ -25,14 +28,25 @@
 	<jsp:setProperty name="employee" property="sectionCode" param="sectionCode" />
 	<jsp:setProperty name="employee" property="joiningDate" param="joiningDate" />
 	
+	<table>
+	  <tbody>
+	    <tr>
+	    <th>従業員コード</th>
+	    <td><jsp:getProperty  name="employee"  property="employeeCode" /></td>
+	    </tr>
+	    <tr>
+	    <th>氏名（かな）</th>
+	    <td><jsp:getProperty  name="employee"  property="surName" /><jsp:getProperty  name="employee"  property="firstName" />（<jsp:getProperty name="employee"  property="surKanaName" /><jsp:getProperty name="employee"  property="firstKanaName" />）</td>
+	    </t>
+	  </tbody>
+	</table>
 	
-	
-		コード:<jsp:getProperty  name="employee"  property="employeeCode" /><br> 
+		<!-- コード:<jsp:getProperty  name="employee"  property="employeeCode" /><br> 
 	    氏:<jsp:getProperty  name="employee"  property="surName" /><br> 
 		名:<jsp:getProperty  name="employee"  property="firstName" /><br>
 		氏(かな):<jsp:getProperty name="employee"  property="surKanaName" /><br>
 		名(かな):<jsp:getProperty name="employee"  property="firstKanaName" /><br>
-		メールアドレス:<jsp:getProperty  name="employee"  property="mail" /><br>
+		 -->メールアドレス:<jsp:getProperty  name="employee"  property="mail" /><br>
 		電話番号:<jsp:getProperty name="employee"  property="tel" /><br>
 		住所:<jsp:getProperty name="employee"  property="address" /><br>
 		性別:<jsp:getProperty name="employee"  property="gender" /><br>

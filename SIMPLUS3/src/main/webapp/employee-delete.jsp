@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
 	<h1>従業員削除画面</h1>
     <div class="confirm-field">
 	<p>以下の社員情報を削除します。よろしいですか？</p>
