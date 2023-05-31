@@ -51,14 +51,17 @@
   <th>入社日</th>
   <td><%=employee.getJoiningDate()%></td>
 </tr>
-<th>保有資格</th>
-<td><%=employee.getLicenseName()%></td>
+<tr>
+  <th>保有資格</th>
+  <td><%=employee.getLicenseName()%></td>
 </tr>
-<th>趣味</th>
-<td><%=employee.getHobbyName()%></td>
+<tr>
+  <th>趣味</th>
+  <td><%=employee.getHobbyName()%></td>
 </tr>
-<th>自己紹介</th>
-<td><%=employee.getSelfintroduction()%></td>
+<tr>
+  <th>自己紹介</th>
+  <td><%=employee.getSelfintroduction()%></td>
 </tr>
 </tbody>
 </table>
