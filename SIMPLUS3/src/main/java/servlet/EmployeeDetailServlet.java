@@ -58,7 +58,9 @@ public class EmployeeDetailServlet extends HttpServlet {
 
 			// セッションスコープへの属性の設定
 			session.setAttribute("employee", employee);
-
+			
+			System.out.println(employee.getEmployeeCode());
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}

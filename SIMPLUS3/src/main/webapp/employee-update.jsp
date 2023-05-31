@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.List,model.entity.EmployeeBean"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +10,7 @@
 <%@ include file="header.jsp" %>
 
 	<jsp:useBean id="employee" class="model.entity.EmployeeBean" scope="session"/>
+	
 	<form action="employee-update-confirm-servlet" method="post">
 	
 		従業員コード：<jsp:getProperty name="employee" property="employeeCode" /><br>

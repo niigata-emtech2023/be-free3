@@ -44,6 +44,8 @@ public class EmployeeUpdateConfirmServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		
+		try {
 		//リクエストパラメータの取得 
 		String gender = request.getParameter("gender");
 		String sectionCode = request.getParameter("sectionCode");
@@ -53,9 +55,11 @@ public class EmployeeUpdateConfirmServlet extends HttpServlet {
 		employee.setSectionCode(sectionCode);
 		
 		HttpSession session = request.getSession();
-		 
-		session.setAttribute("employee", employee);
 		
+		session.setAttribute("employee", employee);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		// リクエストの転送
 		RequestDispatcher rd = request.getRequestDispatcher("employee-update-confirm.jsp");
 		rd.forward(request, response);

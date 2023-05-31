@@ -32,7 +32,7 @@
 		名(かな)：	   <jsp:getProperty name="employee" property="firstKanaName" /><br>
 		メールアドレス:<jsp:getProperty name="employee" property="mail" /><br>
 		電話番号:	   <jsp:getProperty name="employee" property="tel" /><br>
-		住所:		   <jsp:getProperty name="employee"  property="address" /><br>
+		住所:		   <jsp:getProperty name="employee" property="address" /><br>
 		性別:		   <jsp:getProperty name="employee" property="gender" /><br>
 		生年月日:	   <jsp:getProperty name="employee" property="birthDate" /><br>
 		所属部署:	   <jsp:getProperty name="employee" property="sectionCode" /><br>
