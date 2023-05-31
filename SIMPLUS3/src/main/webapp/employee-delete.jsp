@@ -65,18 +65,6 @@
 </tr>
 </tbody>
 </table>
-		<!-- 従業員コード：<%=employee.getEmployeeCode()%><br>
-		氏名（かな）：<%=employee.getSurName()%><%=employee.getFirstName()%>(<%=employee.getSurKanaName()%><%=employee.getFirstKanaName()%>)<br>
-		メールアドレス：<%=employee.getMail()%><br>
-		TEL：<%=employee.getTel()%><br>
-		生年月日：<%=employee.getBirthDate()%><br>
-		性別：<%=employee.getGender()%><br>
-		所属部署：<%=employee.getSectionName()%><br>
-		入社日：<%=employee.getJoiningDate()%><br>
-		保有資格：<%=employee.getLicenseName()%><br>
-		趣味：<%=employee.getHobbyName()%><br>
-		自己紹介：<%=employee.getSelfintroduction()%><br>
-   -->
   <div class="double_submit">
   <ul>
     <li>
