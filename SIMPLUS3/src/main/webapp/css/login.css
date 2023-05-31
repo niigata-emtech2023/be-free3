@@ -137,6 +137,18 @@ margin: 5px;
   text-align: center;
 }
 
-.logout_submit {
-	left: 0;
+.flead {
+	display: flex;
+	position:relative;
+	height: 80px;
+}
+
+.user_name_area {
+	position:absolute;
+    bottom:0;
+    margin-left:160px; 
+}
+
+.design_submit {
+	
 }

@@ -77,12 +77,12 @@
 	<ul>
 	  <li>
 	      <form action="employee-list-servlet" method="POST">
-		    <input type="submit" value="社員一覧画面に戻る" class="c-form-submit-button">
+		    <input type="submit" value="社員一覧画面に戻る" class="main_submit">
 	      </form>
 	  </li>
 	  <li>
 	      <form action="menu.jsp" method="POST">
-		    <input type="submit" value="メニュー画面に戻る" class="c-form-submit-button">
+		    <input type="submit" value="メニュー画面に戻る" class="main_submit">
 	      </form>
 	  </li>
 	</ul>

@@ -7,6 +7,7 @@ pageEncoding="UTF-8"%>
 <title>メニュー画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css">
+
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font_size.css">
 </head>
 <body>
