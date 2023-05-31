@@ -37,7 +37,10 @@
 	    <tr>
 	    <th>氏名（かな）</th>
 	    <td><jsp:getProperty  name="employee"  property="surName" /><jsp:getProperty  name="employee"  property="firstName" />（<jsp:getProperty name="employee"  property="surKanaName" /><jsp:getProperty name="employee"  property="firstKanaName" />）</td>
-	    </t>
+	    </tr>
+	    <th>メールアドレス</th>
+	    <td><jsp:getProperty  name="employee"  property="mail" /></td>
+	    
 	  </tbody>
 	</table>
 	
