@@ -33,3 +33,56 @@
 li {
     width: 50%;
 }
+
+table {
+     /* border-collapse: collapse; セルの線を重ねる */
+    table-layout: fixed;        /* セルの幅計算指定 */
+}
+
+.one_table {
+	width: 100%;
+}
+
+.two_table {
+	width: 47%;
+}
+ 
+th,td {
+    padding: 5px 7px;          /* 余白指定 */
+    height: 50px;
+}
+ 
+th {
+    background-color: #eee;  /* 背景色指定 */
+    color:  #000;               /* 文字色指定 */
+    font-weight:  bold;       /* 文字の太さ指定 */
+    position:  relative;        /* 位置指定 */
+    z-index: 10;                /* 重なり調整 */
+    width: 140px;
+}
+ 
+td {
+	background-color: #fff;
+    padding-left: 25px;         /* 余白指定 */
+    width: 200px;
+}
+ 
+th::after {
+    content:'';                 /* 空の要素を作る */
+    position:  absolute;        /* 位置指定 */
+    height: 24px;               /* 高さ指定 */
+    width: 24px;                /* 幅指定 */
+    background-color: #eee;  /* 背景色指定 */
+    transform:  rotate(45deg);  /* 要素を回転 */
+    top: 5px;                   /* 位置指定 */
+    right: -12px;               /* 位置指定 */
+    z-index:  -1;               /* 重なり調整 */
+}
+ 
+tr {
+    border-bottom:  solid #fff; /* 線指定 */
+}
+/*
+.detail_table_inner {
+	margin: 20px auto;
+}*/
