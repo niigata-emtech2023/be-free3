@@ -31,38 +31,60 @@
 	<table>
 	  <tbody>
 	    <tr>
-	    <th>従業員コード</th>
-	    <td><jsp:getProperty  name="employee"  property="employeeCode" /></td>
+	      <th>従業員コード</th>
+	      <td><jsp:getProperty  name="employee"  property="employeeCode" /></td>
 	    </tr>
 	    <tr>
-	    <th>氏名（かな）</th>
-	    <td><jsp:getProperty  name="employee"  property="surName" /><jsp:getProperty  name="employee"  property="firstName" />（<jsp:getProperty name="employee"  property="surKanaName" /><jsp:getProperty name="employee"  property="firstKanaName" />）</td>
+	      <th>氏名（かな）</th>
+	      <td><jsp:getProperty  name="employee"  property="surName" /><jsp:getProperty  name="employee"  property="firstName" />（<jsp:getProperty name="employee"  property="surKanaName" /><jsp:getProperty name="employee"  property="firstKanaName" />）</td>
 	    </tr>
-	    <th>メールアドレス</th>
-	    <td><jsp:getProperty  name="employee"  property="mail" /></td>
-	    
+	    <tr>
+	      <th>所属部署</th>
+	      <td><jsp:getProperty name="employee"  property="sectionCode" /></td>
+	    </tr>
+	    <tr>
+	      <th>メールアドレス</th>
+	      <td><jsp:getProperty  name="employee"  property="mail" /></td>
+	    </tr>
+	    <tr>
+	      <th>電話番号</th>
+	      <td><jsp:getProperty name="employee"  property="tel" /></td>
+	    </tr>
+	    <tr>
+	      <th>住所</th>
+	      <td><jsp:getProperty name="employee"  property="address" /></td>
+	    </tr>
+	    <tr>
+	      <th>性別</th>
+	      <td><jsp:getProperty name="employee"  property="gender" /></td>
+	    </tr>
+	    <tr>
+	      <th>生年月日</th>
+	      <td><jsp:getProperty name="employee"  property="birthDate" /></td>
+	    </tr>
+	    <tr>
+	      <th>入社日</th>
+	      <td><jsp:getProperty name="employee"  property="joiningDate" /></td>
+	    </tr>
 	  </tbody>
 	</table>
 	
-		<!-- コード:<jsp:getProperty  name="employee"  property="employeeCode" /><br> 
-	    氏:<jsp:getProperty  name="employee"  property="surName" /><br> 
-		名:<jsp:getProperty  name="employee"  property="firstName" /><br>
-		氏(かな):<jsp:getProperty name="employee"  property="surKanaName" /><br>
-		名(かな):<jsp:getProperty name="employee"  property="firstKanaName" /><br>
-		 -->メールアドレス:<jsp:getProperty  name="employee"  property="mail" /><br>
-		電話番号:<jsp:getProperty name="employee"  property="tel" /><br>
-		住所:<jsp:getProperty name="employee"  property="address" /><br>
-		性別:<jsp:getProperty name="employee"  property="gender" /><br>
-		生年月日:<jsp:getProperty name="employee"  property="birthDate" /><br>
-		所属部署:<jsp:getProperty name="employee"  property="sectionCode" /><br>
-		入社日:<jsp:getProperty name="employee"  property="joiningDate" /><br>
-	    
-     <form action="employee-insert-servlet"method="post">
-              <input type="submit" value="確定">
-     </form>
-              <form action="employee-insert.jsp" method="post">
-              <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
-              	<input type="submit" value="戻る">
-              </form>
+	<div class="double_submit">
+      <ul>
+        <li>
+        <form action="employee-insert-servlet" method="POST">
+	      <input type="submit" value="確定" class="c-form-submit-button">
+	    </form>
+        </li>
+        <li>
+        <form action="employee-insert.jsp" method="post">
+	      <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>" class="c-form-back-button">
+	      <input type="submit" value="戻る">
+	    </form>
+        </li>
+      </ul>
+     </div>
+     
+     </div>
 </body>
 </html>
