@@ -53,7 +53,7 @@
 		<div class="double_submit">
 		<ul>
 		  <li>
-		    <input type="submit" formaction="event-delete-form-servlet" value="削除" class="c-form-submit-button">
+		    <input type="submit" formaction="event-delete-comfirm-servlet" value="削除" class="c-form-submit-button">
 		  </li>
 		  <li>
 		    <input type="submit" formaction="event-update-form-servlet" value="編集" class="c-form-cancel-button">
