@@ -114,6 +114,10 @@ table {
     width: 500px;
     margin: 10px auto;
 }
+
+th {
+	width: 300px;
+}
 table tr {
     border-bottom: 1px solid #ACACAC;
 }
