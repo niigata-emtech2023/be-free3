@@ -80,7 +80,7 @@
 		入社日:		  <jsp:getProperty name="employee" property="joiningDate" /><br>
 		-->
 	<form action="employee-list-servlet" method="POST">
-		<input type="submit" value="一覧に戻る" class="c-form-submit-button3">
+		<input type="submit" value="一覧画面に戻る" class="c-form-submit-button3">
 	</form>
 
 	<% session.removeAttribute("employee"); %>

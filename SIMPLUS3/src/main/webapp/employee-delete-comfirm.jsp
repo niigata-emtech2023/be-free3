@@ -75,13 +75,13 @@
   <ul>
     <li>
     <form action="employee-detail.jsp" method="post">
-	    <input type="submit" value="戻る" class="c-form-back-button">
+	    <input type="submit" value="詳細画面に戻る" class="c-form-back-button">
 	  </form>
       
     </li>
     <li>
       <form action="employee-delete-servlet" method="POST">
-	    <input type="submit" value="削除" class="c-form-submit-button">
+	    <input type="submit" value="確定" class="c-form-submit-button">
 	  </form>
     </li>
   </ul>
