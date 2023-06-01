@@ -60,7 +60,7 @@
 	      </form>
 	  </li>
 	  <li>
-	      <form action="employee-delete-servlet" method="POST">
+	      <form action="employee-delete-form-servlet" method="POST">
 		    <input type="submit" value="削除" class="c-form-cancel-button">
 	      </form>
 	  </li>
