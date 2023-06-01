@@ -91,7 +91,7 @@ input[type="submit"]:hover {
 
 .main_submit {
 	width: 250px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #fff;
 	display: inline-block;
@@ -157,6 +157,7 @@ input[type="submit"]:hover {
     cursor: pointer;
     border: 2px solid transparent;
     text-align : center;
+    font-size: 18px;
 }
 
 .c-form-submit-button2:hover {
@@ -185,6 +186,7 @@ input[type="submit"]:hover {
     border: 2px solid transparent;
     margin-top: 20px;
     text-align : center;
+    font-size: 18px;
 }
 
 .c-form-cancel-button:hover {
@@ -275,7 +277,7 @@ input[type="submit"]:hover {
     border: 2px solid transparent;
     margin-top: 20px;
     text-align : center;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .c-form-submit-button4:hover {
@@ -343,3 +345,28 @@ input[type="text"], input[type="email"], input[type="tel"]{
 	font-size: 18px;
 	margin-bottom: 5px; 
 }
+
+.d_label {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  border: 2px solid #ccc;
+}
+input[type="date"] {
+  position: relative;
+  padding: 0 10px;
+  width: 200px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #999;
+}
+
+textarea {
+	font-size: 20px;
+}
+
+

@@ -32,16 +32,16 @@
 		
 		<div class="box30">
         <div class="box-title">このイベントに参加しますか？</div>
-          <fieldset class="radio-002">
-           <label>
-              <input type="radio" name="join" value="参加" checked>
-              参加
-           </label>
-           <label>
-              <input type="radio" name="join" value="不参加">
-              不参加
-           </label>
-         </fieldset>
+           <fieldset class="radio-002">
+                   <label>
+                     <input type="radio" name="join" value="参加" checked>
+                     参加
+                   </label>
+                   <label>
+                     <input type="radio" name="join" value="不参加">
+                     不参加
+                   </label>
+             </fieldset>
          <input type="submit" formaction="event-join-servlet" value="送信する" class="part_submit">
         </div>
 		

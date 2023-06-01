@@ -20,14 +20,14 @@
 	<table class ="one_table">
 	    <tr>
 	      <th>従業員コード</th>
-	      <td class="normal_td"><input type="text" name="employeeCode" value="<jsp:getProperty name="employee" property="employeeCode" />"></td>
+	      <td class="normal_td"><input class="form_text" type="text" name="employeeCode" value="<jsp:getProperty name="employee" property="employeeCode" />"></td>
 	    </tr>
 	</table>
 	
 	<table class="two_table" align="left">
 	    <tr>
 	      <th>氏名</th>
-	      <td class="normal_td"><input type="text" name="surName" value="<jsp:getProperty name="employee" property="surName" />"> <input type="text" name="firstName" value="<jsp:getProperty name="employee" property="firstName" />">
+	      <td class="normal_td"><input class="form_text" type="text" name="surName" value="<jsp:getProperty name="employee" property="surName" />"> <input class="form_text" type="text" name="firstName" value="<jsp:getProperty name="employee" property="firstName" />">
 	      </td>
 	    </tr>
 	    <tr>
@@ -51,17 +51,17 @@
 	    </tr>
 	    <tr>
 	      <th>メールアドレス</th>
-	      <td class="normal_td"><input type="text" name="mail" value="<jsp:getProperty name="employee" property="mail" />"></td>
+	      <td class="normal_td"><input class="form_text" type="text" name="mail" value="<jsp:getProperty name="employee" property="mail" />"></td>
 	    </tr>
 	    <tr>
 	      <th>生年月日</th>
-	      <td class="normal_td"><input type="date" name="birthDate" value="<jsp:getProperty name="employee" property="birthDate" />"></td>
+	      <td class="normal_td"><label class="d_label"><input type="date" name="birthDate" value="<jsp:getProperty name="employee" property="birthDate" />"></label></td>
 	    </tr>
 	</table>
 	<table class="two_table">
 	    <tr>
 	      <th>氏名かな</th>
-	      <td class="normal_td"><input type="text" name="surKanaName" value="<jsp:getProperty name="employee" property="surKanaName" />"> <input type="text" name="firstKanaName" value="<jsp:getProperty name="employee" property="firstKanaName" />">
+	      <td class="normal_td"><input class="form_text" type="text" name="surKanaName" value="<jsp:getProperty name="employee" property="surKanaName" />"> <input class="form_text" type="text" name="firstKanaName" value="<jsp:getProperty name="employee" property="firstKanaName" />">
 	      </td>
 	    </tr>
 	    <tr>
@@ -79,18 +79,18 @@
 	      </td>
 	    <tr>
 	      <th>電話番号</th>
-	      <td class="normal_td"><input type="text" name="tel" value="<jsp:getProperty name="employee" property="tel" />"></td>
+	      <td class="normal_td"><input class="form_text" type="text" name="tel" value="<jsp:getProperty name="employee" property="tel" />"></td>
 	    </tr>
 	    <tr>
 	      <th>入社日</th>
-	      <td class="normal_td"><input type="date" name="joiningDate" value="<jsp:getProperty name="employee" property="joiningDate" />"></td>
+	      <td class="normal_td"><label class="d_label"><input type="date" name="joiningDate" value="<jsp:getProperty name="employee" property="joiningDate" />"></label></td>
 	    </tr>
 	</table>
 	
 	<table class ="one_table">
 	    <tr>
 	      <th>住所</th>
-	      <td class="normal_td"><input type="text" name="address" value="<jsp:getProperty name="employee" property="address" />"></td>
+	      <td class="normal_td"><input class="form_text" type="text" name="address" value="<jsp:getProperty name="employee" property="address" />"></td>
 	    </tr>
 	</table>
 		<!-- 氏：		  <input type="text" name="surName" value="<jsp:getProperty name="employee" property="surName" />"><br>

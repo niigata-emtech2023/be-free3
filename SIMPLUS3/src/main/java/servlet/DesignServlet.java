@@ -43,8 +43,8 @@ public class DesignServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		// リクエストパラメータの取得
-		String fontSize = request.getParameter("font_size");
-		String siteColor = request.getParameter("site_color");
+		String fontSize = request.getParameter("font-size");
+		String siteColor = request.getParameter("site-color");
 
 //		DesignBean design = new DesignBean();
 //		

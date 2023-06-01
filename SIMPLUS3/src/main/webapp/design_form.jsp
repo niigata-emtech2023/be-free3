@@ -18,15 +18,15 @@
          <tr><th>文字の大きさ</th><td class="normal_td">
            <fieldset class="radio-002">
                    <label>
-                     <input type="radio" name="font-size" value="0">
+                     <input type="radio" name="font-size" value="small">
                      small
                    </label>
                    <label>
-                     <input type="radio" name="font-size" value="1" checked="checked">
+                     <input type="radio" name="font-size" value="normal" checked="checked">
                      normal
                    </label>
                    <label>
-                     <input type="radio" name="font-size" value="2">
+                     <input type="radio" name="font-size" value="large">
                      large
                    </label>
                  </fieldset>

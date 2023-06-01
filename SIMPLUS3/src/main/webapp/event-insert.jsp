@@ -16,30 +16,30 @@
 	  <table class="two_table" align="left">
 	    <tr>
 	      <th>イベントコード<span class="req_span">必須</span></th>
-	      <td class="normal_td"><input type="text" size="10" name="eventCode" required></td>
+	      <td class="normal_td"><input type="text" size="10" name="eventCode" required  class="form_text"></td>
 	    </tr>
 	    <tr>
 	      <th>開催者<span class="req_span">必須</span><br><p class="note">従業員コードで入力してください</p></th>
-	      <td class="normal_td"><input type="text" size="10" name="organizer" required></td>
+	      <td class="normal_td"><input type="text" size="10" name="organizer" required  class="form_text"></td>
 	    </tr>
 	    <tr>
 	      <th>開催場所<span class="req_span">必須</span></th>
-	      <td class="normal_td"><input type="text" size="10" name="eventPlace" value ="未定" required></td>
+	      <td class="normal_td"><input type="text" size="20" name="eventPlace" value ="未定" required class="form_text"></td>
 	  </table>
 	  <table class="two_table">
 	    <tr>
 	      <th>イベント名<span class="req_span">必須</span></th>
-	      <td class="normal_td"><input type="text" size="10" name="eventName" required></td>
+	      <td class="normal_td"><input type="text" size="24" name="eventName" required class="form_text"></td>
 	    </tr>
 	    <tr>
 	      <th>開催日<span class="req_span">必須</span></th>
-	      <td class="normal_td"><input type="date" size="10" name="eventDate" required></td>
+	      <td class="normal_td"><label class="d_label"><input type="date" size="10" name="eventDate" required></label></td>
 	    </tr>
 	  </table>
 	  <table class="one_table">
 	    <tr>
 	      <th>イベント詳細<span class="req_span">必須</span></th>
-	      <td class="normal_td"><textarea name="selfIntroduction" cols="40" rows="3"  required>誰でも気軽に参加してください！</textarea><td>
+	      <td class="normal_td"><textarea name="selfintroduction" maxlength="400" cols="40" rows="10">誰でも気軽に参加してください！</textarea><td>
 	    </tr>
 	  </table>
 		
