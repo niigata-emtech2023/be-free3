@@ -57,9 +57,21 @@
 	    	  </tbody>
 	</table>
 	
-	<form action="menu.jsp"method="post">
-           <input type="submit"value="メニュー画面に戻る"class="c-form-submit-button3">
-     </form>
+	<%
+		if ("2" == session.getAttribute("authority")) {
+		%>
+		<form action="menu2.jsp" method="POST">
+		    <input type="submit" value="メニュー画面に戻る" class="main_submit">
+	      </form>
+		<%
+		} else {
+		%>
+		<form action="menu.jsp" method="POST">
+		    <input type="submit" value="メニュー画面に戻る" class="main_submit">
+	      </form>
+		<%
+		}
+		%>
     <% session.removeAttribute("employee"); %>
      </div>
 </body>

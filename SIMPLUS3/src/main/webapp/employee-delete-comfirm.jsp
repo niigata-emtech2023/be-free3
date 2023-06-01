@@ -27,11 +27,15 @@
 			<td><%=employee.getSurName() %><%=employee.getFirstName() %>(<%=employee.getSurKanaName() %><%=employee.getFirstKanaName() %>)</td>
 		</tr>
 		<tr>
+			<th>所属部署</th>
+			<td><%=employee.getSectionName() %></td>
+		</tr>
+		<tr>
 			<th>メールアドレス</th>
 			<td><%=employee.getMail() %></td>
 		</tr>
 		<tr>
-			<th>TEL</th>
+			<th>電話番号</th>
 			<td><%=employee.getTel() %></td>
 		</tr>
 		<tr>
@@ -40,11 +44,7 @@
 		</tr>
 		<tr>
 			<th>性別</th>
-			<td><%=employee.getGender() %></td>
-		</tr>
-		<tr>
-			<th>所属部署</th>
-			<td><%=employee.getSectionName() %></td>
+			<td><%=employee.getGenderName() %></td>
 		</tr>
 		<tr>
 			<th>入社日</th>
