@@ -110,9 +110,6 @@
 		<%
 		}
 		%>
-	      <form action="menu.jsp" method="POST">
-		    <input type="submit" value="メニュー画面に戻る" class="main_submit">
-	      </form>
 	  </li>
 	</ul>
 	</div>
