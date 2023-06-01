@@ -30,8 +30,8 @@
 		<tr><th>趣味</th><td><%=employee.getHobbyName() %></td></tr>
 		<tr><th>自己紹介</th><td><%=employee.getSelfintroduction() %></td></tr>
 	</table>
-	<form action="menu.jsp" method="post">
-	<input type="submit" value="メニューへ戻る" class="c-form-submit-button3">
+	<form action="employee-list-servlet" method="POST">
+		<input type="submit" value="一覧画面に戻る" class="c-form-submit-button3">
 	</form>
 	<% session.removeAttribute("employee"); %>
 </div>

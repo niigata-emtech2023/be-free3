@@ -53,9 +53,9 @@
 	  </tbody>
 	</table>
 		
-		<form action="event-list-servlet" method="POST">
-		<input type="submit" value="メニュー画面に戻る" class="c-form-submit-button3">
-	</form>
+		<form action="event-list-servlet" method="post">
+			<input type="submit" value="一覧画面に戻る" class="c-form-submit-button3">
+		</form>
 
 	<% session.removeAttribute("employee"); %>
 	</div>

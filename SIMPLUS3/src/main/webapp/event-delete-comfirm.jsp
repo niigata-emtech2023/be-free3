@@ -28,10 +28,10 @@
 		<div class="double_submit">
 		<ul>
     		<li>
-			<input type="submit" formaction="event-detail-servlet" value="戻る" class="c-form-back-button">
+			<input type="submit" formaction="event-detail-servlet" value="詳細画面に戻る" class="c-form-back-button">
 			</li>
 			<li>
-			<input type="submit" formaction="event-delete-servlet" value="削除" class="c-form-submit-button">
+			<input type="submit" formaction="event-delete-servlet" value="確定" class="c-form-submit-button">
 			</li>
 		</ul>
 		</div>

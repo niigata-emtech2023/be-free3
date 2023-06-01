@@ -47,7 +47,7 @@
 	</form>
 	
 	<form action="menu.jsp" method="post">
-    	<input type="submit" value="登録を中止してメニューへ戻る"  class="c-form-submit-button2"> 
+    	<input type="submit" value="登録を中止してメニューに戻る"  class="c-form-submit-button2"> 
     </form>
     </div>
     <%@ include file="footer.jsp" %>

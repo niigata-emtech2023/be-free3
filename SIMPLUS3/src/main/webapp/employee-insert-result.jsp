@@ -70,7 +70,7 @@
 	</table>
      
      <form action="menu.jsp"method="post">
-           <input type="submit"value="メニューに戻る" class="c-form-submit-button3">
+           <input type="submit"value="メニュー画面に戻る" class="c-form-submit-button3">
      </form>
      <% session.removeAttribute("employee"); %>
 

@@ -124,7 +124,7 @@
 	
 	<form action="employee-detail-servlet" method="POST">
 		<input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
-		<input type="submit" value="登録を中止してメニューへ戻る" class="c-form-submit-button2">
+		<input type="submit" value="詳細画面に戻る" class="c-form-submit-button2">
 	</form>
 	</div>
 	<%@ include file="footer.jsp" %>

@@ -64,7 +64,7 @@
      
      <form action="event-detail-servlet" method="POST">
 		<input type="hidden" name="eventCode" value="<%=event.getEventCode()%>">
-		<input type="submit" value="戻る">
+		<input type="submit" value="詳細画面に戻る" class="c-form-submit-button2">
 	</form>
 	</div>
 	<%@ include file="footer.jsp" %>
