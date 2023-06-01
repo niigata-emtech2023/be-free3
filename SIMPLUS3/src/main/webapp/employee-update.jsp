@@ -116,6 +116,7 @@
 				  	  </select>
 		入社日:		  <input type="date" name="joiningDate" value="<jsp:getProperty name="employee" property="joiningDate" />"><br>
 -->
+		<jsp:setProperty name="employee" property="employeeCode" param="employeeCode" />
 		
 		<input type="submit" value="確認" class="c-form-submit-button">
 		
