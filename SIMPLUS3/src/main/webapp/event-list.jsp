@@ -11,6 +11,7 @@
 	href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
 	<div class="container">
 		<h1>社内イベント一覧画面</h1>
 		<%
@@ -34,7 +35,6 @@
 					</span></td>
 					<td class="td7"><%=event.getEventName()%></td>
 					<td class="td8"><%=event.getEventDate()%></td>
-
 					<td class="td9">
 						<form action="event-detail-servlet" method="POST">
 							<input type="hidden" name="eventCode"

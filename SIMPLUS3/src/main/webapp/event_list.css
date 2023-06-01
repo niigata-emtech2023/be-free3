@@ -94,7 +94,6 @@ td {
   padding: 10px 15px;
   position: relative;
   transition: all 300ms;
-  width: 150px;
 }
 
 td:first-child {
@@ -136,29 +135,6 @@ tbody:hover tr:hover td {
   text-shadow: 0 1px 0 #fff;
 }
 
-.th1 {
-	width: 110px;
-}
-
-.th2 {
-	width: 155px;
-}
-
-.th3 {
-	width: 210px;
-}
-
-.th5 {
-	width: 190px;
-}
-
-.td1 {
-	width:180px;
-}
-
-.td3 {
-	width: 210px;
-}
 
 /*社内イベント*/
 

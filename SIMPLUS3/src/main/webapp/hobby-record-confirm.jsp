@@ -45,7 +45,7 @@
 	    </form>
         </li>
         <li>
-        <form action="hobby-insert-form.jsp" method="post">
+        <form action="hobby-insert-form-servlet" method="post">
 	      <input type="hidden" name="eventCode" value="<%=employee.getEmployeeCode()%>" class="c-form-back-button">
 	      <input type="submit" value="戻る">
 	    </form>
