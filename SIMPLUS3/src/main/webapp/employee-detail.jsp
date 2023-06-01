@@ -68,7 +68,7 @@
 	</div>
 	
 	<form action="employee-list-servlet" method="POST">
-		<input type="submit" value="戻る" class="c-form-submit-button2">
+		<input type="submit" value="詳細画面に戻る" class="c-form-submit-button2">
 	</form>
 	</div>
 </body>

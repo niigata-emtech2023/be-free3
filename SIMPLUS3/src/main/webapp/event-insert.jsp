@@ -19,12 +19,12 @@
 	      <td class="normal_td"><input type="text" size="10" name="eventCode" required></td>
 	    </tr>
 	    <tr>
-	      <th>開催者名<span class="req_span">必須</span></th>
+	      <th>開催者<span class="req_span">必須</span><br><p class="note">従業員コードで入力してください</p></th>
 	      <td class="normal_td"><input type="text" size="10" name="organizer" required></td>
 	    </tr>
 	    <tr>
 	      <th>開催場所<span class="req_span">必須</span></th>
-	      <td class="normal_td"><input type="text" size="10" name="eventPlace" required></td>
+	      <td class="normal_td"><input type="text" size="10" name="eventPlace" value ="未定" required></td>
 	  </table>
 	  <table class="two_table">
 	    <tr>
@@ -39,8 +39,7 @@
 	  <table class="one_table">
 	    <tr>
 	      <th>イベント詳細<span class="req_span">必須</span></th>
-	      <td class="normal_td"><textarea name="selfIntroduction" cols="40" rows="3"  required>
-	      </textarea><td>
+	      <td class="normal_td"><textarea name="selfIntroduction" cols="40" rows="3"  required>誰でも気軽に参加してください！</textarea><td>
 	    </tr>
 	  </table>
 		

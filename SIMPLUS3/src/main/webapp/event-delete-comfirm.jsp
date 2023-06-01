@@ -17,7 +17,7 @@
 		EventBean event = (EventBean) session.getAttribute("event");
 	%>
 	<form action="?" method="post">
-		<table border=1>
+		<table>
 		<tr><th>イベント名</th><td><%=event.getEventName() %></td></tr>
 		<tr><th>開催者名</th><td><%=event.getOrganizer() %></td></tr>
 		<tr><th>開催日時</th><td><%=event.getEventDate() %></td></tr>
@@ -28,7 +28,7 @@
 		<div class="double_submit">
 		<ul>
     		<li>
-			<input type="submit" formaction="event-delete.jsp" value="戻る" class="c-form-back-button">
+			<input type="submit" formaction="event-detail-servlet" value="戻る" class="c-form-back-button">
 			</li>
 			<li>
 			<input type="submit" formaction="event-delete-servlet" value="削除" class="c-form-submit-button">

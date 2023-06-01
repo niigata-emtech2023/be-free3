@@ -7,7 +7,7 @@
 <title>従業員情報編集確認画面</title>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css"><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css">
 </head>
 <body>
 <%@ include file="header.jsp" %>
@@ -80,14 +80,14 @@
 	<div class="double_submit">
       <ul>
         <li>
-        <form action="employee-update-servlet" method="POST">
-	      <input type="submit" value="確定" class="c-form-submit-button">
+        <form action="employee-update-form-servlet" method="post">
+	      <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
+	      <input type="submit" value="戻る" class="c-form-back-button">
 	    </form>
         </li>
         <li>
-        <form action="employee-update-form-servlet" method="post">
-	      <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>" class="c-form-back-button">
-	      <input type="submit" value="戻る">
+        <form action="employee-update-servlet" method="POST">
+	      <input type="submit" value="確定" class="c-form-submit-button">
 	    </form>
         </li>
       </ul>

@@ -31,7 +31,7 @@
             </select>
            </div>
            </td></tr>
-           <tr><th>自己紹介</th><td class="normal_td"><textarea name="selfintroduction" maxlength="400" cols="40" rows="10" ></textarea></td></tr>
+           <tr><th>自己紹介</th><td class="normal_td"><textarea name="selfintroduction" maxlength="400" cols="40" rows="10" value="はじめまして！よろしくね！" ></textarea></td></tr>
          </table>
                  <input type="submit" value="確認" class="c-form-submit-button">
        </form>

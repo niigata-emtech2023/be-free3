@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>自己紹介・趣味登録確認画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css"><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css">
 </head>
 <body>
         <%@ include file="header.jsp" %>
