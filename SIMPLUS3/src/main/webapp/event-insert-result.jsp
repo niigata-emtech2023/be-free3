@@ -11,6 +11,7 @@
 <body>
 <%@ include file="header.jsp" %>
     <h1></h1>
+    <div class="confirm-field">
 <%
     int count = (Integer) request.getAttribute("count");
    	if (count > 0) {
@@ -38,6 +39,6 @@
            <input type="submit"value="メニューに戻る">
      </form>
      <%session.invalidate(); %>
-     
+     </div>
 </body>
 </html>

@@ -5,8 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>社内イベント編集完了画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
+<div class="confirm-field">
        <%
 		int processingNumber = (Integer) request.getAttribute("processingNumber");
 		if (processingNumber > 0) {
@@ -32,5 +36,6 @@
 	</form>
 
 	<!-- <% session.invalidate(); %> -->
+	</div>
 </body>
 </html>
