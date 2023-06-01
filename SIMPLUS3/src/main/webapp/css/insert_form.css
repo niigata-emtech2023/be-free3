@@ -147,6 +147,10 @@
     display: none;
 }
 
+.c-form-radio-text {
+    display:inline-block; 
+}
+/*
 .c-form-select {
     position: relative;
 }
@@ -166,9 +170,6 @@
     pointer-events: none;
 }
 
-.c-form-radio-text {
-    display:inline-block; 
-}
 
 .c-form-select select {
 	width: 100%;
@@ -190,7 +191,7 @@
 .c-form-select select:focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
-}
+}*/
 
 .c-form-submit-button {
     width: 100%;

@@ -91,25 +91,6 @@ tr {
 	margin: 20px auto;
 }*/
 
-.box30 {
-text-align: center;
-    margin: 2em 0;
-    background: #f1f1f1;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
-}
-.box30 .box-title {
-    font-size: 1.2em;
-    background: #5fc2f5;
-    padding: 4px;
-    text-align: center;
-    color: #FFF;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-}
-.box30 .radio-002 {
-    padding: 15px 20px;
-    margin: 0;
-}
 
 .part_submit {
     width: 100%;
