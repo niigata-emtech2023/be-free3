@@ -19,7 +19,7 @@
 	<%=event.getEventName() %>の削除が完了しました。
 	
 	<form action="event-list-servlet" method="post">
-	<input type="submit" value="一覧画面に戻る">
+	<input type="submit" value="一覧画面に戻る" class="c-form-submit-button3">
 	</form>
 	</div>
 </body>

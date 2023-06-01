@@ -21,7 +21,7 @@
 	<%
 } else {
 %>
-	以下の社内イベント情報を登録できませんでした。
+	<span class="fail_red">以下の社内イベント情報を登録できませんでした。</span>
 	<br>
 	<%
 }
@@ -36,7 +36,7 @@
 	イベント詳細:<jsp:getProperty  name="event"  property="selfIntroduction" /><br>
 	
 	<form action="menu.jsp"method="post">
-           <input type="submit"value="メニューに戻る">
+           <input type="submit"value="メニューに戻る"class="c-form-submit-button3">
      </form>
      <%session.invalidate(); %>
      </div>

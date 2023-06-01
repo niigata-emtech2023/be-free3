@@ -13,7 +13,7 @@
 		String str = (String) request.getAttribute("join");
 	%>
 	
-	<%=event.getEventName() %>は、<%=str %>!
+	<%=event.getEventName() %>は、<%=str %>で受け付けました。
 	<br>
 	<form action="event-detail.jsp" method="post">
 	<input type="submit" value="詳細画面に戻る">

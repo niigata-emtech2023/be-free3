@@ -19,7 +19,7 @@
 	<%
 		} else {
 	%>
-	次のデータを変更登録できませんでした。<br>
+	<span class="fail_red">次のデータを変更登録できませんでした。</span><br>
 	<%
 		}
 	%>
@@ -32,7 +32,7 @@
 		自由記述：	  <jsp:getProperty name="event" property="selfIntroduction" /><br>
 		
 		<form action="event-list-servlet" method="POST">
-		<input type="submit" value="メニュー画面に戻る">
+		<input type="submit" value="メニュー画面に戻る" class="c-form-submit-button3">
 	</form>
 
 	<!-- <% session.invalidate(); %> -->
