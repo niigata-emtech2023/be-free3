@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.LoginDAO;
-
 /**
  * Servlet implementation class DesignServlet
  */
@@ -40,41 +38,29 @@ public class DesignServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String url = null; //画面遷移先
 
 		// リクエストオブジェクトのエンコーディング方式の指定
 		request.setCharacterEncoding("UTF-8");
 
 		// リクエストパラメータの取得
-		String userId = request.getParameter("userId");
-		String password = request.getParameter("password");
+		String fontSize = request.getParameter("font_size");
+		String siteColor = request.getParameter("site_color");
 
-		try {
-			// DAOの生成
-			 LoginDAO loginDao = new  LoginDAO();
+//		DesignBean design = new DesignBean();
+//		
+//		design.setFontSize(fontSize);
+//		design.setSiteColor(siteColor);
+		
+		// セッションオブジェクトの取得
+		HttpSession session = request.getSession();
 
-			// DAOの利用
-			if (loginDao.loginCheck(userId, password)) {
-				// 認証成功
-				url = "menu.jsp";
-
-				// セッションオブジェクトの取得
-				HttpSession session = request.getSession();
-
-				// セッションスコープへの属性の設定
-				session.setAttribute("userId", userId);
-
-			} else {
-				// 認証失敗
-				url = "login.html";
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		// セッションスコープへの属性の設定
+//		session.setAttribute("design", design);
+		session.setAttribute("fontSize", fontSize);
+		session.setAttribute("siteColor",siteColor);
 
 		// リクエストの転送
-		RequestDispatcher rd = request.getRequestDispatcher(url);
+		RequestDispatcher rd = request.getRequestDispatcher("menu.jsp");
 		rd.forward(request, response);
 	}
 }
