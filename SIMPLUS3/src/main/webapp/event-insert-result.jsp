@@ -51,7 +51,7 @@
 	      <td><jsp:getProperty name="event"  property="eventPlace" /></td>
 	    </tr>
 	    <tr>
-	      <th>自己紹介</th>
+	      <th>イベント詳細</th>
 	      <td><jsp:getProperty name="event"  property="selfIntroduction" /></td>
 	    </tr>
 	    	  </tbody>
