@@ -38,7 +38,7 @@
 	  </table>
 	  <table class="one_table">
 	    <tr>
-	      <th>イベント詳細）<span class="req_span">必須</span></th>
+	      <th>イベント詳細<span class="req_span">必須</span></th>
 	      <td class="normal_td"><textarea name="selfIntroduction" cols="40" rows="3"  required>
 	      </textarea><td>
 	    </tr>

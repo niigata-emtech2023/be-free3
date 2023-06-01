@@ -5,10 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>社内イベント情報削除確認画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirm.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
 	<h1>社内イベント情報削除確認画面</h1>
-	
+	<div class="confirm-field">
+	<p>この内容を削除しますか？</p>
 	<%
 		EventBean event = (EventBean) session.getAttribute("event");
 	%>
@@ -21,9 +25,17 @@
 		<tr><th>イベント詳細</th><td><%=event.getSelfIntroduction() %></td></tr>
 		</table>
 	
-		本当に削除しますか？
-		<input type="submit" formaction="event-delete.jsp" value="戻る">
-		<input type="submit" formaction="event-delete-servlet" value="削除">
+		<div class="double_submit">
+		<ul>
+    		<li>
+			<input type="submit" formaction="event-delete.jsp" value="戻る" class="c-form-back-button">
+			</li>
+			<li>
+			<input type="submit" formaction="event-delete-servlet" value="削除" class="c-form-submit-button">
+			</li>
+		</ul>
+		</div>
 		</form>
+	</div>
 </body>
 </html>

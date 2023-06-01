@@ -46,7 +46,7 @@
 	      <td><jsp:getProperty name="event"  property="eventPlace" /></td>
 	    </tr>
 	    <tr>
-	      <th>自己紹介</th>
+	      <th>イベント詳細</th>
 	      <td><jsp:getProperty name="event"  property="selfIntroduction" /></td>
 	    </tr>
 	    	  </tbody>
@@ -57,7 +57,7 @@
     <div class="double_submit">
       <ul>
         <li>
-        <form action="event-insert-servlet" method="POST">
+        <form action="event-insert-result-servlet" method="POST">
 	      <input type="submit" value="確定" class="c-form-submit-button">
 	    </form>
         </li>

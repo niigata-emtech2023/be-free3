@@ -43,7 +43,7 @@
         <li>
         <form action="license-insert-form.jsp" method="post">
 	      <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>" class="c-form-back-button">
-	      <input type="submit" value="戻る">
+	      <input type="submit" value="戻る" class="c-form-submit-button4">
 	    </form>
         </li>
       </ul>
