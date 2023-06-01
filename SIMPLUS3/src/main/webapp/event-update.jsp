@@ -40,7 +40,7 @@
 	       </tr>
 	       <tr>
 	         <th>開催場所</th>
-	         <td class="normal_td"><input type="text" name="eventplace" value="<jsp:getProperty name="event" property="eventPlace" />"></td>
+	         <td class="normal_td"><input type="text" name="eventPlace" value="<jsp:getProperty name="event" property="eventPlace" />"></td>
 	       </tr>
 	   </table>
 	   
