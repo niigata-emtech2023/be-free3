@@ -19,7 +19,7 @@
          <tr><th>設定したい従業員のコードを入力してください<span class="req_span">必須</span></th><td class="normal_td"><input class="form_text" type="text" size="10" name="employeeCode" required></td></tr>
          <tr><th>保有資格選択<span class="req_span">必須</span></th><td class="normal_td">
           <div class="c-form-select">
-          <select name="licenceCode">
+          <select name="licenceCode"required>
                  <option></option>
                  <option value="L001">基本情報技術者試験</option>
                  <option value="L002">応用情報技術者試験</option>
