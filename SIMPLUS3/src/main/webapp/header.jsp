@@ -4,7 +4,7 @@
 %>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
       <div class="header_logo">
-        <img src="img/logo.png" alt="サイトのロゴマークです。">
+        <a href="menu.jsp"><img src="img/logo.png" alt="サイトのロゴマークです。"></a>
       </div>
       <div class=flead>
           <form action="logout-servlet" method="POST">
