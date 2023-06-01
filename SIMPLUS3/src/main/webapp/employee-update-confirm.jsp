@@ -13,7 +13,7 @@
 <%@ include file="header.jsp" %>
 	<h1>従業員情報変更確認画面</h1>
 	<div class="confirm-field">
-	<p>以下の社員情報に変更します。よろしいですか？</p>
+	<p>以下の従業員情報に変更します。よろしいですか？</p>
 <%
 		request.setCharacterEncoding("UTF-8");
 	%>
