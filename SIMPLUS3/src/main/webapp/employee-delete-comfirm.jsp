@@ -27,7 +27,7 @@
 	<input type="submit" value="削除">
 	</form>
 	<form action="employee-delete.jsp" method="post">
-	<input type="submit" value="戻る">
+	<input type="submit" value="戻る" class="c-form-submit-button4">
 	</form>
 
 </body>
