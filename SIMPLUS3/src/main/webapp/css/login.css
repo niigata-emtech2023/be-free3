@@ -20,14 +20,18 @@ body {
   text-align: center;
 }
 
-.login_form .login_h1, .login_form .login_p {
+.login_form .login_h1, .login_form .login_p .alert{
   color: #5c87a6;
   font-weight: 500;
   /*back-ground:*/
 }
 
-.login_form .login_p {
+.login_form .login_p .alert{
   font-size: 20px;
+}
+
+.login_form .alert{
+	color:#ff0000;
 }
 
 .login_form .login_input[type=text], .login_form .login_input[type=password] {
