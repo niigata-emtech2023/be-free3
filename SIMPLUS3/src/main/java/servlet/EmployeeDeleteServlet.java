@@ -62,7 +62,7 @@ EmployeeDAO dao = new EmployeeDAO();
 		}
 
 		if(cnt == 0) {
-			RequestDispatcher rd = request.getRequestDispatcher("employee-delete.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("employee-delete-confirm.jsp");
 			rd.forward(request, response);
 		}else {
 			RequestDispatcher rd = request.getRequestDispatcher("employee-delete-result.jsp");
