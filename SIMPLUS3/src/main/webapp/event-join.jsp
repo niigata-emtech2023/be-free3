@@ -5,18 +5,24 @@
 <head>
 <meta charset="UTF-8">
 <title>参加可否画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
+
 </head>
 <body>
+<%@ include file="header.jsp" %>
+<div class="logout_inner">
 	<h1>社内イベント参加可否画面</h1>
 	<%
 		EventBean event = (EventBean) session.getAttribute("event");
 		String str = (String) request.getAttribute("join");
 	%>
 	
-	<%=event.getEventName() %>は、<%=str %>!
+	<p><%=event.getEventName() %>に「<%=str %>」を送信しました!</p>
 	<br>
 	<form action="event-detail.jsp" method="post">
-	<input type="submit" value="詳細画面に戻る">
+	<input type="submit" value="詳細画面に戻る" class="main_submit">
 	</form>
+	</div>
 </body>
 </html>
