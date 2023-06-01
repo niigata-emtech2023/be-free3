@@ -46,7 +46,7 @@
      <form action="menu.jsp"method="post">
            <input type="submit"value="メニューに戻る" class="c-form-submit-button3">
      </form>
-     <%session.removeAttribute("employee"); %>
+    <% session.removeAttribute("employee"); %>
 
 </div>
 </body>

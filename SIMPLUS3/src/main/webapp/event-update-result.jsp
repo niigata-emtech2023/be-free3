@@ -57,7 +57,7 @@
 		<input type="submit" value="メニュー画面に戻る" class="c-form-submit-button3">
 	</form>
 
-	<!-- <% session.invalidate(); %> -->
+	<% session.removeAttribute("employee"); %>
 	</div>
 </body>
 </html>

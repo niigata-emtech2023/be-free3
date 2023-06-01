@@ -21,6 +21,7 @@
 	<form action="event-list-servlet" method="post">
 	<input type="submit" value="一覧画面に戻る" class="c-form-submit-button3">
 	</form>
+	
 	</div>
 </body>
 </html>
