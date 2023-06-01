@@ -23,9 +23,9 @@
 	<jsp:setProperty name="employee" property="mail" param="mail" />
 	<jsp:setProperty name="employee" property="address" param="address" />
 	<jsp:setProperty name="employee" property="tel" param="tel" />
-	<jsp:setProperty name="employee" property="gender" param="gender" />
+	
 	<jsp:setProperty name="employee" property="birthDate" param="birthDate" />
-	<jsp:setProperty name="employee" property="sectionCode" param="sectionCode" />
+	
 	<jsp:setProperty name="employee" property="joiningDate" param="joiningDate" />
 	
 	<table>
@@ -40,7 +40,7 @@
 	    </tr>
 	    <tr>
 	      <th>所属部署</th>
-	      <td><jsp:getProperty name="employee"  property="sectionCode" /></td>
+	      <td><jsp:getProperty name="employee"  property="sectionName" /></td>
 	    </tr>
 	    <tr>
 	      <th>メールアドレス</th>
@@ -56,7 +56,7 @@
 	    </tr>
 	    <tr>
 	      <th>性別</th>
-	      <td><jsp:getProperty name="employee"  property="gender" /></td>
+	      <td><jsp:getProperty name="employee"  property="genderName" /></td>
 	    </tr>
 	    <tr>
 	      <th>生年月日</th>

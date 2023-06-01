@@ -20,11 +20,12 @@
 	<table>
 		<tr><th>従業員コード</th><td><%=employee.getEmployeeCode() %></td></tr>
 		<tr><th>氏名（かな）</th><td><%=employee.getSurName() %><%=employee.getFirstName() %>(<%=employee.getSurKanaName() %><%=employee.getFirstKanaName() %>)</td></tr>
+		<tr><th>所属部署</th><td><%=employee.getSectionName() %></td></tr>
 		<tr><th>メールアドレス</th><td><%=employee.getMail() %></td></tr>
-		<tr><th>TEL</th><td><%=employee.getTel() %></td></tr>
+		<tr><th>電話番号</th><td><%=employee.getTel() %></td></tr>
 		<tr><th>生年月日</th><td><%=employee.getBirthDate() %></td></tr>
-		<tr><th>性別</th><td><%=employee.getGender() %></td></tr>
-		<tr><th>所属部署</th><td><%=employee.getSectionCode() %></td></tr>
+		<tr><th>性別</th><td><%=employee.getGenderName() %></td></tr>
+		<tr><th>所属部署</th><td><%=employee.getSectionName() %></td></tr>
 		<tr><th>入社日</th><td><%=employee.getJoiningDate() %></td></tr>
 		<tr><th>保有資格</th><td><%=employee.getLicenseName() %></td></tr>
 		<tr><th>趣味</th><td><%=employee.getHobbyName() %></td></tr>

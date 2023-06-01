@@ -61,10 +61,23 @@
 			<td class="td3"><%=employee.getSurKanaName() + employee.getFirstKanaName()%></td>
 			<td class="td4"><%=employee.getSectionName()%></td>
 			<td class="td5">
-				<form action="employee-detail-servlet" method="POST">
+				<%
+		if ("2" == session.getAttribute("authority")) {
+		%>
+		<form action="employee-detail2-servlet" method="POST">
+			<input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
+					<input type="submit" value="詳細表示" class="detail-submit">
+		</form>
+		<%
+		} else {
+		%>
+		<form action="employee-detail-servlet" method="POST">
 					<input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
 					<input type="submit" value="詳細表示" class="detail-submit">
 				</form>
+		<%
+		}
+		%>
 			</td>
 		</tr>
 		<%
@@ -81,6 +94,21 @@
 	      </form>
 	  </li>
 	  <li>
+	  <%
+		if ("2" == session.getAttribute("authority")) {
+		%>
+		<form action="menu2.jsp" method="POST">
+		    <input type="submit" value="メニュー画面に戻る" class="main_submit">
+	      </form>
+		<%
+		} else {
+		%>
+		<form action="menu.jsp" method="POST">
+		    <input type="submit" value="メニュー画面に戻る" class="main_submit">
+	      </form>
+		<%
+		}
+		%>
 	      <form action="menu.jsp" method="POST">
 		    <input type="submit" value="メニュー画面に戻る" class="main_submit">
 	      </form>

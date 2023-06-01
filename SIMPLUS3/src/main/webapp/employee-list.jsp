@@ -86,21 +86,6 @@
 		%>
 		</tbody>
 	</table>
-	<%
-		if ("2" == session.getAttribute("authority")) {
-		%>
-		<form action="menu2.jsp" method="POST">
-			<input type="submit" value="メニューに戻る" class="main_submit">
-		</form>
-		<%
-		} else {
-		%>
-		<form action="menu.jsp" method="POST">
-			<input type="submit" value="メニューに戻る" class="main_submit">
-		</form>
-		<%
-		}
-		%>
   </div>
   <%@ include file="footer.jsp" %>
 </body>

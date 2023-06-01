@@ -319,5 +319,39 @@ public class EmployeeDAO {
 		}
 		return cnt;
 	}
+	
+	public List<EmployeeBean> selectName(String section_code,String gender) throws SQLException, ClassNotFoundException {
+
+		List<EmployeeBean> employeeList = new ArrayList<EmployeeBean>();
+		
+		String sql = "SELECT t3.section_name,t2.gender_name\n"
+				+"FROM employee t1 LEFT OUTER JOIN gender t2 ON t1.? = t2.gender\n"
+				+"LEFT OUTER JOIN section t3 ON t1.? = t3.section_code";
+		
+		// データベースへの接続の取得、Statementの取得、SQLステートメントの実行
+		try (Connection con = ConnectionManager.getConnection();
+				PreparedStatement pstmt = con.prepareStatement(sql);) {
+			
+			pstmt.setString(1, gender);
+			pstmt.setString(2, section_code);
+			
+			
+			ResultSet res = pstmt.executeQuery();
+			
+			// 結果の操作
+			while (res.next()) {
+				String genderName = res.getString("gender_name");
+				String sectionName = res.getString("section_name");
+				
+				EmployeeBean employee = new EmployeeBean();
+				employee.setGenderName(genderName);
+				employee.setSectionName(sectionName);
+				
+
+				employeeList.add(employee);
+			}
+		}
+		return employeeList;
+	}
 
 }

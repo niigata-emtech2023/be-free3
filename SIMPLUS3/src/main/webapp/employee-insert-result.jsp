@@ -40,6 +40,10 @@
         （<jsp:getProperty name="employee"  property="surKanaName" /><jsp:getProperty name="employee"  property="firstKanaName" />）</td>
       </tr>
       <tr>
+        <th>所属部署</th>
+        <td><jsp:getProperty name="employee"  property="sectionName" /></td>
+      </tr>
+      <tr>
         <th>メールアドレス</th>
         <td><jsp:getProperty  name="employee"  property="mail" /></td>
       </tr>
@@ -53,15 +57,11 @@
       </tr>
       <tr>
         <th>性別</th>
-        <td><jsp:getProperty name="employee"  property="gender" /></td>
+        <td><jsp:getProperty name="employee"  property="genderName" /></td>
       </tr>
       <tr>
         <th>生年月日</th>
         <td><jsp:getProperty name="employee"  property="birthDate" /></td>
-      </tr>
-      <tr>
-        <th>所属部署</th>
-        <td><jsp:getProperty name="employee"  property="sectionCode" /></td>
       </tr>
       <tr>
         <th>入社日</th>
