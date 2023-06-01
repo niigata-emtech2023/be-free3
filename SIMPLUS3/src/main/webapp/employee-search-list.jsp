@@ -14,28 +14,29 @@
   <div class = "container">
     <h1>社員情報一覧</h1>
     
-    <div class="group">
-      <div class="search_bar">
-        他の趣味で社員検索
-        <i class="fas fa-search search_icon"></i>
-         <form action="employee-search-servlet" method="POST">
-          <div class="c-form-select">
-           <select name="hobbyName">
-                 <option></option>
-                 <option value="H001">映画</option>
-                 <option value="H002">サッカー</option>
-                 <option value="H003">旅行</option>
-                 <option value="H004">野球</option>
-                 <option value="H005">バスケットボール</option>
-                 <option value="H006">その他インドア</option>
-                 <option value="H007">その他アウトドア</option>
-            </select>
+    <div class="box29">
+        <div class="box-title">趣味で社員検索</div>
+           <div class="group">
+                 <div class="search_bar">
+                  <!-- 趣味で社員検索 -->
+                   <form action="employee-search-servlet" method="POST">
+                    <div class="c-form-select">
+                     <select name="hobbyName">
+                           <option></option>
+                           <option value="H001" selected>映画</option>
+                           <option value="H002">サッカー</option>
+                           <option value="H003">旅行</option>
+                           <option value="H004">野球</option>
+                           <option value="H005">バスケットボール</option>
+                           <option value="H006">その他インドア</option>
+                           <option value="H007">その他アウトドア</option>
+                      </select>
+                      </div>
+                    <input type="submit" value="検索" class="c-form-submit-button4">
+                    </form>
+                  </div>
+            </div>
          </div>
-        <i class="fas fa-times search_icon"></i>
-        <input type="submit" value="検索">
-      </form>
-    </div>
-  </div>
     
 	<%
 		List<EmployeeBean> employeeList
@@ -89,5 +90,6 @@
 	</div>
 	
   <%@ include file="footer.jsp" %>
+  </div>
 </body>
 </html>
