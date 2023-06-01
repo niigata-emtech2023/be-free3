@@ -66,8 +66,8 @@
         </li>
         <li>
         <form action="event-update-form-servlet" method="post">
-	      <input type="hidden" name="eventCode" value="<%=event.getEventCode()%>" class="c-form-back-button">
-	      <input type="submit" value="編集画面に戻る">
+	      <input type="hidden" name="eventCode" value="<%=event.getEventCode()%>">
+	      <input type="submit" value="編集画面に戻る" class="c-form-back-button">
 	    </form>
         </li>
       </ul>
