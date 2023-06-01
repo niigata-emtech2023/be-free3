@@ -32,7 +32,7 @@
 	      <td class="normal_td"><input type="text" size="10" name="eventName" required></td>
 	    </tr>
 	    <tr>
-	      <th>開催日時<span class="req_span">必須</span></th>
+	      <th>開催日<span class="req_span">必須</span></th>
 	      <td class="normal_td"><input type="date" size="10" name="eventDate" required></td>
 	    </tr>
 	  </table>
