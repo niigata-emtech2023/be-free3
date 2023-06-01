@@ -22,9 +22,12 @@
 		<tr><th>氏名（かな）</th><td><%=employee.getSurName() %><%=employee.getFirstName() %>(<%=employee.getSurKanaName() %><%=employee.getFirstKanaName() %>)</td></tr>
 		<tr><th>メールアドレス</th><td><%=employee.getMail() %></td></tr>
 		<tr><th>TEL</th><td><%=employee.getTel() %></td></tr>
-		<tr><th>生年月日</th><td><%=employee.getBirthDate() %></td><th>性別</th><td><%=employee.getGender() %></td></tr>
-		<tr><th>所属部署</th><td><%=employee.getSectionCode() %></td><th>入社日</th><td><%=employee.getJoiningDate() %></td></tr>
-		<tr><th>保有資格</th><td><%=employee.getLicenseName() %></td><th>趣味</th><td><%=employee.getHobbyName() %></td></tr>
+		<tr><th>生年月日</th><td><%=employee.getBirthDate() %></td></tr>
+		<tr><th>性別</th><td><%=employee.getGender() %></td></tr>
+		<tr><th>所属部署</th><td><%=employee.getSectionCode() %></td></tr>
+		<tr><th>入社日</th><td><%=employee.getJoiningDate() %></td></tr>
+		<tr><th>保有資格</th><td><%=employee.getLicenseName() %></td></tr>
+		<tr><th>趣味</th><td><%=employee.getHobbyName() %></td></tr>
 		<tr><th>自己紹介</th><td><%=employee.getSelfintroduction() %></td></tr>
 	</table>
 	<form action="menu.jsp" method="post">
