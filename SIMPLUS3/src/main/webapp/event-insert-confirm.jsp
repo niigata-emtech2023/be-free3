@@ -57,7 +57,7 @@
     <div class="double_submit">
       <ul>
         <li>
-        <form action="event-insert-servlet" method="POST">
+        <form action="event-insert-result-servlet" method="POST">
 	      <input type="submit" value="確定" class="c-form-submit-button">
 	    </form>
         </li>
