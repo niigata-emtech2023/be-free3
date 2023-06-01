@@ -12,7 +12,7 @@
         <%@ include file="header.jsp" %>
        <h1>趣味・自己紹介登録確認画面</h1>
         <div class="confirm-field">
-	<p>以下のイベント情報に変更します。よろしいですか？</p>
+	<p>以下の趣味・自己紹介を登録します。よろしいですか？</p>
 	
 	    <jsp:useBean id="employee"  class="model.entity.EmployeeBean" scope="session" />
 	
