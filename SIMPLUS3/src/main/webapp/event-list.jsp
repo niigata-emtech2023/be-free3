@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>社内イベント一覧画面</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/table-style.css">
+	href="${pageContext.request.contextPath}/css/event_table.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/style.css">
 </head>
@@ -20,7 +20,7 @@
 		<table>
 			<thead>
 				<tr>
-					<th class="th6">イベントコード</th>
+					<th class="th6">イベント<br>コード</th>
 					<th class="th7">イベント名</th>
 					<th class="th8">開催日時</th>
 					<th class="th9"></th>
