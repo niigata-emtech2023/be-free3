@@ -187,6 +187,48 @@ input[type="submit"]:hover {
     border: 2px solid rgb(33, 150, 243);
 }
 
+.c-form-select {
+    position: relative;
+}
+
+.c-form-select:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(135deg);
+    pointer-events: none;
+}
+
+
+.c-form-select select {
+	width: 100%;
+    height: 2.4em;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.c-form-select select::-ms-expand {
+    display: none;
+}
+
+.c-form-select select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
 .search_bar{
     display: flex; /*アイコン、テキストボックスを調整する*/
     align-items: center; /*アイコン、テキストボックスを縦方向の中心に*/
@@ -238,4 +280,49 @@ input[type="submit"]:hover {
     outline: 0;
     background-color: #000;
     border: 2px solid rgb(33, 150, 243);
+}
+
+.box29 {
+    text-align: center;
+    margin: 2px auto;
+    background: #eee;
+    height: 150px;
+}
+.box29 .box-title {
+    font-size: 1.2em;
+    background: #a8ddd4;
+    padding: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box29 .radio-002 {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.box30 {
+text-align: center;
+    margin: 2em 0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+.box30 .box-title {
+    font-size: 1.2em;
+    background: #5fc2f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box30 .radio-002 {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.search_bar{
+	padding:10px;
 }

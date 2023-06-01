@@ -17,13 +17,8 @@
 		EventBean event = (EventBean) session.getAttribute("event");
 		String str = (String) request.getAttribute("join");
 	%>
-	
-<<<<<<< HEAD
-	<p><%=event.getEventName() %>に「<%=str %>」を送信しました!</p>
-=======
-	<%=event.getEventName() %>は、<%=str %>で受け付けました。
->>>>>>> refs/remotes/origin/master
-	<br>
+
+	<p><%=event.getEventName() %>は、<%=str %>で受け付けました。</p>
 	<form action="event-detail.jsp" method="post">
 	<input type="submit" value="詳細画面に戻る" class="main_submit">
 	</form>
