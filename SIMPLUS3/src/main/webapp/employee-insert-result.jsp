@@ -41,7 +41,7 @@
       </tr>
       <tr>
         <th>所属部署</th>
-        <td><jsp:getProperty name="employee"  property="sectionName" /></td>
+        <td><jsp:getProperty name="employee"  property="sectionCode" /></td>
       </tr>
       <tr>
         <th>メールアドレス</th>
@@ -57,7 +57,7 @@
       </tr>
       <tr>
         <th>性別</th>
-        <td><jsp:getProperty name="employee"  property="genderName" /></td>
+        <td><jsp:getProperty name="employee"  property="gender" /></td>
       </tr>
       <tr>
         <th>生年月日</th>
