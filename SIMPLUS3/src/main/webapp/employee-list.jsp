@@ -23,14 +23,35 @@
                    <form action="employee-search-servlet" method="POST">
                     <div class="c-form-select">
                      <select name="hobbyName">
-                           <option selected>選択してください</option>
+                           <option value="H000">未設定</option>
                            <option value="H001">映画</option>
                            <option value="H002">サッカー</option>
                            <option value="H003">旅行</option>
                            <option value="H004">野球</option>
                            <option value="H005">バスケットボール</option>
-                           <option value="H006">その他インドア</option>
-                           <option value="H007">その他アウトドア</option>
+                           <option value="H006"></option>
+                           <option value="H007"></option>
+                           <option value="H008"></option>
+                           <option value="H009"></option>
+                           <option value="H010"></option>
+                           <option value="H011"></option>
+                           <option value="H012"></option>
+                           <option value="H013"></option>
+                           <option value="H014"></option>
+                           <option value="H015"></option>
+                           <option value="H016"></option>
+                           <option value="H017"></option>
+                           <option value="H018"></option>
+                           <option value="H019"></option>
+                           <option value="H020"></option>
+                           <option value="H021"></option>
+                           <option value="H022"></option>
+                           <option value="H023"></option>
+                           <option value="H024"></option>
+                           <option value="H025"></option>
+                           <option value="H026"></option>
+                           <option value="H027">その他インドア</option>
+                           <option value="H028">その他アウトドア</option>
                       </select>
                       </div>
                     <input type="submit" value="検索" class="c-form-submit-button4">

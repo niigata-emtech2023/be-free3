@@ -41,7 +41,13 @@
 	<%
 		List<EmployeeBean> employeeList
 			= (List<EmployeeBean>) request.getAttribute("employeeList");
+	    
+	    if(employeeList.size() == 0 ){
 	%>
+	<div class="notFound_search">
+	    該当する従業員が見つかりませんでした。
+	</div>
+	<% } else { %>
 	<table>
 	  <thead>
 		<tr>
@@ -83,6 +89,7 @@
 		</tr>
 		<%
 			}
+	}
 		%>
 		</tbody>
 	</table>
