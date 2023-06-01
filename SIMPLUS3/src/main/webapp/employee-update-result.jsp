@@ -84,5 +84,6 @@
 	</form>
 
 	<% session.removeAttribute("employee"); %>
+	</div>
 </body>
 </html>

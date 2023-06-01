@@ -44,7 +44,7 @@
 	      保有資格名:<jsp:getProperty  name="employee"  property="licenseCode" /><br> 
 	  -->
      <form action="menu.jsp"method="post">
-           <input type="submit"value=" class="c-form-submit-button3">
+           <input type="submit"value="メニューに戻る" class="c-form-submit-button3">
      </form>
      <%session.removeAttribute("employee"); %>
 
