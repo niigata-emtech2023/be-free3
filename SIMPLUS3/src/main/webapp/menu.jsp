@@ -8,7 +8,26 @@ pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css">
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font_size.css">
+
+
+
+<%
+	if("0" == session.getAttribute("fontSize")){
+%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font_size_small.css">
+<%
+	} else if("2" == session.getAttribute("fontSize")){
+%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font_size_large.css">
+<%
+	} else {
+%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font_size_normal.css">
+<%
+	}
+%>
+
+
 </head>
 <body>
 <%@ include file="header.jsp" %>

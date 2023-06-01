@@ -157,6 +157,7 @@ li {
 .design_submit {
 	background-color: #a8ddd4;
     border: 2px solid #a8ddd4;
+    border-radius: 5px;
     /*追加*/
     color: #fff;
     position:absolute;
@@ -165,9 +166,14 @@ li {
     font-size: 16px;
     padding: 10px;
     right: 0;
+    cursor: pointer;
 }
 
-.design_submit:focus{
-	background-color: #eee;
-	color: #a8ddd4;
+.design_submit:hover {
+    color: #5c87a6;
+    background-color: #ffffff;
+    border: 1px solid #5c87a6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s;
 }

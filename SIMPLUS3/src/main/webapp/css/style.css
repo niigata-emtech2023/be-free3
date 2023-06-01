@@ -66,7 +66,7 @@ input[type="submit"]:hover {
 
 .logout_submit {
 	width: 150px;
-    font-size: 15px;
+    font-size: 20px;
     color: #fff;
 	display: inline-block;
     padding: 15px 0px;
@@ -78,6 +78,15 @@ input[type="submit"]:hover {
     cursor: pointer;
     transition: background-color 1s;
     margin-top: 20px;
+}
+
+.logout_submit:hover {
+	color: #5c87a6;
+    background-color: #ffffff;
+    border: 1px solid #5c87a6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s;
 }
 
 .main_submit {
@@ -109,6 +118,7 @@ input[type="submit"]:hover {
   position: relative;
   display: inline-block;
   font-weight: bold;
+  font-size: 18px;
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #00BCD4;
@@ -189,6 +199,7 @@ input[type="submit"]:hover {
 
 .c-form-select {
     position: relative;
+    width: 200px;
 }
 
 .c-form-select:before {
@@ -237,12 +248,6 @@ input[type="submit"]:hover {
     width: 100%;
 }
 
-.search_icon{ /*アイコンに一定のスペースを設ける*/
-    height: 15px;
-    width: 15px;
-    padding: 5px 5px;
-}
-
 .group {
 	margin: 20px auto;
 }
@@ -270,6 +275,7 @@ input[type="submit"]:hover {
     border: 2px solid transparent;
     margin-top: 20px;
     text-align : center;
+    font-size: 19px;
 }
 
 .c-form-submit-button4:hover {
@@ -286,7 +292,7 @@ input[type="submit"]:hover {
     text-align: center;
     margin: 2px auto;
     background: #eee;
-    height: 150px;
+    height: 170px;
 }
 .box29 .box-title {
     font-size: 1.2em;
@@ -324,5 +330,16 @@ text-align: center;
 }
 
 .search_bar{
-	padding:10px;
+	padding:15px;
+}
+
+select {
+	border :1px solid #eee; 
+	font-size :18px;
+	
+}
+
+input[type="text"], input[type="email"], input[type="tel"]{
+	font-size: 18px;
+	margin-bottom: 5px; 
 }
