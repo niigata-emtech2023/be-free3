@@ -21,7 +21,7 @@
          <tr><th>趣味名<span class="req_span">必須</span></th><td class="normal_td">
          <div class="c-form-select">
            <select name="hobbyName"required>
-                 <option></option>
+                 <option selected>選択してください</option>
                  <option value="H000">未設定</option>
                  <option value="H001">映画</option>
                  <option value="H002">サッカー</option>

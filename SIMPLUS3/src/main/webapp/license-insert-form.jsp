@@ -20,7 +20,7 @@
          <tr><th>保有資格選択<span class="req_span">必須</span></th><td class="normal_td">
           <div class="c-form-select">
           <select name="licenceCode"required>
-                 <option></option>
+                 <option selected>選択してください</option>
                  <option value="L000">未所持</option>
                  <option value="L001">基本情報技術者試験</option>
                  <option value="L002">応用情報技術者試験</option>
