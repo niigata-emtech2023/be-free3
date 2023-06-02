@@ -29,6 +29,7 @@
 		<ul>
     		<li>
 			<input type="submit" formaction="event-detail-servlet" value="詳細画面に戻る" class="c-form-back-button">
+			<input type="hidden" name="eventCode" value="<%=event.getEventCode()%>">
 			</li>
 			<li>
 			<input type="submit" formaction="event-delete-servlet" value="確定" class="c-form-submit-button">
