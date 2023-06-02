@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="header_log.jsp" %>
 
 	<form class="login_form" action="login-servlet" method="post">
 		<div class="login_form_top">
