@@ -17,6 +17,11 @@
 	
 	<form action="employee-update-confirm-servlet" method="post">
 	
+	<%
+		EmployeeBean eb = (EmployeeBean)session.getAttribute("employee");
+	%>
+	
+	
 	<table class ="one_table">
 	    <tr>
 	      <th>従業員コード</th>
@@ -35,16 +40,32 @@
 	      <td class="normal_td">
 	             <fieldset class="radio-002">
                    <label>
-                     <input type="radio" name="gender" value="0" checked="checked">
-                     未設定
+                     <input type="radio" name="gender" value="0" 
+                    <%--  <%
+                     if(eb.getGender().equals("0")){
+                     %>
+                     checked="checked" --%>
+    
+                     >未設定
                    </label>
                    <label>
-                     <input type="radio" name="gender" value="1">
-                     男
+                     <input type="radio" name="gender" value="1" 
+                    <%--  <%
+                     }else if(eb.getGender().equals("1")){
+                     %>
+                     checked="checked" --%>
+                     >男
                    </label>
                    <label>
-                     <input type="radio" name="gender" value="2">
-                     女
+                     <input type="radio" name="gender" value="2" 
+                     <%-- <%
+                     }else if(eb.getGender().equals("2")){
+                     %>
+                     checked="checked"
+                     <%
+                     }
+                     %> --%>
+                     >女
                    </label>
                  </fieldset>
 	      </td>
