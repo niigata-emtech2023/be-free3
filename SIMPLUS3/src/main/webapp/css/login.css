@@ -4,6 +4,10 @@ body {
   background-color: #efefef;
 }
 
+.hide{
+	visibility:hidden;
+}
+
 .yokonarabi {
     display: flex;
     width:100%

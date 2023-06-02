@@ -22,7 +22,7 @@
 				<tr>
 					<th class="th6">イベント<br>コード</th>
 					<th class="th7">イベント名</th>
-					<th class="th8">開催日時</th>
+					<th class="th8">開催日</th>
 					<th class="th9"></th>
 				</tr>
 			</thead>
