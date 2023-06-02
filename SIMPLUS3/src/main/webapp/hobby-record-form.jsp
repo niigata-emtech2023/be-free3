@@ -15,7 +15,9 @@
       
        <form action="hobby-insert-confirm-servlet"method="post">
        <table class ="one_table">
-         <tr><th>設定したい従業員のコードを入力してください<span class="req_span">必須</span></th><td class="normal_td"><input class="form_text" type="text" size="10" name="employeeCode" required></td></tr>
+         <tr><th>設定したい従業員のコードを入力してください<span class="req_span">必須</span></th><td class="normal_td">
+         <input class="form_text" type="text" size="10" name="employeeCode" required>
+         </td></tr>
          <tr><th>趣味名<span class="req_span">必須</span></th><td class="normal_td">
          <div class="c-form-select">
            <select name="hobbyName"required>
