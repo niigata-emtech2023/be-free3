@@ -377,3 +377,46 @@ textarea {
 	font-weight: bold;
 	
 }
+
+.part_submit{
+	font-size: 18px;
+}
+
+.radio-div label {
+	padding: 0 0 0 2px;
+	font-size: 20px;
+	line-height: 28px;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+}
+/*
+.radio-div label:befor {
+	content: '';
+	width:28px;
+	height: 28px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: yello;
+	border-radius: 50%;
+}
+
+.radio-div input[type="radio"]{
+	display: none;
+}
+
+.radio-div input[type="radio"]:checked + label:after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	background-color: #fff;
+	border-radius: 50%;
+}*/
+
+non_error {
+	padding: 100px;
+}

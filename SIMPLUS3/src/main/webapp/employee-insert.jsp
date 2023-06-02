@@ -41,9 +41,10 @@
 		       </td></tr>
 		     </table>
 		     <table class ="two_table" align="left">
-		        <tr><th>所属部署</th><td class="normal_td">
+		        <tr><th>所属部署<span class="req_span">必須</span><br><p class="note">確定していない場合は「未確定」を選択してください</p></th><td class="normal_td">
   			    <div class="c-form-select">
                   <select name="sectionCode" >
+                     <option>選択してください</option>
                      <option value="S000">未確定</option>
 				     <option value="S001">経理部</option>
 				     <option value="S002">営業部</option>
@@ -52,12 +53,12 @@
 				  </select>
 			    </div>
 			    </td></tr>
-		        <tr><th>メールアドレス<span class="req_span">必須</span></th><td class="normal_td"><input type="email" size="17" name="mail"  required  placeholder="「@」のあとも含めて入力してください" class="form_text"></td></tr>    
+		        <tr><th>メールアドレス<span class="req_span">必須</span><br><p class="note">「@」のあとも含めて入力してください</p></th><td class="normal_td"><input type="email" size="17" name="mail"  required  placeholder="(例)aaa@mail.jp" class="form_text"></td></tr>    
   				<tr><th>生年月日<span class="req_span">必須</span></th><td class="normal_td"><label class="d_label"><input type="date" name="birth_date"  required></label></td></tr>
   			 </table>
   			 <table class="two_table">
   			    <tr><th>従業員コード<span class="req_span">必須</span><br><p class="note">他の従業員との重複は避けてください</p></th><td class="normal_td"><input type="text" size="5" name="employeeCode" required class="form_text"></td></tr>
-  			    <tr><th>電話番号<span class="req_span">必須</span><p class="note">ハイフンありで入力</p></th><td class="normal_td"><input type="tel" size="13" maxlength="13" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="（例）111-2222-3333" required class="form_text"></td></tr>
+  			    <tr><th>電話番号<span class="req_span">必須</span><p class="note">ハイフンありで入力</p></th><td class="normal_td"><input type="tel" size="13" maxlength="13" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="(例)111-2222-3333" required class="form_text"></td></tr>
   				<tr><th>入社日<span class="req_span">必須</span></th><td class="normal_td"><label class="d_label"><input type="date" name="joining_date" required></label></td></tr>
   			 </table>
 
