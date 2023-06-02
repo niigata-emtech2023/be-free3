@@ -57,7 +57,7 @@
 	      <td><jsp:getProperty name="employee"  property="address" /></td>
 	    </tr>
 	    <tr>
-	      <th>性別</th>
+	      <th>性別 0:未設定 1:男性 2:女性</th>
 	      <td><jsp:getProperty name="employee"  property="gender" /></td>
 	    </tr>
 	    <tr>

@@ -27,15 +27,15 @@
 		         <fieldset class="radio-002">
                    <label>
                      <input type="radio" name="gender" value="0" checked="checked">
-                     未設定
+                     0:未設定
                    </label>
                    <label>
                      <input type="radio" name="gender" value="1">
-                     男
+                     1:男
                    </label>
                    <label>
                      <input type="radio" name="gender" value="2">
-                     女
+                     2:女
                    </label>
                  </fieldset>
 		       </td></tr>
@@ -45,11 +45,11 @@
   			    <div class="c-form-select">
                   <select name="sectionCode" >
                      <option>選択してください</option>
-                     <option value="S000">未確定</option>
-				     <option value="S001">経理部</option>
-				     <option value="S002">営業部</option>
-				     <option value="S003">開発部</option>
-				     <option value="S004">研修部</option>
+                     <option value="S000">S000:未確定</option>
+				     <option value="S001">S001:経理部</option>
+				     <option value="S002">S002:営業部</option>
+				     <option value="S003">S003:開発部</option>
+				     <option value="S004">S004:研修部</option>
 				  </select>
 			    </div>
 			    </td></tr>
