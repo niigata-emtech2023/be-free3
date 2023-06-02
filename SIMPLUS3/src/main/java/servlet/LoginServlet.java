@@ -75,8 +75,10 @@ public class LoginServlet extends HttpServlet {
 				
 				
 			} else {
+				request.setAttribute("loginErrorMessage","ユーザーIDまたはパスワードが間違えています");
 				// 認証失敗
-				url = "login.html";
+				RequestDispatcher rd = request.getRequestDispatcher("new-login.jsp");
+				rd.forward(request, response);
 			}
 
 		} catch (Exception e) {
