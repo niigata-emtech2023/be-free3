@@ -16,7 +16,7 @@
 			<p class="login_p">ログインするユーザーの情報を入力してください。</p>
 			<%if(request.getAttribute("loginErrorMessage") != null){ %>
 			  <p><font color="red"><%= request.getAttribute("loginErrorMessage") %></font></p>
-		    <%} %>
+		    <%}%>
 		</div>
 		<div class="login_form_btm">
 			ユーザーID<input class="login_input" type="text" size="20" name="userId"

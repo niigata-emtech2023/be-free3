@@ -57,7 +57,7 @@
 	      <td><jsp:getProperty name="employee"  property="address" /></td>
 	    </tr>
 	    <tr>
-	      <th>性別</th>
+	      <th>性別 0:未設定 1:男性 2:女性</th>
 	      <td><jsp:getProperty name="employee"  property="gender" /></td>
 	    </tr>
 	    <tr>
@@ -75,8 +75,9 @@
       <ul>
         <li>
 	        <form action="employee-insert.jsp" method="post">
-		      <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>" class="c-form-back-button">
-		      <input type="submit" value="登録画面に戻る" class="c-form-submit-button4">
+		      <%-- <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>" class="c-form-back-button"> --%>
+		      <!-- <input type="submit" value="登録画面に戻る" class="c-form-submit-button4"> -->
+		      <button onclick="history.back()" class="c-form-submit-button4">登録画面に戻る</button>
 		    </form>
         </li>
         <li>
