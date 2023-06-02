@@ -19,7 +19,7 @@
 	      <td class="normal_td"><input type="text" size="10" name="eventCode" required  class="form_text"></td>
 	    </tr>
 	    <tr>
-	      <th>開催者<span class="req_span">必須</span><br><p class="note">従業員コードで入力してください</p></th>
+	      <th>開催者の従業員コード<span class="req_span">必須</span><br><p class="note">従業員コードで入力してください</p></th>
 	      <td class="normal_td"><input type="text" size="10" name="organizer" required  class="form_text"></td>
 	    </tr>
 	    <tr>
