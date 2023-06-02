@@ -25,7 +25,7 @@
 	<table class ="one_table">
 	    <tr>
 	      <th>従業員コード</th>
-	      <td class="normal_td"><input class="form_text" type="text" name="employeeCode" value="<jsp:getProperty name="employee" property="employeeCode" />"></td>
+	      <td class="normal_td"><input class="form_text" class="form_text" type="text" name="employeeCode" value="<jsp:getProperty name="employee" property="employeeCode" />"></td>
 	    </tr>
 	</table>
 	

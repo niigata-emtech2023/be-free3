@@ -24,30 +24,31 @@
 	        <td class="normal_td"><jsp:getProperty name="event" property="eventCode" /></td>
 	      </tr>
 	      <tr>
-	        <th>開催日時</th>
-	        <td class="normal_td"><input type="date" name="eventDate" value="<jsp:getProperty name="event" property="eventDate" />"></td>
+	        <th>開催日</th>
+	        <td class="normal_td"><label class="d_label"><input type="date" name="eventDate" value="<jsp:getProperty name="event" property="eventDate" />"></label></td>
 	      </tr>
 	      <tr>
 	        <th>開催者名</th>
-	        <td class="normal_td"><input type="text" name="organizer" value="<jsp:getProperty name="event" property="organizer" />"></td>
+	        <td class="normal_td"><input class="form_text" type="text" name="organizer" value="<jsp:getProperty name="event" property="organizer" />"></td>
 	      </tr>
 	   </table>
 	   
 	   <table class="two_table">
 	       <tr>
 	         <th>イベント名</th>
-	         <td class="normal_td"><input type="text" name="eventName" value="<jsp:getProperty name="event" property="eventName" />"></td>
+	         <td class="normal_td"><input class="form_text" type="text" name="eventName" value="<jsp:getProperty name="event" property="eventName" />"></td>
 	       </tr>
 	       <tr>
 	         <th>開催場所</th>
-	         <td class="normal_td"><input type="text" name="eventPlace" value="<jsp:getProperty name="event" property="eventPlace" />"></td>
+	         <td class="normal_td"><input class="form_text" type="text" name="eventPlace" value="<jsp:getProperty name="event" property="eventPlace" />"></td>
 	       </tr>
 	   </table>
 	   
 	   <table class="one_table">
 	       <tr>
-	         <th>自由記述</th>
-	         <td class="normal_td"><input type="text" name="selfIntroduction" value="<jsp:getProperty name="event" property="selfIntroduction" />"></td>
+	         <th>イベント詳細</th>
+	         <td class="normal_td"><textarea name="selfIntroduction" maxlength="400" cols="40" rows="10"><jsp:getProperty name="event" property="selfIntroduction" /></textarea></td>
+	         <!-- <td class="normal_td"><input type="text" name="selfIntroduction" value="<jsp:getProperty name="event" property="selfIntroduction" />"></td> -->
 	       </tr>
 	   </table>
 	
