@@ -27,7 +27,7 @@
 	      <td><jsp:getProperty  name="employee"  property="employeeCode" /></td>
 	    </tr>
 	    <tr>
-	      <th>趣味名</th>
+	      <th>趣味コード</th>
 	      <td><jsp:getProperty  name="employee"  property="hobbyName" /></td>
 	    </tr>
 	    <tr>
