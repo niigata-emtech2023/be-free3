@@ -8,14 +8,6 @@ pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/menu.css">
 
-<%
-	String fontSize = (String)session.getAttribute("fontSize");
-%>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font_size_<%=fontSize %>css">
-
-
-
-
 </head>
 <body>
 <%@ include file="header.jsp" %>

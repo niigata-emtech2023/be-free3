@@ -163,6 +163,10 @@ tbody:hover tr:hover td {
 	width:250px;
 }
 
+.td2 {
+    font-size: 20px;
+}
+
 .td3 {
 	width: 220px;
 	font-size: 15px;
