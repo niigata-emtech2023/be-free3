@@ -260,7 +260,7 @@ input[type="submit"]:hover {
 }
 
 .fail_red{
-    color: red;
+    color: #FF4500;
 }
 
 .c-form-submit-button4 {
