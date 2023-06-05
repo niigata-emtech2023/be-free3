@@ -23,7 +23,7 @@
                  <option selected>選択してください</option>
                  <option value="L000">L000: 未所持</option>
                  <option value="L001">L001: 基本情報技術者試験</option>
-                 <option value="L002">L002: L応用情報技術者試験</option>
+                 <option value="L002">L002: 応用情報技術者試験</option>
                  <option value="L003">L003: ITパスポート</option>
                  <option value="L004">L004: 情報セキュリティマネジメント</option>
                  <option value="L005">L005: システムアーキテクト試験</option>

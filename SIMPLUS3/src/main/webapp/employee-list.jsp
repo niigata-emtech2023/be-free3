@@ -7,7 +7,6 @@
 <title>社員情報一覧</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/table-style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-
 </head>
 <body>
 <%@ include file="header.jsp" %>
@@ -24,7 +23,6 @@
                     <div class="c-form-select">
                      <select name="hobbyName">
                            <option selected>選択してください</option>
-                           <option value="H000">未設定</option>
                            <option value="H001">映画</option>
                            <option value="H002">サッカー</option>
                            <option value="H003">旅行</option>
