@@ -23,6 +23,7 @@
                     <div class="c-form-select">
                      <select name="hobbyName">
                            <option selected>選択してください</option>
+                           <option value="H000">未選択</option>
                            <option value="H001">映画</option>
                            <option value="H002">サッカー</option>
                            <option value="H003">旅行</option>
