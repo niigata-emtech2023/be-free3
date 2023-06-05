@@ -14,16 +14,37 @@
 	<div class = "container">
       <h1>保有資格情報登録画面</h1>
          
+         <%
+		List<EmployeeBean> employeeList
+			= (List<EmployeeBean>) request.getAttribute("employeeList");
+	    %>
+         
          <form action="license-insert-confirm-servlet"method="post">
          <table class ="one_table">
-         <tr><th>設定したい従業員のコードを入力してください<span class="req_span">必須</span></th><td class="normal_td"><input class="form_text" class="form_text" type="text" size="10" name="employeeCode" required></td></tr>
+         <tr><th>変更したい従業員<span class="req_span">必須</span></th>
+             <td class="normal_td">
+		         <div class="c-form-select">
+                   <select name="employeeCode"required>
+                     <option selected>選択してください</option>
+                         <%
+			                 for (EmployeeBean employee : employeeList) {
+		                 %>
+		                 <option value="<%=employee.getEmployeeCode()%>"><%=employee.getEmployeeCode()%>: <%=employee.getSurName() + employee.getFirstName()%></option>
+		                 <%
+			                 }
+		                 %>
+                   </select>
+                 </div>
+                 <!-- <input class="form_text" class="form_text" type="text" size="10" name="employeeCode" required> -->
+             </td></tr>
+         
          <tr><th>保有資格選択<span class="req_span">必須</span></th><td class="normal_td">
           <div class="c-form-select">
           <select name="licenceCode"required>
                  <option selected>選択してください</option>
                  <option value="L000">L000: 未所持</option>
                  <option value="L001">L001: 基本情報技術者試験</option>
-                 <option value="L002">L002: L応用情報技術者試験</option>
+                 <option value="L002">L002: 応用情報技術者試験</option>
                  <option value="L003">L003: ITパスポート</option>
                  <option value="L004">L004: 情報セキュリティマネジメント</option>
                  <option value="L005">L005: システムアーキテクト試験</option>

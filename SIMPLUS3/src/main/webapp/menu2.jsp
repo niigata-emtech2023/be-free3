@@ -17,7 +17,7 @@ pageEncoding="UTF-8"%>
       <h3>【行いたい操作を選んでください。】</h3>
   </div>  
   <div class="menu_select">
-      <p>▶所属する従業員の一覧表示ができます</p>
+      <p class="mp">▶所属する従業員の一覧表示ができます</p>
       <ul>
 	      <li>
 	        <form action="employee-list-servlet" method="POST">
@@ -57,7 +57,7 @@ pageEncoding="UTF-8"%>
 	      </li>
 	  </ul> -->
 	    
-	  <p>▶今後開催予定の社内イベントを一覧表示します</p>
+	  <p class="mp">▶今後開催予定の社内イベントを一覧表示します</p>
 	  <!-- <div class = "yokonarabi"> -->
 	  <ul>
 	      <li>

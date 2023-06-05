@@ -35,3 +35,8 @@ margin: 5px;
 .none-list{
   margin-left: 20px;
 }
+
+.mp {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}

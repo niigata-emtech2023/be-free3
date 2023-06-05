@@ -18,7 +18,7 @@ pageEncoding="UTF-8"%>
       <h3>【行いたい操作を選んでください。】</h3>
   </div>  
   <div class="menu_select">
-      <p>▶所属する従業員の一覧表示・新規登録ができます</p>
+      <p class="mp">▶所属する従業員の一覧表示・新規登録ができます</p>
       <ul>
 	      <li>
 	        <form action="employee-list-servlet" method="POST">
@@ -44,7 +44,7 @@ pageEncoding="UTF-8"%>
 	    </form><br>
 	  </div> -->
 	
-	<p>▶従業員の保有資格、趣味・自己紹介を登録できます</p>
+	<p class="mp">▶従業員の保有資格、趣味・自己紹介を登録できます</p>
 	  <ul>
 	      <li>
 	        <form action="license-insert-form-servlet" method="POST">
@@ -58,7 +58,7 @@ pageEncoding="UTF-8"%>
 	      </li>
 	  </ul>
 	    
-	  <p>▶今後開催予定の社内イベントを一覧表示・登録します</p>
+	  <p class="mp">▶今後開催予定の社内イベントを一覧表示・登録します</p>
 	  <!-- <div class = "yokonarabi"> -->
 	  <ul>
 	      <li>

@@ -57,7 +57,7 @@
     <div class="double_submit">
       <ul>
         <li>
-	        <form action="event-insert.jsp" method="post">
+	        <form action="event-insert-servlet" method="post">
 		      <input type="hidden" name="eventCode" value="<%=event.getEventCode()%>" class="c-form-back-button">
 		      <input type="submit" value="登録画面に戻る"  class="c-form-submit-button4">
 		    </form>
