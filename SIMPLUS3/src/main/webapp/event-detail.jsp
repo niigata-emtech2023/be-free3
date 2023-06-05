@@ -33,12 +33,12 @@
 		<div class="box30">
         <div class="box-title">このイベントに参加しますか？</div>
            <fieldset class="radio-div">
-                   <label for="buttin-1">
-                       <input type="radio" name="join" value="参加" checked>
+                   <label for="button-1">
+                       <input type="radio" name="join" value="参加" id="button-1" checked>
                        参加
                        </label>
                    <label for="button-2">
-                       <input type="radio" name="join" value="不参加">
+                       <input type="radio" name="join" value="不参加" id="button-2">
                        不参加
                        </label>
              </fieldset>
