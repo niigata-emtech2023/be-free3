@@ -22,7 +22,7 @@
 	   	 <table>
 	  <tbody>
 	    <tr>
-	      <th>変更したい<br>従業員のコード</th>
+	      <th>変更する<br>従業員のコード</th>
 	      <td><jsp:getProperty  name="employee"  property="employeeCode" /></td>
 	    </tr>
 	    <tr>
@@ -70,8 +70,8 @@
 	    </form>
         </li>
         <li class="sub_li">
-        <form action="license-insert-form.jsp" method="post">
-	      <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>" class="c-form-back-button">
+        <form action="license-insert-form-servlet" method="post">
+	      <input type="hidden" name="employeeCode" value="<%=employee.getEmployeeCode()%>">
 	      <input type="submit" value="戻る" class="c-form-submit-button4">
 	    </form>
         </li>

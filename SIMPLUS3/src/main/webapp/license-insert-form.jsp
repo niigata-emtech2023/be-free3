@@ -14,9 +14,30 @@
 	<div class = "container">
       <h1>保有資格情報登録画面</h1>
          
+         <%
+		List<EmployeeBean> employeeList
+			= (List<EmployeeBean>) request.getAttribute("employeeList");
+	    %>
+         
          <form action="license-insert-confirm-servlet"method="post">
          <table class ="one_table">
-         <tr><th>設定したい従業員のコードを入力してください<span class="req_span">必須</span></th><td class="normal_td"><input class="form_text" class="form_text" type="text" size="10" name="employeeCode" required></td></tr>
+         <tr><th>変更したい従業員<span class="req_span">必須</span></th>
+             <td class="normal_td">
+		         <div class="c-form-select">
+                   <select name="employeeCode"required>
+                     <option selected>選択してください</option>
+                         <%
+			                 for (EmployeeBean employee : employeeList) {
+		                 %>
+		                 <option value="<%=employee.getEmployeeCode()%>"><%=employee.getEmployeeCode()%>: <%=employee.getSurName() + employee.getFirstName()%></option>
+		                 <%
+			                 }
+		                 %>
+                   </select>
+                 </div>
+                 <!-- <input class="form_text" class="form_text" type="text" size="10" name="employeeCode" required> -->
+             </td></tr>
+         
          <tr><th>保有資格選択<span class="req_span">必須</span></th><td class="normal_td">
           <div class="c-form-select">
           <select name="licenceCode"required>

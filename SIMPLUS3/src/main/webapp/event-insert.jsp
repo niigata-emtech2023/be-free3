@@ -13,14 +13,34 @@
   <div class = "container">
 	<form action="event-insert-confirm-servlet"method="post">
 	<h1>社内イベント登録</h1>
+	
+	<%
+		List<EmployeeBean> employeeList
+			= (List<EmployeeBean>) request.getAttribute("employeeList");
+	 %>
+	
 	  <table class="two_table" align="left">
 	    <tr>
-	      <th>イベントコード<span class="req_span">必須</span></th>
-	      <td class="normal_td"><input type="text" size="10" name="eventCode" required  class="form_text"></td>
+	      <th>イベントコード<span class="req_span">必須</span><br><p class="note">他のイベントとの重複は避けてください</p></th>
+	      <td class="normal_td"><input type="text" size="10" name="eventCode" pattern="[F]+[0-9]{3}" title="Fからはじまり、半角数字３桁のコードにしてください" placeholder="(例)F000" required  class="form_text"></td>
 	    </tr>
 	    <tr>
-	      <th>開催者の従業員コード<span class="req_span">必須</span><br><p class="note">従業員コードで入力してください</p></th>
-	      <td class="normal_td"><input type="text" size="10" name="organizer" required  class="form_text"></td>
+	      <th>開催者<span class="req_span">必須</span></th>
+	      <td class="normal_td">
+	        <div class="c-form-select">
+                   <select name="organizer"required>
+                     <option selected>選択してください</option>
+                         <%
+			                 for (EmployeeBean employee : employeeList) {
+		                 %>
+		                 <option value="<%=employee.getEmployeeCode()%>"><%=employee.getEmployeeCode()%>: <%=employee.getSurName() + employee.getFirstName()%></option>
+		                 <%
+			                 }
+		                 %>
+                   </select>
+             </div>
+	      <!-- <input type="text" size="10" name="organizer" required  class="form_text"> -->
+	      </td>
 	    </tr>
 	    <tr>
 	      <th>開催場所<span class="req_span">必須</span></th>
@@ -38,8 +58,8 @@
 	  </table>
 	  <table class="one_table">
 	    <tr>
-	      <th>イベント詳細<span class="req_span">必須</span></th>
-	      <td class="normal_td"><textarea name="selfintroduction" maxlength="400" cols="40" rows="10">誰でも気軽に参加してください！</textarea><td>
+	      <th>イベント詳細<span class="req_span">必須</span><br><p class="note">400字以内</p></th>
+	      <td class="normal_td"><textarea name="selfIntroduction" maxlength="400" cols="40" rows="10">誰でも気軽に参加してください！</textarea><td>
 	    </tr>
 	  </table>
 		

@@ -23,7 +23,7 @@
 	     <table>
 	  <tbody>
 	    <tr>
-	      <th>変更したい従業員のコード</th>
+	      <th>設定する従業員</th>
 	      <td><jsp:getProperty  name="employee"  property="employeeCode" /></td>
 	    </tr>
 	    <tr>

@@ -22,7 +22,7 @@
 		  <tr><th>イベント名</th><td><%=event.getEventName() %></td></tr>
 		</table>
 		<table class="two_table" align="left">
-		  <tr><th>開催者名</th><td><%=event.getOrganizer() %></td></tr>
+		  <tr><th>開催者</th><td><%=event.getOrganizer() %></td></tr>
 		  <tr><th>開催場所</th><td><%=event.getEventPlace() %></td></tr>
 		</table>
 		<table class="two_table">
